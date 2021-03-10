@@ -30,25 +30,52 @@ module testbench;
 		// filling up the room
 		$display("filling up the room!");
 		fill;
+		sleep;
 
 		// room capasity limit
 		$display("trying to enter the room after its getting filled");
 		req_enter;
-		
+		sleep;
+
 		// exiting from room
 		$display("exiting the room");
 		exit;
+		sleep;
 
+		// entering the room again
 		$display("trying to enter the room again after one person left the room");
 		req_enter;
 
+		$display("just wating for a friend!");
+		sleep;
+		$display($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst.QD, main.b2v_inst.QC, main.b2v_inst.QB, main.b2v_inst.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
+
+
 		$display("entering the room");
 		enter;
+		sleep;
 
 		// clear the room
-		$display("making the room clear again");
+		$display("shouting every one out!");
 		empty;
-		
+		sleep;
+
+		// mester A enters the room
+		$display("mester A enters the room!");
+		full_enter;
+		sleep;
+
+		// mester B enters while A leaves the room
+		$display("mester B enters while A leaves the room!");
+		ENT = 1;
+		#(clk_c)
+		ENT = 0;
+		IN = 1;
+		OUT = 1;
+		#(clk_c)
+		IN = 0;
+		OUT = 0;
+
 		// visiting time is over
 		#(clk_c) T=0;
 
@@ -58,7 +85,7 @@ module testbench;
 
 		
 		
-		#2000 T=T;
+		sleep;
 		$finish;
 	end
 	
@@ -66,7 +93,7 @@ module testbench;
 		$monitor($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst.QD, main.b2v_inst.QC, main.b2v_inst.QB, main.b2v_inst.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
 	
 
-	task enter;
+	task full_enter;
 	begin
 		IN = 0;
 		ENT = 0;
@@ -74,6 +101,14 @@ module testbench;
 		#clk_c 
 			IN = 1;
 			ENT = 0;
+		#clk_c IN = 0;
+	end
+	endtask
+	
+	task enter;
+	begin
+		IN = 0;
+		#clk_c IN = 1;
 		#clk_c IN = 0;
 	end
 	endtask
@@ -100,7 +135,7 @@ module testbench;
 	task fill;
 	begin
 		for (i=0; i<15;i=i+1) begin
-			enter;
+			full_enter;
 		end
 	end
 	endtask
@@ -112,6 +147,14 @@ module testbench;
 		end
 	end
 	endtask
+
+	task sleep;
+	begin
+		#(10*clk_c) T=T;
+	end
+	endtask
+
+	
 	
 	
 endmodule
