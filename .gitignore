@@ -1,0 +1,12 @@
+AZ1/*
+AZ2/*
+
+!AZ1/*.v
+!AZ1/*.bdf
+!AZ1/report
+!AZ1/*.bsf
+
+!AZ2/*.v
+!AZ2/*.bdf
+!AZ2/report
+!AZ2/*.bsf
