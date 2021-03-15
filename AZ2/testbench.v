@@ -48,7 +48,7 @@ module testbench;
 
 		$display("just wating for a friend!");
 		sleep;
-		$display($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst.QD, main.b2v_inst.QC, main.b2v_inst.QB, main.b2v_inst.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
+		$display($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst20.QD, main.b2v_inst20.QC, main.b2v_inst20.QB, main.b2v_inst20.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
 
 
 		$display("entering the room");
@@ -90,7 +90,7 @@ module testbench;
 	end
 	
 	initial
-		$monitor($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst.QD, main.b2v_inst.QC, main.b2v_inst.QB, main.b2v_inst.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
+		$monitor($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst20.QD, main.b2v_inst20.QC, main.b2v_inst20.QB, main.b2v_inst20.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
 	
 
 	task full_enter;
