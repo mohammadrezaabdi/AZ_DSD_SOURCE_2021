@@ -83,7 +83,9 @@ module testbench;
 		$display("trying to enter the room after the visiting hour");
 		req_enter;
 
-		
+		// trying to bypass the door system and enter when the door closed!
+		$display("trying to bypass the door system and enter when the door closed!");
+		enter;
 		
 		sleep;
 		$finish;
