@@ -14,28 +14,28 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
-// CREATED		"Mon Mar 15 23:08:24 2021"
+// CREATED		"Mon Mar 15 23:35:02 2021"
 
 module Counter_Up_Down_4bit(
-	U_nD,
-	En,
 	clk,
 	CLRN,
-	Q0,
-	Q1,
-	Q2,
-	Q3
+	CIN,
+	DNUP,
+	QA,
+	QB,
+	QC,
+	QD
 );
 
 
-input wire	U_nD;
-input wire	En;
 input wire	clk;
 input wire	CLRN;
-output wire	Q0;
-output wire	Q1;
-output wire	Q2;
-output wire	Q3;
+input wire	CIN;
+input wire	DNUP;
+output wire	QA;
+output wire	QB;
+output wire	QC;
+output wire	QD;
 
 wire	SYNTHESIZED_WIRE_27;
 wire	SYNTHESIZED_WIRE_1;
@@ -45,29 +45,29 @@ wire	SYNTHESIZED_WIRE_4;
 wire	SYNTHESIZED_WIRE_29;
 wire	SYNTHESIZED_WIRE_6;
 wire	SYNTHESIZED_WIRE_7;
-wire	SYNTHESIZED_WIRE_8;
 wire	SYNTHESIZED_WIRE_30;
 wire	SYNTHESIZED_WIRE_31;
 wire	SYNTHESIZED_WIRE_32;
 wire	SYNTHESIZED_WIRE_33;
 wire	SYNTHESIZED_WIRE_34;
+wire	SYNTHESIZED_WIRE_19;
 wire	SYNTHESIZED_WIRE_20;
 wire	SYNTHESIZED_WIRE_21;
 wire	SYNTHESIZED_WIRE_26;
 
-assign	Q0 = SYNTHESIZED_WIRE_20;
-assign	Q1 = SYNTHESIZED_WIRE_26;
-assign	Q2 = SYNTHESIZED_WIRE_6;
+assign	QA = SYNTHESIZED_WIRE_19;
+assign	QB = SYNTHESIZED_WIRE_26;
+assign	QC = SYNTHESIZED_WIRE_6;
 
 
 
 
 JK_FlipFlop	b2v_inst(
-	.J(En),
+	.J(CIN),
 	.clk(SYNTHESIZED_WIRE_27),
-	.K(En),
+	.K(CIN),
 	.CLRN(CLRN),
-	.Q(SYNTHESIZED_WIRE_20),
+	.Q(SYNTHESIZED_WIRE_19),
 	.nQ(SYNTHESIZED_WIRE_7));
 
 assign	SYNTHESIZED_WIRE_3 = SYNTHESIZED_WIRE_1 & SYNTHESIZED_WIRE_28;
@@ -76,9 +76,9 @@ assign	SYNTHESIZED_WIRE_34 = SYNTHESIZED_WIRE_3 | SYNTHESIZED_WIRE_4;
 
 assign	SYNTHESIZED_WIRE_4 = SYNTHESIZED_WIRE_29 & SYNTHESIZED_WIRE_6;
 
-assign	SYNTHESIZED_WIRE_32 = SYNTHESIZED_WIRE_7 & SYNTHESIZED_WIRE_8;
+assign	SYNTHESIZED_WIRE_32 = SYNTHESIZED_WIRE_7 & DNUP;
 
-assign	SYNTHESIZED_WIRE_27 = En & clk;
+assign	SYNTHESIZED_WIRE_27 = CIN & clk;
 
 
 JK_FlipFlop	b2v_inst18(
@@ -106,12 +106,12 @@ JK_FlipFlop	b2v_inst20(
 	.clk(SYNTHESIZED_WIRE_27),
 	.K(SYNTHESIZED_WIRE_34),
 	.CLRN(CLRN),
-	.Q(Q3)
+	.Q(QD)
 	);
 
-assign	SYNTHESIZED_WIRE_33 = SYNTHESIZED_WIRE_20 & U_nD;
+assign	SYNTHESIZED_WIRE_33 = SYNTHESIZED_WIRE_19 & SYNTHESIZED_WIRE_20;
 
-assign	SYNTHESIZED_WIRE_8 =  ~U_nD;
+assign	SYNTHESIZED_WIRE_20 =  ~DNUP;
 
 assign	SYNTHESIZED_WIRE_28 = SYNTHESIZED_WIRE_21 & SYNTHESIZED_WIRE_32;
 
