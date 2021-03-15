@@ -158,3 +158,6 @@ trying to enter the room after the visiting hour
                 1620	counter:0001, IN:0, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
                 1630	counter:0001, IN:0, OUT:0, ENT:1, T:0, CLRN:1, OPEN:0, CLOSE:0
                 1640	counter:0001, IN:0, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
+trying to bypass the door system and enter when the door closed!
+                1660	counter:0001, IN:1, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
+                1670	counter:0001, IN:0, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
