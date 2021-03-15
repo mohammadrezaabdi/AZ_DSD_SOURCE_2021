@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 104 272 272 288)
+	(rect 104 216 272 232)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CIN" (rect 5 0 25 12)(font "Arial" ))
 	(pt 168 8)
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 104 176 272 192)
+	(rect 104 256 272 272)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "DNUP" (rect 5 0 37 12)(font "Arial" ))
 	(pt 168 8)
@@ -708,24 +708,12 @@ applicable agreement for further details.
 	(pt 432 352)
 )
 (connector
-	(pt 272 280)
-	(pt 312 280)
-)
-(connector
 	(pt 328 480)
 	(pt 272 480)
 )
 (connector
 	(pt 328 464)
 	(pt 312 464)
-)
-(connector
-	(pt 312 280)
-	(pt 312 320)
-)
-(connector
-	(pt 312 320)
-	(pt 312 352)
 )
 (connector
 	(pt 312 352)
@@ -1088,14 +1076,6 @@ applicable agreement for further details.
 	(pt 1584 320)
 )
 (connector
-	(pt 416 120)
-	(pt 416 184)
-)
-(connector
-	(pt 272 184)
-	(pt 416 184)
-)
-(connector
 	(pt 416 184)
 	(pt 592 184)
 )
@@ -1106,6 +1086,30 @@ applicable agreement for further details.
 (connector
 	(pt 456 120)
 	(pt 416 120)
+)
+(connector
+	(pt 312 224)
+	(pt 272 224)
+)
+(connector
+	(pt 312 224)
+	(pt 312 320)
+)
+(connector
+	(pt 312 320)
+	(pt 312 352)
+)
+(connector
+	(pt 416 264)
+	(pt 272 264)
+)
+(connector
+	(pt 416 120)
+	(pt 416 184)
+)
+(connector
+	(pt 416 184)
+	(pt 416 264)
 )
 (junction (pt 312 320))
 (junction (pt 312 352))

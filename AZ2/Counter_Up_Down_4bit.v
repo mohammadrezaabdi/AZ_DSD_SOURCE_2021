@@ -14,7 +14,7 @@
 
 // PROGRAM		"Quartus II 64-Bit"
 // VERSION		"Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
-// CREATED		"Mon Mar 15 23:35:02 2021"
+// CREATED		"Mon Mar 15 23:41:26 2021"
 
 module Counter_Up_Down_4bit(
 	clk,

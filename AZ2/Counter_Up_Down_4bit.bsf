@@ -26,15 +26,15 @@ applicable agreement for further details.
 	(port
 		(pt 0 32)
 		(input)
-		(text "DNUP" (rect 0 0 31 14)(font "Arial" (font_size 8)))
-		(text "DNUP" (rect 21 27 52 41)(font "Arial" (font_size 8)))
+		(text "CIN" (rect 0 0 18 14)(font "Arial" (font_size 8)))
+		(text "CIN" (rect 21 27 39 41)(font "Arial" (font_size 8)))
 		(line (pt 0 32)(pt 16 32))
 	)
 	(port
 		(pt 0 48)
 		(input)
-		(text "CIN" (rect 0 0 18 14)(font "Arial" (font_size 8)))
-		(text "CIN" (rect 21 43 39 57)(font "Arial" (font_size 8)))
+		(text "DNUP" (rect 0 0 31 14)(font "Arial" (font_size 8)))
+		(text "DNUP" (rect 21 43 52 57)(font "Arial" (font_size 8)))
 		(line (pt 0 48)(pt 16 48))
 	)
 	(port
