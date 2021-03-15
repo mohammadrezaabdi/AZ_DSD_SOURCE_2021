@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 384 416 552 432)
+	(rect 416 416 584 432)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
 	(text "CLRN" (rect 5 0 35 12)(font "Arial" ))
 	(pt 168 8)
@@ -677,7 +677,7 @@ applicable agreement for further details.
 	(pt 720 320)
 )
 (connector
-	(pt 552 424)
+	(pt 584 424)
 	(pt 720 424)
 )
 (connector
