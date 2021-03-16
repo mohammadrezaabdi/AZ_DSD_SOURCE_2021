@@ -1,12 +1,7 @@
-AZ1/*
-AZ2/*
+.vscode
+AZ*/*
 
-!AZ1/*.v
-!AZ1/*.bdf
-!AZ1/report
-!AZ1/*.bsf
-
-!AZ2/*.v
-!AZ2/*.bdf
-!AZ2/report
-!AZ2/*.bsf
+!AZ*/*.v
+!AZ*/*.bdf
+!AZ*/report
+!AZ*/*.bsf

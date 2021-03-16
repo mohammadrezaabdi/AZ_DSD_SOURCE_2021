@@ -1,7 +1,10 @@
+`timescale 1ps/1ps
+
 module testbench;
 	parameter clk_c = 10;
 	reg IN, OUT, ENT, clk, T, CLRN;
 	wire OPEN, CLOSE;
+	wire [3:0] COUNT;
 	integer i;
 	
 	Main main(
@@ -12,7 +15,8 @@ module testbench;
 	T,
 	CLRN,
 	OPEN,
-	CLOSE
+	CLOSE,
+	COUNT
 	);
 	
 	initial begin
@@ -48,7 +52,7 @@ module testbench;
 
 		$display("just wating for a friend!");
 		sleep;
-		$display($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst20.QD, main.b2v_inst20.QC, main.b2v_inst20.QB, main.b2v_inst20.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
+		$display($realtime, "	counter:%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", COUNT, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
 
 
 		$display("entering the room");
@@ -92,7 +96,7 @@ module testbench;
 	end
 	
 	initial
-		$monitor($time, "	counter:%b%b%b%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", main.b2v_inst20.QD, main.b2v_inst20.QC, main.b2v_inst20.QB, main.b2v_inst20.QA, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
+		$monitor($realtime, "	counter:%b, IN:%b, OUT:%b, ENT:%b, T:%b, CLRN:%b, OPEN:%b, CLOSE:%b", COUNT, IN, OUT, ENT, T, CLRN, OPEN, CLOSE);
 	
 
 	task full_enter;

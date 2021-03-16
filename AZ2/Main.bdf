@@ -147,6 +147,22 @@ applicable agreement for further details.
 		(line (pt 78 12)(pt 82 8))
 	)
 )
+(pin
+	(output)
+	(rect 1440 -16 1616 0)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "C[3..0]" (rect 90 0 124 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
 (symbol
 	(rect 808 72 872 152)
 	(text "NOR4" (rect 1 0 26 10)(font "Arial" (font_size 6)))
@@ -1162,22 +1178,6 @@ applicable agreement for further details.
 	(pt 808 136)
 )
 (connector
-	(pt 760 248)
-	(pt 760 104)
-)
-(connector
-	(pt 768 264)
-	(pt 768 120)
-)
-(connector
-	(pt 776 280)
-	(pt 776 136)
-)
-(connector
-	(pt 752 232)
-	(pt 752 88)
-)
-(connector
 	(pt 752 88)
 	(pt 808 88)
 )
@@ -1217,6 +1217,63 @@ applicable agreement for further details.
 	(pt 872 112)
 	(pt 1288 112)
 )
+(connector
+	(pt 752 88)
+	(pt 752 232)
+)
+(connector
+	(pt 752 -8)
+	(pt 760 -8)
+	(bus)
+)
+(connector
+	(pt 760 104)
+	(pt 760 248)
+)
+(connector
+	(pt 760 -8)
+	(pt 768 -8)
+	(bus)
+)
+(connector
+	(pt 768 120)
+	(pt 768 264)
+)
+(connector
+	(pt 768 -8)
+	(pt 776 -8)
+	(bus)
+)
+(connector
+	(pt 776 136)
+	(pt 776 280)
+)
+(connector
+	(text "c[0]" (rect 736 62 748 80)(font "Arial" )(vertical))
+	(pt 752 -8)
+	(pt 752 88)
+)
+(connector
+	(text "c[1]" (rect 744 78 756 96)(font "Arial" )(vertical))
+	(pt 760 -8)
+	(pt 760 104)
+)
+(connector
+	(text "c[2]" (rect 752 94 764 112)(font "Arial" )(vertical))
+	(pt 768 -8)
+	(pt 768 120)
+)
+(connector
+	(text "c[3]" (rect 760 110 772 128)(font "Arial" )(vertical))
+	(pt 776 -8)
+	(pt 776 136)
+)
+(connector
+	(text "c[3..0]" (rect 786 -24 817 -12)(font "Arial" ))
+	(pt 776 -8)
+	(pt 1440 -8)
+	(bus)
+)
 (junction (pt 760 248))
 (junction (pt 768 264))
 (junction (pt 776 280))
@@ -1237,3 +1294,10 @@ applicable agreement for further details.
 (junction (pt 1136 432))
 (junction (pt 1272 304))
 (junction (pt 1400 272))
+(junction (pt 752 88))
+(junction (pt 760 -8))
+(junction (pt 760 104))
+(junction (pt 768 -8))
+(junction (pt 768 120))
+(junction (pt 776 -8))
+(junction (pt 776 136))
