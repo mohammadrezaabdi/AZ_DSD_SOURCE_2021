@@ -161,5 +161,3 @@ trying to enter the room after the visiting hour
 trying to bypass the door system and enter when the door closed!
 1660	counter:0001, IN:1, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
 1670	counter:0001, IN:0, OUT:0, ENT:0, T:0, CLRN:1, OPEN:0, CLOSE:0
-** Note: $finish    : C:/Users/Home/Desktop/AZ_DSD_SOURCE_2021/AZ2/testbench.v(95)
-   Time: 1770 ps  Iteration: 0  Instance: /testbench
