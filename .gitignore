@@ -5,3 +5,4 @@ AZ*/*
 !AZ*/*.bdf
 !AZ*/report
 !AZ*/*.bsf
+!AZ*/*.sh
