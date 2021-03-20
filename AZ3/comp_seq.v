@@ -1,16 +1,14 @@
 // digits are comming from MSB (right to left)
-module Comp_4bit_seq (a,
-                      b,
-                      reset,
-                      gout,
-                      eout,
-                      lout);
+module Comp_seq (a,
+                 b,
+                 reset,
+                 lgn_out,
+                 e_out,
+                 );
     input a, b, reset;
-    output gout, eout, lout;
-    wire a, b, reset, gout, eout, lout;
+    output lgn_out, e_out;
     
-    assign gout = (!reset && !lout && (gout || a > b));
-    assign eout = (!reset && !lout && !gout && a == b);
-    assign lout = (!reset && !gout && (lout || a < b));
+    assign lgn_out = ~reset & ((~e_out & lgn_out) | (e_out & ~a & b));
+    assign e_out   = reset | (e_out & ~(a ^ b));
     
-endmodule //Comp_4bit_seq
+endmodule //Comp_seq
