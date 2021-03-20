@@ -4,14 +4,15 @@ module testbench();
     reg [3:0] a, b;
     reg A, B;
     reg reset, clk;
-    wire g, e, l, G, E, L;
+    wire lgn, e, G, E;
     
-    Comp_4bit_comb comp0(
+    Comp_comb #(.BIT_LEN(4)) comp0(
     .a(a),
     .b(b),
-    .gout(g),
-    .eout(e),
-    .lout(l)
+    .lgn_in(1'b0),
+    .e_in(1'b1),
+    .lgn_out(lgn),
+    .e_out(e)
     );
     
     Comp_4bit_seq comp1(
@@ -56,7 +57,7 @@ module testbench();
             a = {$random(seed)}%16;
             b = {$random(seed)}%16;
             #1
-            $display(i, "   A:%d  B:%d  G:%b  E:%b, L:%b", a, b, g, e, l);
+            $display(i, "   A:%d  B:%d  LGN:%b  EQ:%b", a, b, lgn, e);
         end
         
         $display("sequantial comparator module test:");
