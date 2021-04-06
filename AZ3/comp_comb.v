@@ -1,10 +1,4 @@
-module Comp_comb (a,
-                  b,
-                  lgn_in,
-                  e_in,
-                  lgn_out,
-                  e_out,
-                  );
+module Comp_comb (a, b, lgn_in, e_in, lgn_out, e_out,);
     parameter BIT_LEN = 4;
     input wire [BIT_LEN-1:0] a, b;
     input wire lgn_in, e_in;
