@@ -20,7 +20,8 @@ module testbench();
     .b(B),
     .reset(reset),
     .lgn_out(LGN),
-    .e_out(E)
+    .e_out(E),
+    .clk(clk)
     );
     
     always

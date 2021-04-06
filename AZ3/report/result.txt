@@ -1,226 +1,165 @@
 combinational comparator module test:
-          0   A: 3  B: 9  LGN:1  EQ:0
-          1   A:15  B:11  LGN:0  EQ:0
-          2   A: 8  B: 8  LGN:0  EQ:1
-          3   A: 3  B:14  LGN:1  EQ:0
-          4   A: 9  B: 6  LGN:0  EQ:0
-          5   A: 6  B: 1  LGN:0  EQ:0
-          6   A:11  B:15  LGN:1  EQ:0
-          7   A:11  B: 7  LGN:0  EQ:0
-          8   A: 4  B: 6  LGN:1  EQ:0
-          9   A: 7  B: 9  LGN:1  EQ:0
-         10   A: 3  B: 3  LGN:0  EQ:1
-         11   A:11  B: 8  LGN:0  EQ:0
-         12   A: 3  B: 8  LGN:1  EQ:0
-         13   A:12  B: 6  LGN:0  EQ:0
-         14   A:13  B: 9  LGN:0  EQ:0
-         15   A: 0  B:11  LGN:1  EQ:0
+          0   A: 6  B:12  LGN:1  EQ:0
+          1   A: 9  B:13  LGN:1  EQ:0
+          2   A: 4  B:12  LGN:1  EQ:0
+          3   A: 2  B: 9  LGN:1  EQ:0
+          4   A: 8  B: 7  LGN:0  EQ:0
+          5   A: 0  B: 9  LGN:1  EQ:0
+          6   A: 5  B:12  LGN:1  EQ:0
+          7   A: 5  B:11  LGN:1  EQ:0
+          8   A: 3  B:11  LGN:1  EQ:0
+          9   A:12  B:13  LGN:1  EQ:0
+         10   A: 4  B: 0  LGN:0  EQ:0
+         11   A: 1  B:15  LGN:1  EQ:0
+         12   A: 6  B:12  LGN:1  EQ:0
+         13   A: 7  B: 2  LGN:0  EQ:0
+         14   A: 4  B: 1  LGN:0  EQ:0
+         15   A:12  B: 3  LGN:0  EQ:0
 sequantial comparator module test:
 reset module  -->  LGN:0  EQ:1
-                  22   A:1  B:0  LGN:0  EQ:0
-                  24   A:1  B:1  LGN:0  EQ:0
-                  26   A:0  B:1  LGN:0  EQ:0
+                  22   A:0  B:0  LGN:0  EQ:1
+                  24   A:0  B:0  LGN:0  EQ:1
+                  26   A:1  B:0  LGN:0  EQ:0
                   28   A:0  B:0  LGN:0  EQ:0
-                  30   A:0  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                  34   A:1  B:0  LGN:0  EQ:0
+                  32   A:0  B:0  LGN:0  EQ:1
+                  34   A:0  B:0  LGN:0  EQ:1
                   36   A:1  B:0  LGN:0  EQ:0
-                  38   A:1  B:1  LGN:0  EQ:0
-                  40   A:1  B:0  LGN:0  EQ:0
-                  42   A:0  B:0  LGN:0  EQ:0
-                  44   A:1  B:0  LGN:0  EQ:0
-                  46   A:1  B:0  LGN:0  EQ:0
-                  48   A:1  B:0  LGN:0  EQ:0
-                  50   A:1  B:1  LGN:0  EQ:0
-                  52   A:1  B:1  LGN:0  EQ:0
+                  38   A:0  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                  56   A:0  B:1  LGN:1  EQ:0
-                  58   A:1  B:1  LGN:1  EQ:0
-                  60   A:1  B:1  LGN:1  EQ:0
+                  42   A:1  B:1  LGN:0  EQ:1
+                  44   A:0  B:1  LGN:1  EQ:0
+                  46   A:0  B:1  LGN:1  EQ:0
 reset module  -->  LGN:0  EQ:1
+                  50   A:1  B:0  LGN:0  EQ:0
+                  52   A:0  B:1  LGN:0  EQ:0
+                  54   A:0  B:1  LGN:0  EQ:0
+                  56   A:0  B:1  LGN:0  EQ:0
+reset module  -->  LGN:0  EQ:1
+                  60   A:1  B:1  LGN:0  EQ:1
+                  62   A:0  B:0  LGN:0  EQ:1
                   64   A:1  B:1  LGN:0  EQ:1
                   66   A:1  B:0  LGN:0  EQ:0
-                  68   A:0  B:1  LGN:0  EQ:0
-                  70   A:0  B:0  LGN:0  EQ:0
-                  72   A:0  B:0  LGN:0  EQ:0
+                  68   A:1  B:0  LGN:0  EQ:0
+                  70   A:0  B:1  LGN:0  EQ:0
+                  72   A:1  B:1  LGN:0  EQ:0
                   74   A:1  B:1  LGN:0  EQ:0
                   76   A:1  B:1  LGN:0  EQ:0
-                  78   A:0  B:0  LGN:0  EQ:0
-                  80   A:1  B:1  LGN:0  EQ:0
-                  82   A:0  B:0  LGN:0  EQ:0
+                  78   A:1  B:1  LGN:0  EQ:0
+                  80   A:0  B:1  LGN:0  EQ:0
+                  82   A:1  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                  86   A:1  B:0  LGN:0  EQ:0
-                  88   A:0  B:1  LGN:0  EQ:0
-                  90   A:1  B:1  LGN:0  EQ:0
-                  92   A:0  B:0  LGN:0  EQ:0
-                  94   A:1  B:0  LGN:0  EQ:0
+                  86   A:0  B:0  LGN:0  EQ:1
+                  88   A:0  B:0  LGN:0  EQ:1
+                  90   A:1  B:1  LGN:0  EQ:1
+                  92   A:0  B:1  LGN:1  EQ:0
 reset module  -->  LGN:0  EQ:1
-                  98   A:1  B:1  LGN:0  EQ:1
-                 100   A:1  B:1  LGN:0  EQ:1
-                 102   A:0  B:1  LGN:1  EQ:0
-                 104   A:1  B:0  LGN:1  EQ:0
-                 106   A:1  B:0  LGN:1  EQ:0
-                 108   A:0  B:1  LGN:1  EQ:0
-                 110   A:1  B:1  LGN:1  EQ:0
-                 112   A:1  B:0  LGN:1  EQ:0
-                 114   A:0  B:1  LGN:1  EQ:0
-                 116   A:1  B:0  LGN:1  EQ:0
-                 118   A:0  B:1  LGN:1  EQ:0
-                 120   A:0  B:0  LGN:1  EQ:0
-                 122   A:1  B:1  LGN:1  EQ:0
-                 124   A:0  B:0  LGN:1  EQ:0
-                 126   A:0  B:1  LGN:1  EQ:0
-                 128   A:1  B:0  LGN:1  EQ:0
-                 130   A:1  B:1  LGN:1  EQ:0
-                 132   A:1  B:1  LGN:1  EQ:0
-                 134   A:0  B:0  LGN:1  EQ:0
+                  96   A:0  B:0  LGN:0  EQ:1
 reset module  -->  LGN:0  EQ:1
-                 138   A:0  B:0  LGN:0  EQ:1
-                 140   A:0  B:1  LGN:1  EQ:0
+                 100   A:1  B:0  LGN:0  EQ:0
+                 102   A:0  B:0  LGN:0  EQ:0
+                 104   A:1  B:1  LGN:0  EQ:0
+                 106   A:1  B:1  LGN:0  EQ:0
+                 108   A:0  B:0  LGN:0  EQ:0
+                 110   A:1  B:0  LGN:0  EQ:0
+                 112   A:0  B:0  LGN:0  EQ:0
+                 114   A:0  B:1  LGN:0  EQ:0
+                 116   A:0  B:1  LGN:0  EQ:0
+                 118   A:0  B:0  LGN:0  EQ:0
+                 120   A:0  B:1  LGN:0  EQ:0
+                 122   A:0  B:1  LGN:0  EQ:0
+                 124   A:1  B:0  LGN:0  EQ:0
+                 126   A:1  B:0  LGN:0  EQ:0
+                 128   A:0  B:0  LGN:0  EQ:0
+                 130   A:0  B:1  LGN:0  EQ:0
+                 132   A:1  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 144   A:1  B:0  LGN:0  EQ:0
-                 146   A:0  B:0  LGN:0  EQ:0
-                 148   A:0  B:1  LGN:0  EQ:0
-                 150   A:0  B:0  LGN:0  EQ:0
-                 152   A:0  B:1  LGN:0  EQ:0
-                 154   A:0  B:0  LGN:0  EQ:0
-                 156   A:1  B:1  LGN:0  EQ:0
-                 158   A:0  B:0  LGN:0  EQ:0
-                 160   A:1  B:0  LGN:0  EQ:0
-                 162   A:0  B:1  LGN:0  EQ:0
-                 164   A:1  B:0  LGN:0  EQ:0
+                 136   A:0  B:1  LGN:1  EQ:0
+                 138   A:0  B:1  LGN:1  EQ:0
+                 140   A:1  B:0  LGN:1  EQ:0
+                 142   A:0  B:1  LGN:1  EQ:0
+                 144   A:0  B:1  LGN:1  EQ:0
+                 146   A:1  B:1  LGN:1  EQ:0
+                 148   A:1  B:1  LGN:1  EQ:0
+                 150   A:1  B:0  LGN:1  EQ:0
+                 152   A:0  B:0  LGN:1  EQ:0
+                 154   A:1  B:1  LGN:1  EQ:0
+reset module  -->  LGN:0  EQ:1
+                 158   A:1  B:0  LGN:0  EQ:0
+                 160   A:1  B:1  LGN:0  EQ:0
+                 162   A:1  B:1  LGN:0  EQ:0
+                 164   A:0  B:1  LGN:0  EQ:0
                  166   A:1  B:0  LGN:0  EQ:0
-                 168   A:1  B:0  LGN:0  EQ:0
+                 168   A:0  B:1  LGN:0  EQ:0
+                 170   A:1  B:0  LGN:0  EQ:0
+                 172   A:0  B:0  LGN:0  EQ:0
+                 174   A:0  B:0  LGN:0  EQ:0
+                 176   A:0  B:1  LGN:0  EQ:0
+                 178   A:0  B:1  LGN:0  EQ:0
+                 180   A:1  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 172   A:1  B:1  LGN:0  EQ:1
-                 174   A:0  B:0  LGN:0  EQ:1
-                 176   A:0  B:1  LGN:1  EQ:0
-                 178   A:1  B:1  LGN:1  EQ:0
-                 180   A:1  B:0  LGN:1  EQ:0
-                 182   A:0  B:1  LGN:1  EQ:0
-                 184   A:0  B:0  LGN:1  EQ:0
-                 186   A:0  B:0  LGN:1  EQ:0
-                 188   A:1  B:1  LGN:1  EQ:0
-                 190   A:1  B:1  LGN:1  EQ:0
-                 192   A:1  B:0  LGN:1  EQ:0
+                 184   A:1  B:1  LGN:0  EQ:1
+                 186   A:0  B:1  LGN:1  EQ:0
+                 188   A:1  B:0  LGN:1  EQ:0
+                 190   A:0  B:0  LGN:1  EQ:0
+                 192   A:0  B:0  LGN:1  EQ:0
                  194   A:1  B:1  LGN:1  EQ:0
-                 196   A:1  B:0  LGN:1  EQ:0
-                 198   A:1  B:0  LGN:1  EQ:0
-                 200   A:1  B:0  LGN:1  EQ:0
-                 202   A:1  B:0  LGN:1  EQ:0
-                 204   A:0  B:1  LGN:1  EQ:0
-                 206   A:1  B:0  LGN:1  EQ:0
-                 208   A:0  B:1  LGN:1  EQ:0
+                 196   A:0  B:0  LGN:1  EQ:0
+                 198   A:1  B:1  LGN:1  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 212   A:0  B:1  LGN:1  EQ:0
-                 214   A:0  B:0  LGN:1  EQ:0
-                 216   A:1  B:0  LGN:1  EQ:0
-                 218   A:1  B:0  LGN:1  EQ:0
-                 220   A:0  B:0  LGN:1  EQ:0
-                 222   A:1  B:0  LGN:1  EQ:0
-                 224   A:1  B:0  LGN:1  EQ:0
-                 226   A:0  B:0  LGN:1  EQ:0
-                 228   A:0  B:0  LGN:1  EQ:0
-                 230   A:0  B:1  LGN:1  EQ:0
+                 202   A:1  B:1  LGN:0  EQ:1
+                 204   A:0  B:0  LGN:0  EQ:1
+                 206   A:0  B:0  LGN:0  EQ:1
+                 208   A:0  B:0  LGN:0  EQ:1
+                 210   A:1  B:0  LGN:0  EQ:0
+                 212   A:1  B:0  LGN:0  EQ:0
+                 214   A:0  B:1  LGN:0  EQ:0
+                 216   A:1  B:0  LGN:0  EQ:0
+                 218   A:0  B:0  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 234   A:0  B:1  LGN:1  EQ:0
-                 236   A:0  B:0  LGN:1  EQ:0
-                 238   A:1  B:1  LGN:1  EQ:0
-                 240   A:1  B:1  LGN:1  EQ:0
-                 242   A:0  B:1  LGN:1  EQ:0
-                 244   A:1  B:0  LGN:1  EQ:0
-                 246   A:0  B:1  LGN:1  EQ:0
-                 248   A:0  B:1  LGN:1  EQ:0
-                 250   A:0  B:1  LGN:1  EQ:0
-                 252   A:0  B:0  LGN:1  EQ:0
-                 254   A:0  B:0  LGN:1  EQ:0
-                 256   A:1  B:0  LGN:1  EQ:0
-                 258   A:0  B:1  LGN:1  EQ:0
-                 260   A:1  B:0  LGN:1  EQ:0
-                 262   A:1  B:1  LGN:1  EQ:0
-                 264   A:0  B:0  LGN:1  EQ:0
-                 266   A:0  B:1  LGN:1  EQ:0
+                 222   A:0  B:1  LGN:1  EQ:0
+                 224   A:0  B:0  LGN:1  EQ:0
+                 226   A:1  B:1  LGN:1  EQ:0
+                 228   A:1  B:0  LGN:1  EQ:0
+                 230   A:1  B:0  LGN:1  EQ:0
+                 232   A:0  B:0  LGN:1  EQ:0
+                 234   A:1  B:1  LGN:1  EQ:0
+                 236   A:0  B:1  LGN:1  EQ:0
+                 238   A:0  B:1  LGN:1  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 270   A:1  B:1  LGN:0  EQ:1
+                 242   A:1  B:0  LGN:0  EQ:0
+reset module  -->  LGN:0  EQ:1
+                 246   A:1  B:0  LGN:0  EQ:0
+                 248   A:1  B:1  LGN:0  EQ:0
+                 250   A:1  B:0  LGN:0  EQ:0
+                 252   A:1  B:0  LGN:0  EQ:0
+                 254   A:0  B:0  LGN:0  EQ:0
+                 256   A:0  B:1  LGN:0  EQ:0
+                 258   A:0  B:0  LGN:0  EQ:0
+                 260   A:1  B:0  LGN:0  EQ:0
+                 262   A:0  B:1  LGN:0  EQ:0
+                 264   A:1  B:0  LGN:0  EQ:0
+                 266   A:0  B:1  LGN:0  EQ:0
+                 268   A:0  B:0  LGN:0  EQ:0
+                 270   A:0  B:1  LGN:0  EQ:0
                  272   A:1  B:0  LGN:0  EQ:0
                  274   A:0  B:1  LGN:0  EQ:0
-                 276   A:1  B:1  LGN:0  EQ:0
-                 278   A:1  B:0  LGN:0  EQ:0
-                 280   A:0  B:0  LGN:0  EQ:0
-                 282   A:1  B:0  LGN:0  EQ:0
-                 284   A:1  B:0  LGN:0  EQ:0
-                 286   A:1  B:0  LGN:0  EQ:0
-                 288   A:0  B:1  LGN:0  EQ:0
-                 290   A:1  B:0  LGN:0  EQ:0
-                 292   A:0  B:0  LGN:0  EQ:0
-                 294   A:0  B:0  LGN:0  EQ:0
-                 296   A:1  B:1  LGN:0  EQ:0
-                 298   A:0  B:0  LGN:0  EQ:0
-                 300   A:0  B:1  LGN:0  EQ:0
+                 276   A:0  B:1  LGN:0  EQ:0
+                 278   A:0  B:0  LGN:0  EQ:0
+                 280   A:1  B:1  LGN:0  EQ:0
+                 282   A:0  B:1  LGN:0  EQ:0
+                 284   A:0  B:1  LGN:0  EQ:0
 reset module  -->  LGN:0  EQ:1
-                 304   A:0  B:0  LGN:0  EQ:1
-                 306   A:1  B:0  LGN:0  EQ:0
-                 308   A:1  B:0  LGN:0  EQ:0
+                 288   A:0  B:0  LGN:0  EQ:1
+                 290   A:0  B:0  LGN:0  EQ:1
+                 292   A:1  B:0  LGN:0  EQ:0
+                 294   A:1  B:0  LGN:0  EQ:0
+                 296   A:0  B:0  LGN:0  EQ:0
+                 298   A:0  B:1  LGN:0  EQ:0
+                 300   A:1  B:1  LGN:0  EQ:0
+                 302   A:1  B:1  LGN:0  EQ:0
+                 304   A:0  B:1  LGN:0  EQ:0
+                 306   A:0  B:0  LGN:0  EQ:0
+                 308   A:0  B:0  LGN:0  EQ:0
                  310   A:1  B:0  LGN:0  EQ:0
-                 312   A:1  B:0  LGN:0  EQ:0
-                 314   A:0  B:1  LGN:0  EQ:0
-                 316   A:1  B:0  LGN:0  EQ:0
-                 318   A:1  B:0  LGN:0  EQ:0
-                 320   A:1  B:0  LGN:0  EQ:0
-                 322   A:1  B:1  LGN:0  EQ:0
-                 324   A:1  B:1  LGN:0  EQ:0
-                 326   A:1  B:1  LGN:0  EQ:0
-                 328   A:1  B:0  LGN:0  EQ:0
-reset module  -->  LGN:0  EQ:1
-                 332   A:0  B:0  LGN:0  EQ:1
-                 334   A:0  B:1  LGN:1  EQ:0
-                 336   A:0  B:1  LGN:1  EQ:0
-                 338   A:1  B:0  LGN:1  EQ:0
-                 340   A:0  B:0  LGN:1  EQ:0
-                 342   A:1  B:0  LGN:1  EQ:0
-                 344   A:1  B:0  LGN:1  EQ:0
-                 346   A:1  B:1  LGN:1  EQ:0
-                 348   A:1  B:1  LGN:1  EQ:0
-                 350   A:0  B:1  LGN:1  EQ:0
-                 352   A:0  B:0  LGN:1  EQ:0
-                 354   A:0  B:0  LGN:1  EQ:0
-                 356   A:0  B:0  LGN:1  EQ:0
-                 358   A:0  B:1  LGN:1  EQ:0
-                 360   A:1  B:1  LGN:1  EQ:0
-                 362   A:0  B:1  LGN:1  EQ:0
-                 364   A:0  B:1  LGN:1  EQ:0
-                 366   A:0  B:1  LGN:1  EQ:0
-                 368   A:0  B:0  LGN:1  EQ:0
-reset module  -->  LGN:0  EQ:1
-                 372   A:0  B:1  LGN:1  EQ:0
-                 374   A:0  B:1  LGN:1  EQ:0
-                 376   A:0  B:0  LGN:1  EQ:0
-                 378   A:0  B:0  LGN:1  EQ:0
-                 380   A:1  B:0  LGN:1  EQ:0
-                 382   A:0  B:1  LGN:1  EQ:0
-                 384   A:0  B:0  LGN:1  EQ:0
-                 386   A:0  B:1  LGN:1  EQ:0
-                 388   A:0  B:0  LGN:1  EQ:0
-                 390   A:1  B:0  LGN:1  EQ:0
-                 392   A:0  B:1  LGN:1  EQ:0
-                 394   A:0  B:0  LGN:1  EQ:0
-                 396   A:1  B:1  LGN:1  EQ:0
-reset module  -->  LGN:0  EQ:1
-                 400   A:0  B:0  LGN:0  EQ:1
-                 402   A:0  B:1  LGN:1  EQ:0
-                 404   A:0  B:1  LGN:1  EQ:0
-                 406   A:1  B:1  LGN:1  EQ:0
-                 408   A:1  B:0  LGN:1  EQ:0
-                 410   A:0  B:1  LGN:1  EQ:0
-                 412   A:0  B:1  LGN:1  EQ:0
-                 414   A:0  B:0  LGN:1  EQ:0
-                 416   A:0  B:1  LGN:1  EQ:0
-                 418   A:0  B:0  LGN:1  EQ:0
-                 420   A:1  B:1  LGN:1  EQ:0
-                 422   A:1  B:1  LGN:1  EQ:0
-                 424   A:1  B:0  LGN:1  EQ:0
-                 426   A:1  B:1  LGN:1  EQ:0
-                 428   A:0  B:1  LGN:1  EQ:0
-                 430   A:1  B:0  LGN:1  EQ:0
-                 432   A:0  B:1  LGN:1  EQ:0
-                 434   A:0  B:1  LGN:1  EQ:0
+                 312   A:0  B:1  LGN:0  EQ:0
