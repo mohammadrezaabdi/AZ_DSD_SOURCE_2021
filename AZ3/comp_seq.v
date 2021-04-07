@@ -5,7 +5,7 @@ module Comp_seq (a,
                  lgn_out,
                  e_out,
                  clk);
-                 
+
     input a, b, reset, clk;
     output lgn_out, e_out;
     
