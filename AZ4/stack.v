@@ -33,7 +33,7 @@ module Stack (rstn,
     endtask
     
     always @(posedge clk or negedge rstn) begin
-        if (!rstn) begin
+        if (rstn) begin
             reset_memory;
         end
         else begin

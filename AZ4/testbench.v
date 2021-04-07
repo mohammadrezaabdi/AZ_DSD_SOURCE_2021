@@ -32,9 +32,13 @@ module testbench;
         // fill the stack    
         $display("fill the stack");    
         for (i=0; i<DEPTH;i=i+1) begin
-            #clk_c push(i+1);
+            #clk_c push(i);
         end
 
+        // try to push again: stack is full
+        $display("try to push again: stack is full");
+        #clk_c push(4'b1001);
+        
         // try to push again: stack is full
         $display("try to push again: stack is full");
         #clk_c push(4'b1001);
@@ -45,6 +49,10 @@ module testbench;
             #clk_c pop;
         end
         
+        // try to pop again: stack is empty
+        $display("try to pop again: stack is empty");
+        #clk_c pop;
+
         // try to pop again: stack is empty
         $display("try to pop again: stack is empty");
         #clk_c pop;
@@ -61,22 +69,22 @@ module testbench;
     task push;
         input [BANDWIDTH-1:0]data;
         begin
-            s_push    = 0;
-            s_pop     = 0;
-            rstn    = 1;
+            s_push  = 0;
+            s_pop   = 0;
+            rstn    = 0;
             data_in = data;
             #clk_c
-            s_push = 1;
+            s_push  = 1;
         end
     endtask
     
     task pop;
         begin
-            s_push       = 0;
-            s_pop        = 0;
-            rstn       = 1;
+            s_push  = 0;
+            s_pop   = 0;
+            rstn    = 0;
             #clk_c
-            s_pop = 1;
+            s_pop   = 1;
         end
     endtask
     
