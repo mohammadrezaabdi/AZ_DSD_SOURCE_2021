@@ -19,6 +19,11 @@ module testbench;
         .full(full),
         .empty(empty));
     
+    initial begin
+        $dumpfile("waveform.vcd");
+        $dumpvars(0,stack0);
+    end
+    
     
     initial begin
         clk         = 0;
