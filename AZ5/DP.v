@@ -31,7 +31,7 @@ module DP (state, IN1,IN2, OUT, signal, OUT_R);
         case (state)
             `ST_INIT:
             begin
-                count = BIT_LEN;
+                count = 2*BIT_LEN;
                 A = IN1;                
                 B = IN2;
                 X = 0;
