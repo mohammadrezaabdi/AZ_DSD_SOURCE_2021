@@ -24,6 +24,13 @@ module testbench();
     .clk(clk)
     );
     
+    initial begin
+        $dumpfile("waveform.vcd");
+        $dumpvars(0,comp1);
+        $dumpvars(0,comp0);
+        
+    end
+
     always
     begin
     clk            = 0;

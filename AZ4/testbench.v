@@ -20,7 +20,7 @@ module testbench;
         .empty(empty));
     
     initial begin
-        $dumpfile("waveform.vcd");
+        $dumpfile("report/waveform.vcd");
         $dumpvars(0,stack0);
     end
     
