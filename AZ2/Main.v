@@ -1,3 +1,33 @@
+module mac2r(h,ai,clk,reset,ao);
+  parameter WH;
+  parameter WA;
+  
+  input[WH-1:0] h;
+  input[WA-1:0] ai;
+  input clk;
+  input reset;
+  
+  output [WA-1:0] ao;
+  
+  
+  reg [WA+WH-1:0]mul_d;
+  reg [WA+WH-1:0]add_d;
+  
+  always @(posedge clk or negedge reset)
+  begin
+	  if (!reset) begin
+		mul_d<=0;
+		add_d<=0;
+	  end else begin
+		mul_d<=h*ai;
+		add_d<=mul_d+add_d; 
+	  end
+  end
+
+  assign ao = add_d[WA-1:0];
+
+endmodule
+
 // Copyright (C) 1991-2013 Altera Corporation
 // Your use of Altera Corporation's design tools, logic functions 
 // and other software and tools, and its AMPP partner logic 
