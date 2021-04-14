@@ -9,13 +9,24 @@ module CU(clk,
     output [9:0] control;
     
     wire B0, FIN;
-    reg LD_A, LD_B, LD_CONT, SET_EF, RST_X,RST_EF, SUB_X, SUB_CONT, ADD_X, SHIFT_XB;
+    wire LD_A, LD_B, LD_CONT, SET_EF, RST_X,RST_EF, SUB_X, SUB_CONT, ADD_X, SHIFT_XB;
     wire INIT, ADD, SUB, SHIFT1, SHIFT2;
     reg INIT_D, ADD_D, SUB_D, SHIFT1_D, SHIFT2_D;
     
     assign B0      = status[1];
     assign FIN     = status[0];
     assign control = { LD_A, LD_B, LD_CONT, SET_EF, RST_X, RST_EF, SUB_X, SUB_CONT, ADD_X, SHIFT_XB};
+    
+    assign    LD_A    = (INIT && start);
+    assign    LD_B    = (INIT && start);
+    assign   LD_CONT  = (INIT && start);
+    assign    SET_EF  = ((SHIFT1 || SHIFT2) && FIN);
+    assign    RST_X   = (INIT && start);
+    assign    RST_EF  = (INIT && start);
+    assign    SUB_X   = (SUB);
+    assign    ADD_X   = (ADD);
+    assign   SHIFT_XB = (SHIFT1 || SHIFT2);
+    assign   SUB_CONT = (SHIFT1 || SHIFT2);
     
     always @(INIT or ADD or SUB or SHIFT1 or SHIFT2 or FIN or B0 or posedge clk or negedge rstn) begin
         if (!rstn) begin
@@ -67,18 +78,6 @@ module CU(clk,
     .clk(clk)
     );
     
-    always @(posedge clk) begin
-        LD_A     = (INIT && start);
-        LD_B     = (INIT && start);
-        LD_CONT  = (INIT && start);
-        SET_EF   = ((SHIFT1 || SHIFT2) && FIN);
-        RST_X    = (INIT && start);
-        RST_EF   = (INIT && start);
-        SUB_X    = (SUB);
-        ADD_X    = (ADD);
-        SHIFT_XB = (SHIFT1 || SHIFT2);
-        SUB_CONT = (SHIFT1 || SHIFT2);
-    end
     
 endmodule
     

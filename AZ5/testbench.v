@@ -64,21 +64,20 @@ module testbench();
     // end
     
     initial begin
-        in1   = 4'b0010;
-        in2   = 4'b1000;
-        rstn  = 1;
-        start = 0;
-        #clk_c
-        rstn = 0;
+        rstn  = 0;
         start = 1;
         #clk_c
         rstn  = 1;
-        // start = 0;
-        #200;
+        start = 0;
+        in1   = 4'b0111;
+        in2   = 4'b1011;
+        #clk_c
+        start = 1;
+        #100;
         $finish;
     end
     
     initial
-        $monitor(clk,"%d*%d = %d | XB:%b%b, INIT = %b, ADD = %b, SUB = %b, SHIFT1 = %b, SHIFT2 = %b , B0 = %b, FIN = %b, out_ready = %b, start = %b", in1, in2, out,mb.dp.X, mb.dp.B, mb.cu.INIT, mb.cu.ADD, mb.cu.SUB, mb.cu.SHIFT1, mb.cu.SHIFT2, mb.cu.B0, mb.cu.FIN, out_r, start);
+        $monitor(" A:%b, XB:%b%b, INIT = %b, ADD = %b, SUB = %b, SHIFT1 = %b, SHIFT2 = %b, count=%d , B0 = %b, FIN = %b, out_ready = %b, start = %b",mb.dp.A, mb.dp.X, mb.dp.B, mb.cu.INIT, mb.cu.ADD, mb.cu.SUB, mb.cu.SHIFT1, mb.cu.SHIFT2, mb.dp.cont, mb.cu.B0, mb.cu.FIN, out_r, start);
     
 endmodule

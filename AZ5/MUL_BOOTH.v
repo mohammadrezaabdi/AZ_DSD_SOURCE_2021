@@ -16,11 +16,11 @@ module MUL_BOOTH(in1,
     wire [9:0] control;
     
     CU cu (
-    .clk(clk),
     .status(status),
     .control(control),
     .start(start),
-    .rstn(rstn)
+    .rstn(rstn),
+    .clk(clk)
     );
     
     DP #(.BIT_LEN(BIT_LEN)) dp(
@@ -30,7 +30,7 @@ module MUL_BOOTH(in1,
     .OUT(out),
     .status(status),
     .EF(out_r),
-    .rstn(rstn)
+    .clk(clk)
     );
     
 endmodule //mul_booth
