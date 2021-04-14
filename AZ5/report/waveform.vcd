@@ -1,5 +1,5 @@
 $date
-	Wed Apr 14 22:55:38 2021
+	Thu Apr 15 03:53:33 2021
 $end
 $version
 	Icarus Verilog
@@ -17,320 +17,257 @@ $var wire 1 % start $end
 $var wire 2 & status [1:0] $end
 $var wire 1 ' out_r $end
 $var wire 8 ( out [7:0] $end
-$var wire 10 ) control [9:0] $end
+$var wire 2 ) control [1:0] $end
 $scope module cu $end
-$var wire 1 * ADD_X $end
-$var wire 1 + LD_A $end
-$var wire 1 , LD_B $end
-$var wire 1 - LD_CONT $end
-$var wire 1 . RST_EF $end
-$var wire 1 / RST_X $end
-$var wire 1 0 SET_EF $end
-$var wire 1 1 SHIFT_XB $end
-$var wire 1 2 SUB_CONT $end
-$var wire 1 3 SUB_X $end
 $var wire 1 ! clk $end
 $var wire 1 $ rstn $end
 $var wire 1 % start $end
-$var wire 2 4 status [1:0] $end
-$var wire 10 5 control [9:0] $end
-$var wire 1 6 SUB $end
-$var wire 1 7 SHIFT2 $end
-$var wire 1 8 SHIFT1 $end
-$var wire 1 9 INIT $end
-$var wire 1 : FIN $end
-$var wire 1 ; B0 $end
-$var wire 1 < ADD $end
-$var reg 1 = ADD_D $end
-$var reg 1 > INIT_D $end
-$var reg 1 ? SHIFT1_D $end
-$var reg 1 @ SHIFT2_D $end
-$var reg 1 A SUB_D $end
-$scope module add $end
-$var wire 1 ! clk $end
-$var wire 1 = d $end
-$var reg 1 < q $end
-$upscope $end
-$scope module init $end
-$var wire 1 ! clk $end
-$var wire 1 > d $end
-$var reg 1 9 q $end
-$upscope $end
-$scope module shift1 $end
-$var wire 1 ! clk $end
-$var wire 1 ? d $end
-$var reg 1 8 q $end
-$upscope $end
-$scope module shift2 $end
-$var wire 1 ! clk $end
-$var wire 1 @ d $end
-$var reg 1 7 q $end
-$upscope $end
-$scope module sub $end
-$var wire 1 ! clk $end
-$var wire 1 A d $end
-$var reg 1 6 q $end
-$upscope $end
+$var wire 2 * status [1:0] $end
+$var wire 2 + control [1:0] $end
+$var wire 1 , FIN $end
+$var wire 1 - B0 $end
+$var reg 3 . next_state [2:0] $end
+$var reg 3 / state [2:0] $end
 $upscope $end
 $scope module dp $end
-$var wire 4 B IN1 [3:0] $end
-$var wire 4 C IN2 [3:0] $end
+$var wire 4 0 IN1 [3:0] $end
+$var wire 4 1 IN2 [3:0] $end
 $var wire 1 ! clk $end
-$var wire 10 D control [9:0] $end
-$var wire 2 E status [1:0] $end
-$var wire 1 F SUB_X $end
-$var wire 1 G SUB_CONT $end
-$var wire 1 H SHIFT_XB $end
-$var wire 1 I SET_EF $end
-$var wire 1 J RST_X $end
-$var wire 1 K RST_EF $end
-$var wire 8 L OUT [7:0] $end
-$var wire 1 M LD_CONT $end
-$var wire 1 N LD_B $end
-$var wire 1 O LD_A $end
-$var wire 1 P ADD_X $end
-$var reg 4 Q A [3:0] $end
-$var reg 4 R B [3:0] $end
+$var wire 2 2 control [1:0] $end
+$var wire 1 $ rstn $end
+$var wire 2 3 status [1:0] $end
+$var wire 8 4 OUT [7:0] $end
+$var reg 4 5 A [3:0] $end
+$var reg 4 6 B [3:0] $end
 $var reg 1 ' EF $end
-$var reg 4 S X [3:0] $end
-$var integer 32 T cont [31:0] $end
+$var reg 4 7 X [3:0] $end
+$var integer 32 8 cont [31:0] $end
 $upscope $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-bx T
-bx S
-bx R
-bx Q
-xP
-xO
-xN
-xM
-bx L
-xK
-xJ
-xI
-xH
-xG
-xF
-bx E
-bx D
-bx C
-bx B
-0A
-0@
-0?
-1>
-0=
-x<
-x;
-x:
-x9
-x8
-x7
-x6
-bx 5
-bx 4
-x3
-x2
-x1
-x0
-x/
-x.
-x-
-x,
-x+
-x*
-bx )
-bx (
-x'
-bx &
-1%
+b1000 8
+b0 7
+b1011 6
+b111 5
+b1011 4
+b10 3
+b0 2
+b1011 1
+b111 0
+b0 /
+bx .
+1-
+0,
+b0 +
+b10 *
+b0 )
+b1011 (
+0'
+b10 &
+0%
 0$
-bx #
-bx "
+b1011 #
+b111 "
 0!
 $end
 #2
-0:
-b0xxx R
-0'
-b0xxx (
-b0xxx L
-b0 S
-bx0 &
-bx0 4
-bx0 E
-b110 T
-0I
-1K
-1J
-1M
-1N
-1O
-0G
-0H
-00
-1.
-1/
-1-
-1,
-1+
-0F
-0P
-02
-01
-19
-03
-06
-b1110110000 )
-b1110110000 5
-b1110110000 D
-0*
-0<
-08
-07
 1!
 #4
 0!
 #5
-1;
-b10 &
-b10 4
-b10 E
-0O
-0N
-0M
-0J
-0K
-b1011 (
-b1011 L
-b1011 R
-b111 Q
-0+
-0,
-0-
-0/
-b0 )
-b0 5
-b0 D
-0.
-b1011 #
-b1011 C
-b111 "
-b111 B
-0%
+b10 .
+1%
 1$
 #6
+b11 .
+b10 )
+b10 +
+b10 2
+b10 /
 1!
 #8
 0!
 #10
-0;
-b0 &
-b0 4
-b0 E
-b10 S
-1?
-1F
-09
-13
-16
-0O
-0N
-0M
-0J
-0K
-b101110 (
-b101110 L
-b1110 R
-0A
-0>
-0+
-0,
-0-
-0/
-b1000 )
-b1000 5
-b1000 D
-0.
+b11 )
+b11 +
+b11 2
+b10011011 (
+b10011011 4
+b1001 7
+b11 /
 1!
-1%
+0%
 #12
 0!
 #14
-1;
-b101 T
-b10 &
-b10 4
-b10 E
-1G
-1H
-b1111 R
-12
-11
-1?
-0=
-0F
-b11101111 (
-b11101111 L
-b1110 S
-18
-b101 )
-b101 5
-b101 D
-03
-06
+b111 8
+b1100 7
+b11001101 (
+b11001101 4
+b1101 6
 1!
 #16
 0!
 #18
+b1 .
+0-
+b0 &
+b0 *
+b0 3
+b110 8
+b1110 7
+b11100110 (
+b11100110 4
+b110 6
 1!
 #20
 0!
 #22
+b111 .
+1-
+b1 )
+b1 +
+b1 2
+b10 &
+b10 *
+b10 3
+b1 /
+b101 8
+b1111 7
+b11110011 (
+b11110011 4
+b11 6
 1!
 #24
 0!
 #26
+b10 .
+b11 )
+b11 +
+b11 2
+b1100011 (
+b1100011 4
+b110 7
+b111 /
 1!
 #28
 0!
 #30
+b11 .
+b10 )
+b10 +
+b10 2
+b10 /
+b100 8
+b11 7
+b110001 (
+b110001 4
+b1 6
 1!
 #32
 0!
 #34
+b11 )
+b11 +
+b11 2
+b11000001 (
+b11000001 4
+b1100 7
+b11 /
 1!
 #36
 0!
 #38
+b1 .
+0-
+b0 &
+b0 *
+b0 3
+b11 8
+b1110 7
+b11100000 (
+b11100000 4
+b0 6
 1!
 #40
 0!
 #42
+b111 .
+b1 )
+b1 +
+b1 2
+b10 8
+b11110000 (
+b11110000 4
+b1111 7
+b1 /
 1!
 #44
 0!
 #46
+b11 )
+b11 +
+b11 2
+b111 /
+b1100000 (
+b1100000 4
+b110 7
 1!
 #48
 0!
 #50
+b1 8
+b110000 (
+b110000 4
+b11 7
 1!
 #52
 0!
 #54
+b0 .
+1,
+b1 &
+b1 *
+b1 3
+b0 8
+b1 7
+b11000 (
+b11000 4
+b1000 6
 1!
 #56
 0!
 #58
+0,
+b0 )
+b0 +
+b0 2
+1'
+b0 &
+b0 *
+b0 3
+b11111111111111111111111111111111 8
+b0 7
+b1100 (
+b1100 4
+b1100 6
+b0 /
 1!
 #60
 0!
 #62
+1-
+b10 &
+b10 *
+b10 3
+0'
+b1011 (
+b1011 4
+b1011 6
+b1000 8
 1!
 #64
 0!
