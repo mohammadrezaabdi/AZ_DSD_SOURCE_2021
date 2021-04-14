@@ -4,7 +4,7 @@
 `define ST_SHIFT    2'b11
 
 
-module DP (state, IN1,IN2, OUT, signal);
+module DP (state, IN1,IN2, OUT, signal, OUT_R);
     parameter BIT_LEN = 4;
     
     input [1:0]state;
@@ -13,6 +13,7 @@ module DP (state, IN1,IN2, OUT, signal);
 
     output [2*BIT_LEN-1:0]OUT;
     output [1:0]signal;
+    output OUT_R;
 
     reg [BIT_LEN-1:0]A;
     reg [BIT_LEN-1:0]B;
@@ -24,6 +25,7 @@ module DP (state, IN1,IN2, OUT, signal);
     assign OUT = {X,B};
     assign FIN = (count == 0);
     assign signal = {B[0],FIN};
+    assign OUT_R=FIN;
     
     always @(state) begin
         case (state)

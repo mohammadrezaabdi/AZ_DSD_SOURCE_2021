@@ -19,7 +19,7 @@ module CU(clk, signal , out_state, rstn);
     assign B0=signal[1];
     assign FIN=signal[0];
     assign out_state=state[1:0];
-    
+
     always @(posedge clk, negedge rstn) begin
         if (!rstn) begin
             state = `ST_INIT;  
