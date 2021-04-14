@@ -1,6 +1,6 @@
 `define ST_INIT     2'b00
-`define ST_ADD      2'b10
-`define ST_SUB      2'b11
+`define ST_ADD      2'b01
+`define ST_SUB      2'b10
 `define ST_SHIFT    2'b11
 
 
