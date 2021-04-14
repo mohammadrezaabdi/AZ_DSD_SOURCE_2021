@@ -1,54 +1,57 @@
-`define ST_INIT     2'b00
-`define ST_ADD      2'b01
-`define ST_SUB      2'b10
-`define ST_SHIFT    2'b11
 
 
-module DP (state, IN1,IN2, OUT, signal, OUT_R);
+module DP (control,
+           IN1,
+           IN2,
+           OUT,
+           status,
+           EF,
+           rstn);
     parameter BIT_LEN = 4;
     
-    input [1:0]state;
+    input [9:0]control;
     input [BIT_LEN-1:0]IN1;
     input [BIT_LEN-1:0]IN2;
-
+    input rstn;
+    
     output [2*BIT_LEN-1:0]OUT;
-    output [1:0]signal;
-    output OUT_R;
-
+    output [1:0]status;
+    output EF;
+    
     reg [BIT_LEN-1:0]A;
     reg [BIT_LEN-1:0]B;
     reg [BIT_LEN-1:0]X;
+    reg EF;
+    wire LD_A, LD_B, LD_CONT, RST_X, SUB_X, ADD_X, SUB_CONT, SHIFT_XB;
     
-    integer count;
-    wire FIN;
+    integer cont;
+    reg FIN;
+    reg B0;
     
-    assign OUT = {X,B};
-    assign FIN = (count == 0);
-    assign signal = {B[0],FIN};
-    assign OUT_R=FIN;
+    assign OUT                                                                             = {X,B};
+    assign status                                                                          = {B0,FIN};
+    assign { LD_A, LD_B, LD_CONT, SET_EF, RST_X, RST_EF, SUB_X, SUB_CONT, ADD_X, SHIFT_XB} = control;
     
-    always @(state) begin
-        case (state)
-            `ST_INIT:
-            begin
-                count = 2*BIT_LEN;
-                A = IN1;                
-                B = IN2;
-                X = 0;
-            end
-            `ST_ADD:
-            begin
-                X=X+A;
-            end
-            `ST_SUB:
-                X=X-A;
+    always @(control or negedge rstn) begin
+        if (!rstn) begin
+            FIN = 0;
+            B0  = IN2[0];
+        end
+        else begin
+            if (LD_A) A         = IN1;
+            if (LD_B) B         = IN2;
+            if (LD_CONT) cont   = 2*BIT_LEN;
+            if (SET_EF) EF      = 1;
+            if (RST_X) X        = 0;
+            if (RST_EF) EF      = 0;
+            if (ADD_X) X        = X+A;
+            if (SUB_X) X        = X-A;
+            if (SUB_CONT) cont  = cont -1;
+            if (SHIFT_XB) {X,B} = {X[BIT_LEN-1],X,B[BIT_LEN-1:1]};
             
-            `ST_SHIFT:
-            begin
-                {X,B} = {X[BIT_LEN-1],X,B[BIT_LEN-1:1]};
-                count = count -1; 
-            end
-        endcase
+            B0  = B[0];
+            FIN = (cont == 0);
+        end
     end
-
+    
 endmodule
