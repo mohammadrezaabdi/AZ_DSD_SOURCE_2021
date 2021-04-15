@@ -12,7 +12,7 @@ module MUL_BOOTH(in1,
     output [2*BIT_LEN-1:0] out;
     output out_r;
     
-    wire [1:0] status, control;
+    wire [2:0] status, control;
     
     CU cu (
     .status(status),

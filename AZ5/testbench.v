@@ -5,8 +5,8 @@ module testbench();
     parameter clk_c   = 5;
     wire out_r;
     reg clk, start, rstn;
-    reg [BIT_LEN - 1:0] in1, in2;
-    wire [2 * BIT_LEN - 1:0] out;
+    reg signed [BIT_LEN - 1:0] in1, in2;
+    wire signed [2 * BIT_LEN - 1:0] out;
     
     MUL_BOOTH #(.BIT_LEN(BIT_LEN)) mb (
     .in1(in1),
@@ -46,38 +46,27 @@ module testbench();
         forever clk = #(clk_c/2) ~clk;
     end
     
-    // integer i,n;
-    // initial begin
-    //     n = {$random(seed)}%15+5;
-    //     for (i = 0; i<n; i = i+1) begin
-    //         start = 0;
-    //         #clk_c
-    //         start = 1;
-    //         in1   = {BIT_LEN{$random(seed)}};
-    //         in2   = {BIT_LEN{$random(seed)}};
-    
-    //         while (!out_r)
-    //         begin
-    //             #clk_c;
-    //         end
-    //     end
-    // end
-    
+    integer i,n;
     initial begin
-        in1   = 4'b0111;
-        in2   = 4'b1011;
         rstn  = 0;
         start = 0;
-        #clk_c
-        rstn = 1;
-        start = 1;
-        #clk_c
-        start = 0;
-        #100;
+        n     = {$random(seed)}%15 + 10;
+        for (i = 0; i < n; i = i+1) begin
+            rstn = 0;
+            #clk_c;
+            in1   = {BIT_LEN{$random(seed)}};
+            in2   = {BIT_LEN{$random(seed)}};
+            rstn  = 1;
+            start = 1;
+            while (!out_r)
+            begin
+                #clk_c;
+            end
+        end
         $finish;
     end
     
     initial
-        $monitor(" A:%b, XB:%b%b, state = %d, next_state = %d, count = %d , B0 = %b, FIN = %b, out_ready = %b, start = %b",mb.dp.A, mb.dp.X, mb.dp.B, mb.cu.state, mb.cu.next_state, mb.dp.cont, mb.cu.B0, mb.cu.FIN, out_r, start);
+        $monitor($time, "  %d * %d = %d _______ A:%b, XB:%b%b, state = %d, next_state = %d, count = %d , B0,B-1 = %b%b, out_ready = %b",in1, in2, out, mb.dp.A, mb.dp.X, mb.dp.B, mb.cu.state, mb.cu.next_state, mb.dp.cont, mb.cu.B0, mb.cu.BO, out_r);
     
 endmodule
