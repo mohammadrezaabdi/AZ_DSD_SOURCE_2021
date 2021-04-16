@@ -54,7 +54,10 @@ module testbench();
         for (i = 0; i < n; i = i+1) begin
             rstn = 0;
             #clk_c;
-            in1   = {BIT_LEN{$random(seed)}};
+            in1 = {BIT_LEN{$random(seed)}};
+            while (in1 == {1'b1,{BIT_LEN-1{1'b0}}})begin
+                in1 = {BIT_LEN{$random(seed)}};
+            end
             in2   = {BIT_LEN{$random(seed)}};
             rstn  = 1;
             start = 1;
@@ -62,11 +65,12 @@ module testbench();
             begin
                 #clk_c;
             end
+            $display("result is ready: \t%d * %d = %d",in1, in2, out);
         end
         $finish;
     end
     
     initial
-        $monitor($time, "  %d * %d = %d _______ A:%b, XB:%b%b, state = %d, next_state = %d, count = %d , B0,B-1 = %b%b, out_ready = %b",in1, in2, out, mb.dp.A, mb.dp.X, mb.dp.B, mb.cu.state, mb.cu.next_state, mb.dp.cont, mb.cu.B0, mb.cu.BO, out_r);
+        $monitor($time, "  A:%b, XB:%b%b, state = %d, next_state = %d, count = %d , B0,B-1 = %b%b, out_ready = %b", mb.dp.A, mb.dp.X, mb.dp.B, mb.cu.state, mb.cu.next_state, mb.dp.cont, mb.cu.B0, mb.cu.BO, out_r);
     
 endmodule
