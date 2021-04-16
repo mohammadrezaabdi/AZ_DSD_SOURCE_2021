@@ -1,5 +1,218 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
+<<<<<<< HEAD
                    0 7*11= 11_______________, out_ready=0, rstn=0,state=0,CU_state=0,X:B=00001011
                   20 7*11= 11_______________, out_ready=0, rstn=1,state=0,CU_state=0,X:B=00001011
                   30 7*11=155_______________, out_ready=0, rstn=1,state=2,CU_state=2,X:B=10011011
                   50 7*11=205_______________, out_ready=0, rstn=1,state=3,CU_state=3,X:B=11001101
+=======
+                   0  A:xxxx, XB:0000xxxx, state = 0, next_state = x, count = 4 , B0,B-1 = x0, out_ready = 0
+                   5  A:xxxx, XB:0000xxxx, state = 0, next_state = 4, count = 4 , B0,B-1 = x0, out_ready = 0
+                   6  A:0110, XB:00000000, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                  10  A:0110, XB:00000000, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                  14  A:0110, XB:00000000, state = 4, next_state = 3, count = 3 , B0,B-1 = 00, out_ready = 0
+                  18  A:0110, XB:00000000, state = 3, next_state = 4, count = 3 , B0,B-1 = 00, out_ready = 0
+                  22  A:0110, XB:00000000, state = 4, next_state = 3, count = 2 , B0,B-1 = 00, out_ready = 0
+                  26  A:0110, XB:00000000, state = 3, next_state = 4, count = 2 , B0,B-1 = 00, out_ready = 0
+                  30  A:0110, XB:00000000, state = 4, next_state = 3, count = 1 , B0,B-1 = 00, out_ready = 0
+                  34  A:0110, XB:00000000, state = 3, next_state = 4, count = 1 , B0,B-1 = 00, out_ready = 0
+                  38  A:0110, XB:00000000, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	 6 *  0 =    0
+                  40  A:0110, XB:00000000, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                  46  A:0010, XB:00000111, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                  50  A:0010, XB:00000111, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                  54  A:0010, XB:11100111, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                  58  A:0010, XB:11110011, state = 4, next_state = 3, count = 3 , B0,B-1 = 11, out_ready = 0
+                  62  A:0010, XB:11110011, state = 3, next_state = 4, count = 3 , B0,B-1 = 11, out_ready = 0
+                  66  A:0010, XB:11111001, state = 4, next_state = 3, count = 2 , B0,B-1 = 11, out_ready = 0
+                  70  A:0010, XB:11111001, state = 3, next_state = 4, count = 2 , B0,B-1 = 11, out_ready = 0
+                  74  A:0010, XB:11111100, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                  78  A:0010, XB:11111100, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                  82  A:0010, XB:00011100, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                  86  A:0010, XB:00001110, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	 2 *  7 =   14
+                  90  A:0010, XB:00000111, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                  98  A:0001, XB:00000010, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 102  A:0001, XB:00000010, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 106  A:0001, XB:00000001, state = 4, next_state = 2, count = 3 , B0,B-1 = 10, out_ready = 0
+                 110  A:0001, XB:00000001, state = 2, next_state = 3, count = 3 , B0,B-1 = 10, out_ready = 0
+                 114  A:0001, XB:11110001, state = 3, next_state = 4, count = 3 , B0,B-1 = 10, out_ready = 0
+                 118  A:0001, XB:11111000, state = 4, next_state = 1, count = 2 , B0,B-1 = 01, out_ready = 0
+                 122  A:0001, XB:11111000, state = 1, next_state = 3, count = 2 , B0,B-1 = 01, out_ready = 0
+                 126  A:0001, XB:00001000, state = 3, next_state = 4, count = 2 , B0,B-1 = 01, out_ready = 0
+                 130  A:0001, XB:00000100, state = 4, next_state = 3, count = 1 , B0,B-1 = 00, out_ready = 0
+                 134  A:0001, XB:00000100, state = 3, next_state = 4, count = 1 , B0,B-1 = 00, out_ready = 0
+                 138  A:0001, XB:00000010, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	 1 *  2 =    2
+                 140  A:0001, XB:00000010, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 146  A:1100, XB:00001100, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 150  A:1100, XB:00001100, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 154  A:1100, XB:00000110, state = 4, next_state = 3, count = 3 , B0,B-1 = 00, out_ready = 0
+                 158  A:1100, XB:00000110, state = 3, next_state = 4, count = 3 , B0,B-1 = 00, out_ready = 0
+                 162  A:1100, XB:00000011, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 166  A:1100, XB:00000011, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 170  A:1100, XB:01000011, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 174  A:1100, XB:00100001, state = 4, next_state = 3, count = 1 , B0,B-1 = 11, out_ready = 0
+                 178  A:1100, XB:00100001, state = 3, next_state = 4, count = 1 , B0,B-1 = 11, out_ready = 0
+                 182  A:1100, XB:00010000, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	-4 * -4 =   16
+                 185  A:1100, XB:00001100, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 190  A:0010, XB:00001001, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 194  A:0010, XB:00001001, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 198  A:0010, XB:11101001, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 202  A:0010, XB:11110100, state = 4, next_state = 1, count = 3 , B0,B-1 = 01, out_ready = 0
+                 206  A:0010, XB:11110100, state = 1, next_state = 3, count = 3 , B0,B-1 = 01, out_ready = 0
+                 210  A:0010, XB:00010100, state = 3, next_state = 4, count = 3 , B0,B-1 = 01, out_ready = 0
+                 214  A:0010, XB:00001010, state = 4, next_state = 3, count = 2 , B0,B-1 = 00, out_ready = 0
+                 218  A:0010, XB:00001010, state = 3, next_state = 4, count = 2 , B0,B-1 = 00, out_ready = 0
+                 222  A:0010, XB:00000101, state = 4, next_state = 2, count = 1 , B0,B-1 = 10, out_ready = 0
+                 226  A:0010, XB:00000101, state = 2, next_state = 3, count = 1 , B0,B-1 = 10, out_ready = 0
+                 230  A:0010, XB:11100101, state = 3, next_state = 4, count = 1 , B0,B-1 = 10, out_ready = 0
+                 234  A:0010, XB:11110010, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	 2 * -7 =  -14
+                 235  A:0010, XB:00001001, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 242  A:1011, XB:00000110, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 246  A:1011, XB:00000110, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 250  A:1011, XB:00000011, state = 4, next_state = 2, count = 3 , B0,B-1 = 10, out_ready = 0
+                 254  A:1011, XB:00000011, state = 2, next_state = 3, count = 3 , B0,B-1 = 10, out_ready = 0
+                 258  A:1011, XB:01010011, state = 3, next_state = 4, count = 3 , B0,B-1 = 10, out_ready = 0
+                 262  A:1011, XB:00101001, state = 4, next_state = 3, count = 2 , B0,B-1 = 11, out_ready = 0
+                 266  A:1011, XB:00101001, state = 3, next_state = 4, count = 2 , B0,B-1 = 11, out_ready = 0
+                 270  A:1011, XB:00010100, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 274  A:1011, XB:00010100, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 278  A:1011, XB:11000100, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 282  A:1011, XB:11100010, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	-5 *  6 =  -30
+                 285  A:1011, XB:00000110, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 290  A:0011, XB:00001110, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 294  A:0011, XB:00001110, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 298  A:0011, XB:00000111, state = 4, next_state = 2, count = 3 , B0,B-1 = 10, out_ready = 0
+                 302  A:0011, XB:00000111, state = 2, next_state = 3, count = 3 , B0,B-1 = 10, out_ready = 0
+                 306  A:0011, XB:11010111, state = 3, next_state = 4, count = 3 , B0,B-1 = 10, out_ready = 0
+                 310  A:0011, XB:11101011, state = 4, next_state = 3, count = 2 , B0,B-1 = 11, out_ready = 0
+                 314  A:0011, XB:11101011, state = 3, next_state = 4, count = 2 , B0,B-1 = 11, out_ready = 0
+                 318  A:0011, XB:11110101, state = 4, next_state = 3, count = 1 , B0,B-1 = 11, out_ready = 0
+                 322  A:0011, XB:11110101, state = 3, next_state = 4, count = 1 , B0,B-1 = 11, out_ready = 0
+                 326  A:0011, XB:11111010, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	 3 * -2 =   -6
+                 330  A:0011, XB:00001110, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 338  A:1001, XB:00001100, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 342  A:1001, XB:00001100, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 346  A:1001, XB:00000110, state = 4, next_state = 3, count = 3 , B0,B-1 = 00, out_ready = 0
+                 350  A:1001, XB:00000110, state = 3, next_state = 4, count = 3 , B0,B-1 = 00, out_ready = 0
+                 354  A:1001, XB:00000011, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 358  A:1001, XB:00000011, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 362  A:1001, XB:01110011, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 366  A:1001, XB:00111001, state = 4, next_state = 3, count = 1 , B0,B-1 = 11, out_ready = 0
+                 370  A:1001, XB:00111001, state = 3, next_state = 4, count = 1 , B0,B-1 = 11, out_ready = 0
+                 374  A:1001, XB:00011100, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	-7 * -4 =   28
+                 375  A:1001, XB:00001100, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 382  A:0001, XB:00000100, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 386  A:0001, XB:00000100, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 390  A:0001, XB:00000010, state = 4, next_state = 3, count = 3 , B0,B-1 = 00, out_ready = 0
+                 394  A:0001, XB:00000010, state = 3, next_state = 4, count = 3 , B0,B-1 = 00, out_ready = 0
+                 398  A:0001, XB:00000001, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 402  A:0001, XB:00000001, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 406  A:0001, XB:11110001, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 410  A:0001, XB:11111000, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 414  A:0001, XB:11111000, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 418  A:0001, XB:00001000, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 422  A:0001, XB:00000100, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	 1 *  4 =    4
+                 425  A:0001, XB:00000100, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 430  A:0000, XB:00000101, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 434  A:0000, XB:00000101, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 438  A:0000, XB:00000101, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 442  A:0000, XB:00000010, state = 4, next_state = 1, count = 3 , B0,B-1 = 01, out_ready = 0
+                 446  A:0000, XB:00000010, state = 1, next_state = 3, count = 3 , B0,B-1 = 01, out_ready = 0
+                 450  A:0000, XB:00000010, state = 3, next_state = 4, count = 3 , B0,B-1 = 01, out_ready = 0
+                 454  A:0000, XB:00000001, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 458  A:0000, XB:00000001, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 462  A:0000, XB:00000001, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 466  A:0000, XB:00000000, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 470  A:0000, XB:00000000, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 474  A:0000, XB:00000000, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 478  A:0000, XB:00000000, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	 0 *  5 =    0
+                 480  A:0000, XB:00000101, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 486  A:1010, XB:00000101, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 490  A:1010, XB:00000101, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 494  A:1010, XB:01100101, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 498  A:1010, XB:00110010, state = 4, next_state = 1, count = 3 , B0,B-1 = 01, out_ready = 0
+                 502  A:1010, XB:00110010, state = 1, next_state = 3, count = 3 , B0,B-1 = 01, out_ready = 0
+                 506  A:1010, XB:11010010, state = 3, next_state = 4, count = 3 , B0,B-1 = 01, out_ready = 0
+                 510  A:1010, XB:11101001, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 514  A:1010, XB:11101001, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 518  A:1010, XB:01001001, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 522  A:1010, XB:00100100, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 526  A:1010, XB:00100100, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 530  A:1010, XB:11000100, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 534  A:1010, XB:11100010, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	-6 *  5 =  -30
+                 535  A:1010, XB:00000101, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 542  A:0001, XB:00000111, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 546  A:0001, XB:00000111, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 550  A:0001, XB:11110111, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 554  A:0001, XB:11111011, state = 4, next_state = 3, count = 3 , B0,B-1 = 11, out_ready = 0
+                 558  A:0001, XB:11111011, state = 3, next_state = 4, count = 3 , B0,B-1 = 11, out_ready = 0
+                 562  A:0001, XB:11111101, state = 4, next_state = 3, count = 2 , B0,B-1 = 11, out_ready = 0
+                 566  A:0001, XB:11111101, state = 3, next_state = 4, count = 2 , B0,B-1 = 11, out_ready = 0
+                 570  A:0001, XB:11111110, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 574  A:0001, XB:11111110, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 578  A:0001, XB:00001110, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 582  A:0001, XB:00000111, state = 4, next_state = 2, count = 0 , B0,B-1 = 10, out_ready = 1
+result is ready: 	 1 *  7 =    7
+                 585  A:0001, XB:00000111, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 590  A:0100, XB:00001100, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 594  A:0100, XB:00001100, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 598  A:0100, XB:00000110, state = 4, next_state = 3, count = 3 , B0,B-1 = 00, out_ready = 0
+                 602  A:0100, XB:00000110, state = 3, next_state = 4, count = 3 , B0,B-1 = 00, out_ready = 0
+                 606  A:0100, XB:00000011, state = 4, next_state = 2, count = 2 , B0,B-1 = 10, out_ready = 0
+                 610  A:0100, XB:00000011, state = 2, next_state = 3, count = 2 , B0,B-1 = 10, out_ready = 0
+                 614  A:0100, XB:11000011, state = 3, next_state = 4, count = 2 , B0,B-1 = 10, out_ready = 0
+                 618  A:0100, XB:11100001, state = 4, next_state = 3, count = 1 , B0,B-1 = 11, out_ready = 0
+                 622  A:0100, XB:11100001, state = 3, next_state = 4, count = 1 , B0,B-1 = 11, out_ready = 0
+                 626  A:0100, XB:11110000, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	 4 * -4 =  -16
+                 630  A:0100, XB:00001100, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 638  A:1110, XB:00000111, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 642  A:1110, XB:00000111, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 646  A:1110, XB:00100111, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 650  A:1110, XB:00010011, state = 4, next_state = 3, count = 3 , B0,B-1 = 11, out_ready = 0
+                 654  A:1110, XB:00010011, state = 3, next_state = 4, count = 3 , B0,B-1 = 11, out_ready = 0
+                 658  A:1110, XB:00001001, state = 4, next_state = 3, count = 2 , B0,B-1 = 11, out_ready = 0
+                 662  A:1110, XB:00001001, state = 3, next_state = 4, count = 2 , B0,B-1 = 11, out_ready = 0
+                 666  A:1110, XB:00000100, state = 4, next_state = 1, count = 1 , B0,B-1 = 01, out_ready = 0
+                 670  A:1110, XB:00000100, state = 1, next_state = 3, count = 1 , B0,B-1 = 01, out_ready = 0
+                 674  A:1110, XB:11100100, state = 3, next_state = 4, count = 1 , B0,B-1 = 01, out_ready = 0
+                 678  A:1110, XB:11110010, state = 4, next_state = 3, count = 0 , B0,B-1 = 00, out_ready = 1
+result is ready: 	-2 *  7 =  -14
+                 680  A:1110, XB:00000111, state = 0, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 686  A:1101, XB:00001010, state = 4, next_state = 3, count = 4 , B0,B-1 = 00, out_ready = 0
+                 690  A:1101, XB:00001010, state = 3, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 694  A:1101, XB:00000101, state = 4, next_state = 2, count = 3 , B0,B-1 = 10, out_ready = 0
+                 698  A:1101, XB:00000101, state = 2, next_state = 3, count = 3 , B0,B-1 = 10, out_ready = 0
+                 702  A:1101, XB:00110101, state = 3, next_state = 4, count = 3 , B0,B-1 = 10, out_ready = 0
+                 706  A:1101, XB:00011010, state = 4, next_state = 1, count = 2 , B0,B-1 = 01, out_ready = 0
+                 710  A:1101, XB:00011010, state = 1, next_state = 3, count = 2 , B0,B-1 = 01, out_ready = 0
+                 714  A:1101, XB:11101010, state = 3, next_state = 4, count = 2 , B0,B-1 = 01, out_ready = 0
+                 718  A:1101, XB:11110101, state = 4, next_state = 2, count = 1 , B0,B-1 = 10, out_ready = 0
+                 722  A:1101, XB:11110101, state = 2, next_state = 3, count = 1 , B0,B-1 = 10, out_ready = 0
+                 726  A:1101, XB:00100101, state = 3, next_state = 4, count = 1 , B0,B-1 = 10, out_ready = 0
+                 730  A:1101, XB:00010010, state = 4, next_state = 1, count = 0 , B0,B-1 = 01, out_ready = 1
+                 734  A:1101, XB:00010010, state = 1, next_state = 3, count = 0 , B0,B-1 = 01, out_ready = 1
+result is ready: 	-3 * -6 =   18
+                 735  A:1101, XB:00001010, state = 0, next_state = 4, count = 4 , B0,B-1 = 00, out_ready = 0
+                 742  A:1101, XB:00000011, state = 4, next_state = 2, count = 4 , B0,B-1 = 10, out_ready = 0
+                 746  A:1101, XB:00000011, state = 2, next_state = 3, count = 4 , B0,B-1 = 10, out_ready = 0
+                 750  A:1101, XB:00110011, state = 3, next_state = 4, count = 4 , B0,B-1 = 10, out_ready = 0
+                 754  A:1101, XB:00011001, state = 4, next_state = 3, count = 3 , B0,B-1 = 11, out_ready = 0
+                 758  A:1101, XB:00011001, state = 3, next_state = 4, count = 3 , B0,B-1 = 11, out_ready = 0
+                 762  A:1101, XB:00001100, state = 4, next_state = 1, count = 2 , B0,B-1 = 01, out_ready = 0
+                 766  A:1101, XB:00001100, state = 1, next_state = 3, count = 2 , B0,B-1 = 01, out_ready = 0
+                 770  A:1101, XB:11011100, state = 3, next_state = 4, count = 2 , B0,B-1 = 01, out_ready = 0
+                 774  A:1101, XB:11101110, state = 4, next_state = 3, count = 1 , B0,B-1 = 00, out_ready = 0
+                 778  A:1101, XB:11101110, state = 3, next_state = 4, count = 1 , B0,B-1 = 00, out_ready = 0
+                 782  A:1101, XB:11110111, state = 4, next_state = 2, count = 0 , B0,B-1 = 10, out_ready = 1
+result is ready: 	-3 *  3 =   -9
+>>>>>>> cee84f9e83d5bb1ec0dd2521ac1b3f19dacbd0a5
