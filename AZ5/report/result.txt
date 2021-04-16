@@ -1,0 +1,5 @@
+VCD info: dumpfile report/waveform.vcd opened for output.
+                   0 7*11= 11_______________, out_ready=0, rstn=0,state=0,CU_state=0,X:B=00001011
+                  20 7*11= 11_______________, out_ready=0, rstn=1,state=0,CU_state=0,X:B=00001011
+                  30 7*11=155_______________, out_ready=0, rstn=1,state=2,CU_state=2,X:B=10011011
+                  50 7*11=205_______________, out_ready=0, rstn=1,state=3,CU_state=3,X:B=11001101
