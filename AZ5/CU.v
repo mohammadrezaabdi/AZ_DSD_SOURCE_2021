@@ -66,6 +66,5 @@ module CU(clk,
         endcase
     end
     
-    
 endmodule
     
