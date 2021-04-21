@@ -1,7 +1,6 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
                    0	tempreture: -10, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                  15	tempreture: -10, AC_state=3, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                  25	tempreture: -10, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
+                  15	tempreture: -10, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                   30	tempreture:  -9, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                   40	tempreture:  -8, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                   50	tempreture:  -7, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
@@ -43,30 +42,26 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  410	tempreture:  29, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                  420	tempreture:  30, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                  430	tempreture:  31, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
-                 435	tempreture:  31, AC_state=1, Fan_state=0, HEAT=1, COOL=0, CRS= 0
-                 440	tempreture:  32, AC_state=1, Fan_state=0, HEAT=1, COOL=0, CRS= 0
-                 445	tempreture:  32, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
+                 435	tempreture:  31, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
+                 440	tempreture:  32, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                  450	tempreture:  33, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                  460	tempreture:  34, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                  470	tempreture:  35, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                  480	tempreture:  36, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                 485	tempreture:  36, AC_state=2, Fan_state=1, HEAT=0, COOL=0, CRS= 0
-                 490	tempreture:  37, AC_state=2, Fan_state=1, HEAT=0, COOL=0, CRS= 0
-                 495	tempreture:  37, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
+                 485	tempreture:  36, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
+                 490	tempreture:  37, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                  500	tempreture:  38, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                  510	tempreture:  39, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                  520	tempreture:  40, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                  530	tempreture:  41, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
-                 535	tempreture:  41, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 4
-                 540	tempreture:  42, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 4
-                 545	tempreture:  42, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
+                 535	tempreture:  41, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
+                 540	tempreture:  42, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  550	tempreture:  43, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  560	tempreture:  44, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  570	tempreture:  45, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  580	tempreture:  46, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
-                 585	tempreture:  46, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 6
-                 590	tempreture:  47, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 6
-                 595	tempreture:  47, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
+                 585	tempreture:  46, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
+                 590	tempreture:  47, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
                  600	tempreture:  48, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
                  610	tempreture:  49, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
                  620	tempreture:  50, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
@@ -101,16 +96,14 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  920	tempreture:  41, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
                  930	tempreture:  40, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
                  940	tempreture:  39, AC_state=2, Fan_state=3, HEAT=0, COOL=1, CRS= 8
-                 945	tempreture:  39, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 8
-                 950	tempreture:  38, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 8
-                 955	tempreture:  38, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
+                 945	tempreture:  39, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
+                 950	tempreture:  38, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  960	tempreture:  37, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  970	tempreture:  36, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  980	tempreture:  35, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
                  990	tempreture:  34, AC_state=2, Fan_state=2, HEAT=0, COOL=1, CRS= 6
-                 995	tempreture:  34, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 6
-                1000	tempreture:  33, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 6
-                1005	tempreture:  33, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
+                 995	tempreture:  34, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
+                1000	tempreture:  33, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                 1010	tempreture:  32, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                 1020	tempreture:  31, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                 1030	tempreture:  30, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
@@ -120,9 +113,8 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                 1070	tempreture:  26, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                 1080	tempreture:  25, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
                 1090	tempreture:  24, AC_state=2, Fan_state=1, HEAT=0, COOL=1, CRS= 4
-                1095	tempreture:  24, AC_state=1, Fan_state=0, HEAT=0, COOL=1, CRS= 4
-                1100	tempreture:  23, AC_state=1, Fan_state=0, HEAT=0, COOL=1, CRS= 4
-                1105	tempreture:  23, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
+                1095	tempreture:  24, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
+                1100	tempreture:  23, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                 1110	tempreture:  22, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                 1120	tempreture:  21, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                 1130	tempreture:  20, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
@@ -132,9 +124,8 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                 1170	tempreture:  16, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                 1180	tempreture:  15, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
                 1190	tempreture:  14, AC_state=1, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                1195	tempreture:  14, AC_state=3, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                1200	tempreture:  13, AC_state=3, Fan_state=0, HEAT=0, COOL=0, CRS= 0
-                1205	tempreture:  13, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
+                1195	tempreture:  14, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
+                1200	tempreture:  13, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                 1210	tempreture:  12, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                 1220	tempreture:  11, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0
                 1230	tempreture:  10, AC_state=3, Fan_state=0, HEAT=1, COOL=0, CRS= 0

@@ -27,25 +27,38 @@ module AC(clk,
             case (state)
                 `S1:
                 begin
-                    cooler                <= 0;
-                    heater                <= 0;
-                    if (sensor > 35)state <= `S2;
-                    if (sensor < 15)state <= `S3;
+                    if (sensor > 35) state <= `S2;
+                    if (sensor < 15) state <= `S3;
                 end
                 `S2:
                 begin
-                    heater                 <= 0;
-                    cooler                 <= 1;
                     if (sensor < 25) state <= `S1;
                 end
                 `S3:
                 begin
-                    heater                 <= 1;
-                    cooler                 <= 0;
                     if (sensor > 30) state <= `S1;
                 end
             endcase
-            
         end
+    end
+    
+    always @(state) begin
+        case (state)
+            `S1:
+            begin
+                cooler <= 0;
+                heater <= 0;
+            end
+            `S2:
+            begin
+                heater <= 0;
+                cooler <= 1;
+            end
+            `S3:
+            begin
+                heater <= 1;
+                cooler <= 0;
+            end
+        endcase
     end
 endmodule
