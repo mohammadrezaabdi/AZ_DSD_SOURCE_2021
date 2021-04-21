@@ -3,16 +3,17 @@
 `define S2 2'b10
 `define S3 2'b11
 
-module AC(clk,
+module Fan(clk,
           sensor,
           rstn,
           CRS_o,
           );
-    input clk, sensor, rstn;
-    output [3:0]CRS_o;
+    input clk, rstn;
+    input [7:0] sensor;
+    output [3:0] CRS_o;
     
     reg [1:0] state;
-    reg [3:0]CRS;
+    reg [3:0] CRS;
     
     assign CRS_o = CRS;
     
@@ -30,7 +31,7 @@ module AC(clk,
                 end
                 `S1:
                 begin
-                    CRS                   <= 4;
+                    CRS                    <= 4;
                     if (sensor > 40) state <= `S2;
                 end
                 `S2:
