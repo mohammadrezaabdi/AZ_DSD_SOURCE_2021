@@ -8,7 +8,7 @@ module AC(clk,
           cool_o,
           heat_o);
     input clk, rstn;
-    input [7:0] sensor;
+    input signed [7:0] sensor;
     output cool_o,heat_o;
     
     reg [1:0] state;
@@ -19,10 +19,11 @@ module AC(clk,
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn)begin
-            state <= `S1;
+            state  <= `S1;
+            cooler <= 0;
+            heater <= 0;
         end
         else begin
-            
             case (state)
                 `S1:
                 begin

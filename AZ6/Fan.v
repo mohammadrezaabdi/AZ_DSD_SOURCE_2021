@@ -9,7 +9,7 @@ module Fan(clk,
           CRS_o,
           );
     input clk, rstn;
-    input [7:0] sensor;
+    input signed [7:0] sensor;
     output [3:0] CRS_o;
     
     reg [1:0] state;
@@ -33,6 +33,7 @@ module Fan(clk,
                 begin
                     CRS                    <= 4;
                     if (sensor > 40) state <= `S2;
+                    if (sensor < 25) state <= `OUT;
                 end
                 `S2:
                 begin

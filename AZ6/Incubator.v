@@ -6,8 +6,9 @@ module Incubator (clk,
                   CRS);
     
     input clk,rstn;
-    input [7:0]sensor;
-    output heater,cooler,CRS;
+    input signed [7:0]sensor;
+    output heater,cooler;
+    output [3:0] CRS;
     
     
     AC ac (

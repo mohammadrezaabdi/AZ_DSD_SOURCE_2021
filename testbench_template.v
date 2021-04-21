@@ -37,6 +37,7 @@ module testbench;
 
     initial begin
         // your bench here
+        $finish;
     end
 
 
