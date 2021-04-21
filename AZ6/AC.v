@@ -5,13 +5,16 @@
 module AC(clk,
           sensor,
           rstn,
-          out_cool,
-          out_heat);
+          cool_o,
+          heat_o);
     input clk, sensor, rstn;
-    output out_cool,out_heat;
+    output cool_o,heat_o;
     
     reg [1:0] state;
     reg cooler,heater;
+
+    assign cool_o= cooler;
+    assign heat_o= heater;
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn)begin
