@@ -6,43 +6,46 @@
 module AC(clk,
           sensor,
           rstn,
-          out_CRS,
+          CRS_o,
           );
     input clk, sensor, rstn;
-    output out_CRS;
+    output [3:0]CRS_o;
     
     reg [1:0] state;
-    reg CRS;
-    assign = 
+    reg [3:0]CRS;
+    
+    assign CRS_o = CRS;
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn)begin
-            state <= `S1;
+            state <= `OUT;
+            CRS   <= 0;
         end
         else begin
-            
             case (state)
+                `OUT:
+                begin
+                    CRS                    <= 0;
+                    if (sensor > 35) state <= `S1;
+                end
                 `S1:
                 begin
-                    cooler                <= 0;
-                    heater                <= 0;
-                    if (sensor > 35)state <= `S2;
-                    if (sensor < 15)state <= `S3;
+                    CRS                   <= 4;
+                    if (sensor > 40) state <= `S2;
                 end
                 `S2:
                 begin
-                    heater                 <= 0;
-                    cooler                 <= 1;
-                    if (sensor < 25) state <= `S1;
+                    CRS                    <= 6;
+                    if (sensor > 45) state <= `S3;
+                    if (sensor < 35) state <= `S1;
+                    
                 end
                 `S3:
                 begin
-                    heater                 <= 1;
-                    cooler                 <= 0;
-                    if (sensor > 30) state <= `S1;
+                    CRS                    <= 8;
+                    if (sensor < 40) state <= `S2;
                 end
             endcase
-            
         end
     end
 endmodule
