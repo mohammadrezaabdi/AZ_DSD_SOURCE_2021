@@ -1,23 +1,41 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
                    0	 u0:xxxxxxx -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
-                  10	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
-                  15	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:3, u0_counter: 0, u1_counter: 0, channel:1
-                  25	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 1, u1_counter: 0, channel:1
-                  35	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 2, u1_counter: 1, channel:0
-                  45	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 3, u1_counter: 2, channel:0
-                  55	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 4, u1_counter: 3, channel:0
-                  65	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 5, u1_counter: 4, channel:0
-                  75	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 6, u1_counter: 5, channel:1
-                  85	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 7, u1_counter: 6, channel:1
-                  95	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 8, u1_counter: 7, channel:1
-                 105	 u0:1100001 -> u1-v:zzzzzzz(0), u0_state:2, u1_state:1, u0_counter: 0, u1_counter: 8, channel:1
-                 115	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 1, u1_counter: 0, channel:1
-                 125	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 2, u1_counter: 1, channel:0
-                 135	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 3, u1_counter: 2, channel:0
-                 145	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 4, u1_counter: 3, channel:0
-                 155	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 5, u1_counter: 4, channel:0
-                 165	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 6, u1_counter: 5, channel:1
-                 175	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 7, u1_counter: 6, channel:1
-                 185	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 8, u1_counter: 7, channel:1
-                 195	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 0, u1_counter: 8, channel:1
-                 205	 u0:1100001 -> u1-v:1100001(1), u0_state:2, u1_state:1, u0_counter: 1, u1_counter: 0, channel:1
+                  10	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
+                  15	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:0, u0_counter: 0, u1_counter: 0, channel:1
+                  25	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 1, u1_counter: 0, channel:1
+                  35	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 2, u1_counter: 1, channel:1
+                  45	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 3, u1_counter: 2, channel:0
+                  55	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 4, u1_counter: 3, channel:1
+                  65	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 5, u1_counter: 4, channel:1
+                  75	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 6, u1_counter: 5, channel:0
+                  85	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 7, u1_counter: 6, channel:1
+                  95	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 8, u1_counter: 7, channel:1
+                 105	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 9, u1_counter: 8, channel:1
+                 115	 u0:1011011 -> u1-v:1011011(1), u0_state:1, u1_state:1, u0_counter:10, u1_counter: 9, channel:1
+                 125	 u0:1011011 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
+                 130	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
+                 135	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:0, u0_counter: 0, u1_counter: 0, channel:1
+                 145	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 1, u1_counter: 0, channel:0
+                 155	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 2, u1_counter: 1, channel:0
+                 165	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 3, u1_counter: 2, channel:0
+                 175	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 4, u1_counter: 3, channel:0
+                 185	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 5, u1_counter: 4, channel:1
+                 195	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 6, u1_counter: 5, channel:0
+                 205	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 7, u1_counter: 6, channel:0
+                 215	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 8, u1_counter: 7, channel:1
+                 225	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 9, u1_counter: 8, channel:1
+                 235	 u0:0010000 -> u1-v:0010000(1), u0_state:1, u1_state:1, u0_counter:10, u1_counter: 9, channel:1
+                 245	 u0:0010000 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
+                 250	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0
+                 255	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:0, u0_counter: 0, u1_counter: 0, channel:1
+                 265	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 1, u1_counter: 0, channel:0
+                 275	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 2, u1_counter: 1, channel:1
+                 285	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 3, u1_counter: 2, channel:1
+                 295	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 4, u1_counter: 3, channel:0
+                 305	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 5, u1_counter: 4, channel:0
+                 315	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 6, u1_counter: 5, channel:1
+                 325	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 7, u1_counter: 6, channel:0
+                 335	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 8, u1_counter: 7, channel:1
+                 345	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:1, u1_state:1, u0_counter: 9, u1_counter: 8, channel:1
+                 355	 u0:0100110 -> u1-v:0100110(1), u0_state:1, u1_state:1, u0_counter:10, u1_counter: 9, channel:1
+                 365	 u0:0100110 -> u1-v:zzzzzzz(0), u0_state:0, u1_state:0, u0_counter: 0, u1_counter: 0, channel:0

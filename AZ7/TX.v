@@ -1,6 +1,5 @@
-`define RST 2'b00
-`define SEND 2'b10
-`define IDLE 2'b11
+`define RST 1'b0
+`define SEND 1'b1
 
 module TX (clk,
            rstn,
@@ -14,27 +13,20 @@ module TX (clk,
     input [BIT_LEN - 1:0] data_in;
     output reg channel_out;
     
-    reg [1:0] state;
+    reg state;
     reg [BIT_LEN - 1:0] buffer;
     reg [$clog2(BIT_LEN + 1 + 1 + 1):0] send_idx;
     
     always @(posedge clk or negedge rstn) begin
-        // $display("tx:%d", channel_out);
         if (!rstn) begin
             state <= `RST;
         end
         else begin
             case (state)
-                `IDLE:
-                begin
-                    if (start) begin
-                        state <= `SEND;
-                    end
-                end
                 `SEND:
                 begin
-                    if (send_idx > BIT_LEN + 1) begin
-                        state <= `IDLE;
+                    if (send_idx > BIT_LEN + 2) begin
+                        state <= `RST;
                     end
                     else begin
                         send_idx <= send_idx + 1;
@@ -45,9 +37,6 @@ module TX (clk,
                     if (start) begin
                         state <= `SEND;
                     end
-                    else begin
-                        state <= `IDLE;
-                    end
                 end
             endcase
         end
@@ -55,10 +44,6 @@ module TX (clk,
     
     always @(state or send_idx) begin
         case (state)
-            `IDLE:
-            begin
-                // do nothing
-            end
             `SEND:
             begin
                 if (send_idx == 0) begin
@@ -71,9 +56,8 @@ module TX (clk,
                 else if (send_idx == BIT_LEN + 1) begin
                     channel_out <= ^buffer;
                 end
-                else if (send_idx == BIT_LEN + 2) begin
+                else if (send_idx > BIT_LEN + 1) begin
                     channel_out <= 1;
-                    send_idx    <= 0;
                 end
             end
             `RST:

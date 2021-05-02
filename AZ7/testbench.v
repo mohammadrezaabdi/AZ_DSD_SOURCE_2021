@@ -58,15 +58,22 @@ module testbench();
         end
     end
     
+    integer i;
     initial begin
         u0_rstn = 0;
         u1_rstn = 0;
-        #clk_c
-        u0_rstn  = 1;
-        u1_rstn  = 1;
-        u0_start = 1;
-        u0_in    = {BIT_LEN{$random(seed)}};
-        #200
+        #clk_c;
+        u0_rstn = 1;
+        u1_rstn = 1;
+        for (i = 0; i < 3; i++) begin
+            u0_start = 1;
+            u0_in    = {BIT_LEN{$random(seed)}};
+            #clk_c
+            u0_start = 0;
+            while(uart1.rx.state || uart0.tx.state) begin
+                #clk_c;
+            end
+        end
         $finish;
     end
     
