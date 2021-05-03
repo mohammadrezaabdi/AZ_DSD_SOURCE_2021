@@ -46,11 +46,11 @@ module RX (clk,
         case (state)
             `RECV:
             begin
-                if (fetch_idx <= BIT_LEN && fetch_idx > 0) begin
-                    buffer[fetch_idx - 1] <= channel_in;
-                end
-                else if (fetch_idx == BIT_LEN + 1) begin
+                if (fetch_idx == 1)  begin
                     parity <= channel_in;
+                end
+                else if (1 < fetch_idx && fetch_idx <= BIT_LEN + 1) begin
+                    buffer[fetch_idx - 2] <= channel_in;
                 end
                 else if (channel_in && fetch_idx == BIT_LEN + 2) begin
                     data_out <= buffer;
@@ -59,7 +59,6 @@ module RX (clk,
             end
             `RST:
             begin
-                parity    <= 0;
                 buffer    <= 0;
                 fetch_idx <= 0;
             end

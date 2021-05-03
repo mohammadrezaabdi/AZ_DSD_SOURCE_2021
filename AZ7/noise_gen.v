@@ -8,10 +8,10 @@ module NOISE_GENERATOR(clk,
     
     integer counter;
     
-    assign sig_out = (en) ? ((counter == 5) || sig_in) : sig_in;
+    assign sig_out = (en) ? ((counter == 5) ? !sig_in : sig_in) : sig_in;
     
     always @(posedge clk) begin
-        if (counter < 10) begin
+        if (counter < 15) begin
             counter = counter + 1;
         end
         else begin

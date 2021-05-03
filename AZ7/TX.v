@@ -50,11 +50,11 @@ module TX (clk,
                     buffer      <= data_in;
                     channel_out <= 1;
                 end
-                else if (0 < send_idx && send_idx <= BIT_LEN) begin
-                    channel_out <= buffer[send_idx - 1];
-                end
-                else if (send_idx == BIT_LEN + 1) begin
+                else if (send_idx == 1) begin
                     channel_out <= ^buffer;
+                end
+                else if (1 < send_idx && send_idx <= BIT_LEN + 1) begin
+                    channel_out <= buffer[send_idx - 2];
                 end
                 else if (send_idx > BIT_LEN + 1) begin
                     channel_out <= 1;

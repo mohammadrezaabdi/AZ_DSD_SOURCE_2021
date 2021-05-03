@@ -92,7 +92,7 @@ module testbench();
             while(uart1.rx.state || uart0.tx.state) begin
                 #clk_c;
             end
-            if (u0_in == u1_out) begin
+            if (u0_in == u1_out && u1_valid) begin
                 $display("#%d (u0:%b -> u1-v:%b(%b)) test passed", i, u0_in, u1_out, u1_valid);
             end
             else begin
@@ -109,7 +109,7 @@ module testbench();
             while(uart0.rx.state || uart1.tx.state) begin
                 #clk_c;
             end
-            if (u1_in == u0_out) begin
+            if (u1_in == u0_out && u0_valid) begin
                 $display("#%d (u1:%b -> u0-v:%b(%b)) test passed", i, u1_in, u0_out, u0_valid);
             end
             else begin
@@ -117,49 +117,46 @@ module testbench();
             end
         end
         
-        // n      = 10;
-        // ng0_en = 1;
-        // #clk_c
-        // $display("test connection with error uart0 -> uart1");
-        // for (i = 0; i < n; i++) begin
-        //     u0_start = 1;
-        //     u0_in    = {BIT_LEN{$random(seed)}};
-        //     #clk_c
-        //     u0_start = 0;
-        //     while(uart1.rx.state || uart0.tx.state) begin
-        //         #clk_c;
-        //     end
-        //     if (u0_in == u1_out) begin
-        //         $display("#%d (u0:%b -> u1-v:%b(%b)) test passed", i, u0_in, u1_out, u1_valid);
-        //     end
-        //     else begin
-        //         $display("#%d (u0:%b -> u1-v:%b(%b)) test failed", i, u0_in, u1_out, u1_valid);
-        //     end
-        // end
+        n = 10;
         
-        // ng1_en = 1;
-        // #clk_c;
-        // $display("test connection with error uart0 -> uart1");
-        // for (i = 0; i < n; i++) begin
-        //     u1_start = 1;
-        //     u1_in    = {BIT_LEN{$random(seed)}};
-        //     #clk_c
-        //     u1_start = 0;
-        //     while(uart0.rx.state || uart1.tx.state) begin
-        //         #clk_c;
-        //     end
-        //     if (u1_in == u0_out) begin
-        //         $display("#%d (u1:%b -> u0-v:%b(%b)) test passed", i, u1_in, u0_out, u0_valid);
-        //     end
-        //     else begin
-        //         $display("#%d (u1:%b -> u0-v:%b(%b)) test failed", i, u1_in, u0_out, u0_valid);
-        //     end
-        // end
+        ng0_en = 1;
+        #clk_c
+        $display("test connection with noise uart0 -> uart1");
+        for (i = 0; i < n; i++) begin
+            u0_start = 1;
+            u0_in    = {BIT_LEN{$random(seed)}};
+            #clk_c
+            u0_start = 0;
+            while(uart1.rx.state || uart0.tx.state) begin
+                #clk_c;
+            end
+            if (u0_in == u1_out && u1_valid) begin
+                $display("#%d (u0:%b -> u1-v:%b(%b)) test passed", i, u0_in, u1_out, u1_valid);
+            end
+            else begin
+                $display("#%d (u0:%b -> u1-v:%b(%b)) test failed (noise detected)", i, u0_in, u1_out, u1_valid);
+            end
+        end
+        
+        ng1_en = 1;
+        #clk_c;
+        $display("test connection with noise uart0 -> uart1");
+        for (i = 0; i < n; i++) begin
+            u1_start = 1;
+            u1_in    = {BIT_LEN{$random(seed)}};
+            #clk_c
+            u1_start = 0;
+            while(uart0.rx.state || uart1.tx.state) begin
+                #clk_c;
+            end
+            if (u1_in == u0_out && u0_valid) begin
+                $display("#%d (u1:%b -> u0-v:%b(%b)) test passed", i, u1_in, u0_out, u0_valid);
+            end
+            else begin
+                $display("#%d (u1:%b -> u0-v:%b(%b)) test failed (noise detected)", i, u1_in, u0_out, u0_valid);
+            end
+        end
         $finish;
     end
-    
-    
-    // initial
-    //     $monitor($time, "\t u0:%b -> u1-v:%b(%b), u0_state:%d, u1_state:%d, u0_counter:%d, u1_counter:%d, channel:%b", u0_in, u1_out, uart1.rx.is_valid, uart0.tx.state, uart1.rx.state, uart0.tx.send_idx, uart1.rx.fetch_idx, u01_channel);
     
 endmodule
