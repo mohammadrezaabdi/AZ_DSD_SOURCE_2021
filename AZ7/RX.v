@@ -59,11 +59,9 @@ module RX (clk,
             end
             `RST:
             begin
-                is_valid  <= 0;
                 parity    <= 0;
                 buffer    <= 0;
                 fetch_idx <= 0;
-                data_out  <= {BIT_LEN{1'bz}};
             end
         endcase
     end
