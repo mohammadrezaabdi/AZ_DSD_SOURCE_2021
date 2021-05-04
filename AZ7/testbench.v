@@ -140,7 +140,7 @@ module testbench();
         
         ng1_en = 1;
         #clk_c;
-        $display("test connection with noise uart0 -> uart1");
+        $display("test connection with noise uart1 -> uart0");
         for (i = 0; i < n; i++) begin
             u1_start = 1;
             u1_in    = {BIT_LEN{$random(seed)}};

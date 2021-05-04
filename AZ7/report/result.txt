@@ -1,125 +1,125 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
 test connection uart0 -> uart1
-#          0 (u0:0100110 -> u1-v:0100110(1)) test passed
-#          1 (u0:1100100 -> u1-v:1100100(1)) test passed
-#          2 (u0:0010110 -> u1-v:0010110(1)) test passed
-#          3 (u0:1110000 -> u1-v:1110000(1)) test passed
-#          4 (u0:0111000 -> u1-v:0111000(1)) test passed
-#          5 (u0:0111011 -> u1-v:0111011(1)) test passed
-#          6 (u0:1101111 -> u1-v:1101111(1)) test passed
-#          7 (u0:0110010 -> u1-v:0110010(1)) test passed
-#          8 (u0:1101111 -> u1-v:1101111(1)) test passed
-#          9 (u0:1000110 -> u1-v:1000110(1)) test passed
-#         10 (u0:1111011 -> u1-v:1111011(1)) test passed
-#         11 (u0:1001101 -> u1-v:1001101(1)) test passed
-#         12 (u0:1011000 -> u1-v:1011000(1)) test passed
-#         13 (u0:0010001 -> u1-v:0010001(1)) test passed
-#         14 (u0:0110111 -> u1-v:0110111(1)) test passed
-#         15 (u0:0111011 -> u1-v:0111011(1)) test passed
-#         16 (u0:1101011 -> u1-v:1101011(1)) test passed
-#         17 (u0:0100110 -> u1-v:0100110(1)) test passed
+#          0 (u0:1010001 -> u1-v:1010001(1)) test passed
+#          1 (u0:1000110 -> u1-v:1000110(1)) test passed
+#          2 (u0:0100001 -> u1-v:0100001(1)) test passed
+#          3 (u0:1011010 -> u1-v:1011010(1)) test passed
+#          4 (u0:0001001 -> u1-v:0001001(1)) test passed
+#          5 (u0:1110111 -> u1-v:1110111(1)) test passed
+#          6 (u0:0111111 -> u1-v:0111111(1)) test passed
+#          7 (u0:1000001 -> u1-v:1000001(1)) test passed
+#          8 (u0:1001010 -> u1-v:1001010(1)) test passed
+#          9 (u0:1001101 -> u1-v:1001101(1)) test passed
+#         10 (u0:0101100 -> u1-v:0101100(1)) test passed
+#         11 (u0:0011110 -> u1-v:0011110(1)) test passed
+#         12 (u0:1011110 -> u1-v:1011110(1)) test passed
+#         13 (u0:0110110 -> u1-v:0110110(1)) test passed
+#         14 (u0:1100000 -> u1-v:1100000(1)) test passed
+#         15 (u0:0000100 -> u1-v:0000100(1)) test passed
+#         16 (u0:1110100 -> u1-v:1110100(1)) test passed
+#         17 (u0:0100011 -> u1-v:0100011(1)) test passed
 #         18 (u0:1100101 -> u1-v:1100101(1)) test passed
-#         19 (u0:1010001 -> u1-v:1010001(1)) test passed
-#         20 (u0:0011000 -> u1-v:0011000(1)) test passed
-#         21 (u0:0100111 -> u1-v:0100111(1)) test passed
-#         22 (u0:1110110 -> u1-v:1110110(1)) test passed
-#         23 (u0:0110010 -> u1-v:0110010(1)) test passed
-#         24 (u0:1001110 -> u1-v:1001110(1)) test passed
-#         25 (u0:1001011 -> u1-v:1001011(1)) test passed
-#         26 (u0:1100001 -> u1-v:1100001(1)) test passed
-#         27 (u0:1001101 -> u1-v:1001101(1)) test passed
-#         28 (u0:0101011 -> u1-v:0101011(1)) test passed
-#         29 (u0:0000011 -> u1-v:0000011(1)) test passed
-#         30 (u0:0101101 -> u1-v:0101101(1)) test passed
-#         31 (u0:1101101 -> u1-v:1101101(1)) test passed
-#         32 (u0:1011110 -> u1-v:1011110(1)) test passed
-#         33 (u0:1101111 -> u1-v:1101111(1)) test passed
-#         34 (u0:0001100 -> u1-v:0001100(1)) test passed
-#         35 (u0:1001000 -> u1-v:1001000(1)) test passed
+#         19 (u0:0010110 -> u1-v:0010110(1)) test passed
+#         20 (u0:0111001 -> u1-v:0111001(1)) test passed
+#         21 (u0:1001101 -> u1-v:1001101(1)) test passed
+#         22 (u0:1111011 -> u1-v:1111011(1)) test passed
+#         23 (u0:1101101 -> u1-v:1101101(1)) test passed
+#         24 (u0:1011101 -> u1-v:1011101(1)) test passed
+#         25 (u0:0011010 -> u1-v:0011010(1)) test passed
+#         26 (u0:1111001 -> u1-v:1111001(1)) test passed
+#         27 (u0:1011000 -> u1-v:1011000(1)) test passed
+#         28 (u0:1110111 -> u1-v:1110111(1)) test passed
+#         29 (u0:0100100 -> u1-v:0100100(1)) test passed
+#         30 (u0:0011010 -> u1-v:0011010(1)) test passed
+#         31 (u0:1110110 -> u1-v:1110110(1)) test passed
+#         32 (u0:1001000 -> u1-v:1001000(1)) test passed
+#         33 (u0:0010001 -> u1-v:0010001(1)) test passed
+#         34 (u0:1110000 -> u1-v:1110000(1)) test passed
+#         35 (u0:1101011 -> u1-v:1101011(1)) test passed
 #         36 (u0:1010011 -> u1-v:1010011(1)) test passed
-#         37 (u0:1101001 -> u1-v:1101001(1)) test passed
-#         38 (u0:1100100 -> u1-v:1100100(1)) test passed
+#         37 (u0:0111100 -> u1-v:0111100(1)) test passed
+#         38 (u0:0111101 -> u1-v:0111101(1)) test passed
 #         39 (u0:0001101 -> u1-v:0001101(1)) test passed
-#         40 (u0:1000110 -> u1-v:1000110(1)) test passed
-#         41 (u0:1010010 -> u1-v:1010010(1)) test passed
-#         42 (u0:0010100 -> u1-v:0010100(1)) test passed
-#         43 (u0:1100011 -> u1-v:1100011(1)) test passed
-#         44 (u0:1011010 -> u1-v:1011010(1)) test passed
-#         45 (u0:1100000 -> u1-v:1100000(1)) test passed
-#         46 (u0:1011010 -> u1-v:1011010(1)) test passed
-#         47 (u0:1010111 -> u1-v:1010111(1)) test passed
-#         48 (u0:0111011 -> u1-v:0111011(1)) test passed
-#         49 (u0:0100111 -> u1-v:0100111(1)) test passed
+#         40 (u0:0111111 -> u1-v:0111111(1)) test passed
+#         41 (u0:1100001 -> u1-v:1100001(1)) test passed
+#         42 (u0:1011011 -> u1-v:1011011(1)) test passed
+#         43 (u0:1101000 -> u1-v:1101000(1)) test passed
+#         44 (u0:1110110 -> u1-v:1110110(1)) test passed
+#         45 (u0:1001010 -> u1-v:1001010(1)) test passed
+#         46 (u0:1111010 -> u1-v:1111010(1)) test passed
+#         47 (u0:1101000 -> u1-v:1101000(1)) test passed
+#         48 (u0:0001101 -> u1-v:0001101(1)) test passed
+#         49 (u0:0101010 -> u1-v:0101010(1)) test passed
 test connection uart1 -> uart0
-#          0 (u1:0011111 -> u0-v:0011111(1)) test passed
-#          1 (u1:0100101 -> u0-v:0100101(1)) test passed
-#          2 (u1:1110011 -> u0-v:1110011(1)) test passed
-#          3 (u1:0001101 -> u0-v:0001101(1)) test passed
-#          4 (u1:0011010 -> u0-v:0011010(1)) test passed
-#          5 (u1:1101001 -> u0-v:1101001(1)) test passed
-#          6 (u1:0001000 -> u0-v:0001000(1)) test passed
-#          7 (u1:1100110 -> u0-v:1100110(1)) test passed
-#          8 (u1:0001001 -> u0-v:0001001(1)) test passed
-#          9 (u1:0011011 -> u0-v:0011011(1)) test passed
-#         10 (u1:1101111 -> u0-v:1101111(1)) test passed
-#         11 (u1:1110100 -> u0-v:1110100(1)) test passed
-#         12 (u1:1101100 -> u0-v:1101100(1)) test passed
-#         13 (u1:1010101 -> u0-v:1010101(1)) test passed
-#         14 (u1:1111011 -> u0-v:1111011(1)) test passed
-#         15 (u1:1110111 -> u0-v:1110111(1)) test passed
-#         16 (u1:0001010 -> u0-v:0001010(1)) test passed
-#         17 (u1:1100100 -> u0-v:1100100(1)) test passed
-#         18 (u1:1011001 -> u0-v:1011001(1)) test passed
-#         19 (u1:0010101 -> u0-v:0010101(1)) test passed
-#         20 (u1:0101001 -> u0-v:0101001(1)) test passed
-#         21 (u1:0010001 -> u0-v:0010001(1)) test passed
-#         22 (u1:0101111 -> u0-v:0101111(1)) test passed
-#         23 (u1:1000100 -> u0-v:1000100(1)) test passed
-#         24 (u1:0111011 -> u0-v:0111011(1)) test passed
-#         25 (u1:0011000 -> u0-v:0011000(1)) test passed
-#         26 (u1:1110111 -> u0-v:1110111(1)) test passed
-#         27 (u1:1110000 -> u0-v:1110000(1)) test passed
-#         28 (u1:1110000 -> u0-v:1110000(1)) test passed
-#         29 (u1:1010110 -> u0-v:1010110(1)) test passed
-#         30 (u1:0110110 -> u0-v:0110110(1)) test passed
-#         31 (u1:0100101 -> u0-v:0100101(1)) test passed
-#         32 (u1:1110100 -> u0-v:1110100(1)) test passed
-#         33 (u1:0001101 -> u0-v:0001101(1)) test passed
-#         34 (u1:0011011 -> u0-v:0011011(1)) test passed
-#         35 (u1:1011101 -> u0-v:1011101(1)) test passed
-#         36 (u1:0110101 -> u0-v:0110101(1)) test passed
-#         37 (u1:1010001 -> u0-v:1010001(1)) test passed
-#         38 (u1:0100110 -> u0-v:0100110(1)) test passed
-#         39 (u1:0110101 -> u0-v:0110101(1)) test passed
-#         40 (u1:0010010 -> u0-v:0010010(1)) test passed
-#         41 (u1:1111101 -> u0-v:1111101(1)) test passed
-#         42 (u1:1101000 -> u0-v:1101000(1)) test passed
-#         43 (u1:1001111 -> u0-v:1001111(1)) test passed
-#         44 (u1:0111000 -> u0-v:0111000(1)) test passed
-#         45 (u1:0111101 -> u0-v:0111101(1)) test passed
-#         46 (u1:0000001 -> u0-v:0000001(1)) test passed
-#         47 (u1:1111010 -> u0-v:1111010(1)) test passed
-#         48 (u1:0011011 -> u0-v:0011011(1)) test passed
-#         49 (u1:0010001 -> u0-v:0010001(1)) test passed
-test connection with error uart0 -> uart1
-#          0 (u0:1100101 -> u1-v:1100100(0)) test failed (noise detected)
-#          1 (u0:1110101 -> u1-v:1100101(0)) test failed (noise detected)
-#          2 (u0:1010011 -> u1-v:1010011(1)) test passed
-#          3 (u0:1011001 -> u1-v:0110010(1)) test failed (noise detected)
-#          4 (u0:0000100 -> u1-v:0000100(1)) test passed
-#          5 (u0:1110110 -> u1-v:1110110(0)) test failed (noise detected)
-#          6 (u0:0111110 -> u1-v:0110110(0)) test failed (noise detected)
-#          7 (u0:1000101 -> u1-v:0110110(0)) test failed (noise detected)
-#          8 (u0:1111100 -> u1-v:1111100(1)) test passed
-#          9 (u0:0110011 -> u1-v:0110011(0)) test failed (noise detected)
-test connection with error uart0 -> uart1
-#          0 (u1:0110100 -> u0-v:0110000(0)) test failed (noise detected)
-#          1 (u1:1000000 -> u0-v:0000000(0)) test failed (noise detected)
-#          2 (u1:1001111 -> u0-v:1001111(1)) test passed
-#          3 (u1:0011010 -> u0-v:0011010(1)) test passed
-#          4 (u1:0111000 -> u0-v:0111100(0)) test failed (noise detected)
-#          5 (u1:0110000 -> u0-v:1110000(0)) test failed (noise detected)
-#          6 (u1:1010110 -> u0-v:1010110(1)) test passed
-#          7 (u1:0000111 -> u0-v:0000111(1)) test passed
-#          8 (u1:1101001 -> u0-v:1101101(0)) test failed (noise detected)
-#          9 (u1:0011110 -> u0-v:1011110(0)) test failed (noise detected)
+#          0 (u1:1100100 -> u0-v:1100100(1)) test passed
+#          1 (u1:0000001 -> u0-v:0000001(1)) test passed
+#          2 (u1:1010011 -> u0-v:1010011(1)) test passed
+#          3 (u1:0110001 -> u0-v:0110001(1)) test passed
+#          4 (u1:1111101 -> u0-v:1111101(1)) test passed
+#          5 (u1:0111011 -> u0-v:0111011(1)) test passed
+#          6 (u1:0010100 -> u0-v:0010100(1)) test passed
+#          7 (u1:1111000 -> u0-v:1111000(1)) test passed
+#          8 (u1:0111110 -> u0-v:0111110(1)) test passed
+#          9 (u1:1100010 -> u0-v:1100010(1)) test passed
+#         10 (u1:1111000 -> u0-v:1111000(1)) test passed
+#         11 (u1:1011100 -> u0-v:1011100(1)) test passed
+#         12 (u1:1100010 -> u0-v:1100010(1)) test passed
+#         13 (u1:1001001 -> u0-v:1001001(1)) test passed
+#         14 (u1:0000101 -> u0-v:0000101(1)) test passed
+#         15 (u1:1010111 -> u0-v:1010111(1)) test passed
+#         16 (u1:1110010 -> u0-v:1110010(1)) test passed
+#         17 (u1:1110000 -> u0-v:1110000(1)) test passed
+#         18 (u1:0101111 -> u0-v:0101111(1)) test passed
+#         19 (u1:1111101 -> u0-v:1111101(1)) test passed
+#         20 (u1:1111011 -> u0-v:1111011(1)) test passed
+#         21 (u1:1010111 -> u0-v:1010111(1)) test passed
+#         22 (u1:1110110 -> u0-v:1110110(1)) test passed
+#         23 (u1:0110011 -> u0-v:0110011(1)) test passed
+#         24 (u1:0010000 -> u0-v:0010000(1)) test passed
+#         25 (u1:1110010 -> u0-v:1110010(1)) test passed
+#         26 (u1:0000111 -> u0-v:0000111(1)) test passed
+#         27 (u1:0100100 -> u0-v:0100100(1)) test passed
+#         28 (u1:1101000 -> u0-v:1101000(1)) test passed
+#         29 (u1:1111110 -> u0-v:1111110(1)) test passed
+#         30 (u1:1011001 -> u0-v:1011001(1)) test passed
+#         31 (u1:0101101 -> u0-v:0101101(1)) test passed
+#         32 (u1:0111011 -> u0-v:0111011(1)) test passed
+#         33 (u1:0010011 -> u0-v:0010011(1)) test passed
+#         34 (u1:0111010 -> u0-v:0111010(1)) test passed
+#         35 (u1:0111010 -> u0-v:0111010(1)) test passed
+#         36 (u1:0011110 -> u0-v:0011110(1)) test passed
+#         37 (u1:1011111 -> u0-v:1011111(1)) test passed
+#         38 (u1:1010010 -> u0-v:1010010(1)) test passed
+#         39 (u1:1000001 -> u0-v:1000001(1)) test passed
+#         40 (u1:0011100 -> u0-v:0011100(1)) test passed
+#         41 (u1:1000010 -> u0-v:1000010(1)) test passed
+#         42 (u1:1110110 -> u0-v:1110110(1)) test passed
+#         43 (u1:1100000 -> u0-v:1100000(1)) test passed
+#         44 (u1:0111101 -> u0-v:0111101(1)) test passed
+#         45 (u1:0111001 -> u0-v:0111001(1)) test passed
+#         46 (u1:1110000 -> u0-v:1110000(1)) test passed
+#         47 (u1:1010000 -> u0-v:1010000(1)) test passed
+#         48 (u1:0101111 -> u0-v:0101111(1)) test passed
+#         49 (u1:1110100 -> u0-v:1110100(1)) test passed
+test connection with noise uart0 -> uart1
+#          0 (u0:0000010 -> u1-v:0000011(0)) test failed (noise detected)
+#          1 (u0:0100101 -> u1-v:0110101(0)) test failed (noise detected)
+#          2 (u0:1010110 -> u1-v:1010110(1)) test passed
+#          3 (u0:1010110 -> u1-v:0101100(1)) test failed (noise detected)
+#          4 (u0:1000110 -> u1-v:1000110(1)) test passed
+#          5 (u0:0010000 -> u1-v:0010000(0)) test failed (noise detected)
+#          6 (u0:1110000 -> u1-v:1111000(0)) test failed (noise detected)
+#          7 (u0:1001111 -> u1-v:1111000(0)) test failed (noise detected)
+#          8 (u0:1000110 -> u1-v:1000110(1)) test passed
+#          9 (u0:0100101 -> u1-v:0100101(0)) test failed (noise detected)
+test connection with noise uart1 -> uart0
+#          0 (u1:0000111 -> u0-v:0000011(0)) test failed (noise detected)
+#          1 (u1:1100010 -> u0-v:0100010(0)) test failed (noise detected)
+#          2 (u1:1011010 -> u0-v:1011010(1)) test passed
+#          3 (u1:1010001 -> u0-v:1010001(1)) test passed
+#          4 (u1:1101101 -> u0-v:1101001(0)) test failed (noise detected)
+#          5 (u1:0100100 -> u0-v:1100100(0)) test failed (noise detected)
+#          6 (u1:0110001 -> u0-v:0110001(1)) test passed
+#          7 (u1:0000001 -> u0-v:0000001(1)) test passed
+#          8 (u1:1111001 -> u0-v:1111101(0)) test failed (noise detected)
+#          9 (u1:0011101 -> u0-v:1011101(0)) test failed (noise detected)
