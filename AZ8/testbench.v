@@ -34,8 +34,8 @@ module testbench();
     end
     
     initial begin
-        $readmemb("memory.mem", pipe.memory.mem, 0, MEM_SIZE-1);
-        $readmemb("inst_test1.mem", pipe.ifm.inst_mem, 0, INST_CAP-1);
+        $readmemb("report/memory.mem", pipe.memory.mem, 0, MEM_SIZE-1);
+        $readmemb("report/is.mem", pipe.ifm.inst_mem, 0, INST_CAP-1);
     end
     
     initial begin
@@ -46,8 +46,5 @@ module testbench();
         $writememb("report/result.mem", pipe.memory.mem);
         $finish;
     end
-    
-    // initial
-        // $monitor($time, "\t pipe.memory.mem[0]=%b",pipe.memory.mem[0]);
     
 endmodule
