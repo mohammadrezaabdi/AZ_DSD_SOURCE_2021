@@ -1,6 +1,7 @@
 module IF (clk,
            rstn,
            inst);
+    
     parameter INST_CAP = 5;
     parameter INST_LEN = 17;
     
@@ -12,13 +13,13 @@ module IF (clk,
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-            pc = 0;
+            pc <= 0;
         end
         else begin
             if (pc < INST_CAP) begin
-                $display($time, "\t inst(%d):%b", pc, inst_mem[pc]);
-                inst = inst_mem[pc];
-                pc   = pc + 1;
+                $display($time, "\t [IF] inst[%d]:%b", pc, inst_mem[pc]);
+                inst <= inst_mem[pc];
+                pc   <= pc + 1;
             end
         end
     end

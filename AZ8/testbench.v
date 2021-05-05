@@ -18,8 +18,8 @@ module testbench();
     .INST_LEN(INST_LEN),
     .INST_CAP(INST_CAP)
     ) pipe (
-    clk,
-    rstn
+    .clk(clk),
+    .rstn(rstn)
     );
     
     

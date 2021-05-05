@@ -6,10 +6,11 @@ module ALU (clk,
             b,
             res,
             control_sig);
+    
     parameter PART_LEN = 8;
     
     input [2*PART_LEN-1:0]a,b;
-    output reg [2*PART_LEN-1:0]res;
+    output [2*PART_LEN-1:0]res;
     input clk,rstn;
     input [1:0]control_sig;
     
@@ -32,20 +33,23 @@ module ALU (clk,
     .asn(asn),
     .res(res_mul));
     
+    assign res = (opp == `OPP_ASN) ? res_as: res_mul;
     
-    always @(posedge clk or negedge rstn)
-    begin
-        if (!rstn) begin
-            res <= 0;
-            end else begin
-            case (opp)
-                `OPP_ASN:
-                res <= res_as;
-                `OPP_MUL:
-                res <= res_mul;
-            endcase
-            $display($time, "\t a=%b, b=%b, res = %b", a, b, res);
-        end
-    end
+    // always @(*)
+    // begin
+    //     if (!rstn) begin
+    //         res <= 0;
+    //         end else begin
+    //         case (opp)
+    //             `OPP_ASN:
+    //             res <= res_as;
+    //             `OPP_MUL:
+    //             res <= res_mul;
+    //         endcase
+    //     end
+    // end
+    
+    initial
+        $monitor($time, "\t [ALU] a = %b, b = %b, control = %b, res = %b", a, b, control_sig, res);
     
 endmodule
