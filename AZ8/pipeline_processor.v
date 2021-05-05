@@ -15,10 +15,10 @@ module PIPELINE(clk,
     wire [1:0] alu_sig;
     wire [WORD_SIZE-1:0] res, wb_data_out, data_out1, data_out2;
     
-    reg id_mem_r_en, wb_mem_w_en;
+    reg id_mem_r_en;
     reg [1:0] id_alu_sig, alu_sig_buff;
-    reg [ADDR_LEN-1:0] dst_addr_buff, dst_addr, id_mem_r_addr1, id_mem_r_addr2, wb_mem_w_addr;
-    reg [WORD_SIZE-1:0] alu_wb_buff_res, wb_mem_data_out, mem_alu_data_out1, mem_alu_data_out2;
+    reg [ADDR_LEN-1:0] dst_addr_buff, dst_addr, id_mem_r_addr1, id_mem_r_addr2;
+    reg [WORD_SIZE-1:0] mem_alu_data_out1, mem_alu_data_out2;
     reg [INST_LEN-1:0] if_id_buff_inst;
     
     always @(posedge clk)
@@ -34,11 +34,6 @@ module PIPELINE(clk,
         id_alu_sig        <= alu_sig_buff;
         mem_alu_data_out1 <= data_out1;
         mem_alu_data_out2 <= data_out2;
-        alu_wb_buff_res   <= res;
-        wb_mem_w_addr     <= w_addr;
-        wb_mem_w_en       <= w_en;
-        wb_mem_data_out   <= wb_data_out;
-        
     end
     
     IF #(.INST_LEN(INST_LEN), .INST_CAP(INST_CAP)) ifm (
