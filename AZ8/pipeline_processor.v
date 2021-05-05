@@ -31,6 +31,7 @@ module PIPELINE(clk,
     ID #(.INST_LEN(INST_LEN), .MEM_SIZE(MEM_SIZE), .WORD_SIZE(WORD_SIZE), .ADDR_LEN(ADDR_LEN)) idm (
     .clk(clk),
     .inst(inst),
+    .rstn(rstn),
     .oper1(r_addr1),
     .oper2(r_addr2),
     .dest(id_dest_addr),
@@ -49,6 +50,14 @@ module PIPELINE(clk,
     .data_in(wb_data_out),
     .clk(clk));
     
+    ALU #(.PART_LEN(PART_LEN))alu (
+    .clk(clk),
+    .a(data_out1),
+    .b(data_out2),
+    .res(res),
+    .control_sig(alu_sig)
+    );
+    
     WB #(.ADDR_LEN(ADDR_LEN),.WORD_SIZE(WORD_SIZE))wbm(
     .dst_addr_i(dst_addr),
     .data_i(res),
@@ -56,14 +65,6 @@ module PIPELINE(clk,
     .dst_addr_o(w_addr),
     .data_o(wb_data_out),
     .w_en(w_en)
-    );
-    
-    ALU #(.PART_LEN(PART_LEN))alu (
-    .clk(clk),
-    .a(data_out1),
-    .b(data_out2),
-    .res(res),
-    .control_sig(alu_sig)
     );
     
 endmodule

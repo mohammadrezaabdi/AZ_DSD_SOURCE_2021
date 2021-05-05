@@ -1,0 +1,19 @@
+VCD info: dumpfile report/waveform.vcd opened for output.
+                   5	 a=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, b=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, res = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                  15	 inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 1, alu_sig = xx
+                  15	 inst( 0):01000010000100001
+                  15	 a=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, b=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, res = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                  25	 inst( 1):00000000000000000
+                  25	 inst = 00000000000000000, oper1 = 00001, oper2 = 00001, dest = 00001, mem_read = 1, alu_sig = 01
+                  35	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  35	 inst( 2):00000000000000000
+                  45	 inst( 3):00000000000000000
+                  45	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  55	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  55	 inst( 4):00000000000000000
+                  65	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  75	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  85	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  95	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                 105	 inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+WARNING: testbench.v:46: $writememb: Standard inconsistency, following 1364-2005.

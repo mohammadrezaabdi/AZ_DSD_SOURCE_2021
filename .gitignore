@@ -6,3 +6,4 @@ AZ*/*
 !AZ*/report
 !AZ*/*.bsf
 !AZ*/*.sh
+!AZ*/*.mem

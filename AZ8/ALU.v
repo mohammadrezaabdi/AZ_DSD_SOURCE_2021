@@ -1,5 +1,5 @@
-`define OPP_ASN 0
-`define OPP_MUL 1
+`define OPP_ASN 1
+`define OPP_MUL 0
 
 module ALU (clk,
             a,
@@ -44,6 +44,7 @@ module ALU (clk,
                 `OPP_MUL:
                 res <= res_mul;
             endcase
+            $display($time, "\t a=%b, b=%b, res = %b", a, b, res);
         end
     end
     

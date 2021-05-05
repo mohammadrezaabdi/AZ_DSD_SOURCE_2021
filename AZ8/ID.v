@@ -1,5 +1,6 @@
 module ID (clk,
            inst,
+           rstn,
            oper1,
            oper2,
            dest,
@@ -11,22 +12,45 @@ module ID (clk,
     parameter MEM_SIZE  = 32;
     parameter ADDR_LEN  = 5;
     
-    input clk;
+    input clk, rstn;
     input [INST_LEN-1:0] inst;
     output reg mem_read;
-    output reg [ADDR_LEN-1:0] oper1, oper2, dest;
-    output reg [1:0] alu_sig;
+    output [ADDR_LEN-1:0] oper1, oper2, dest;
+    output [1:0] alu_sig;
     
-    always @(posedge clk) begin
-        alu_sig  <= inst[INST_LEN-1 : INST_LEN-2];
-        oper1    <= inst[3*ADDR_LEN-1 : 2*ADDR_LEN];
-        oper2    <= inst[2*ADDR_LEN-1 : ADDR_LEN];
-        dest     <= inst[ADDR_LEN-1 : 0];
-        mem_read <= 1;
+    assign alu_sig = inst[INST_LEN-1 : INST_LEN-2];
+    assign oper1   = inst[3*ADDR_LEN-1 : 2*ADDR_LEN];
+    assign oper2   = inst[2*ADDR_LEN-1 : ADDR_LEN];
+    assign dest    = inst[ADDR_LEN-1 : 0];
+    
+    
+    always @(posedge clk or negedge rstn) begin
+        if (!rstn) begin
+            // alu_sig  = 0;
+            // oper1    = 0;
+            // oper2    = 0;
+            // dest     = 0;
+            mem_read = 0;
+        end
+        else begin
+            // alu_sig  = inst[INST_LEN-1 : INST_LEN-2];
+            // oper1    = inst[3*ADDR_LEN-1 : 2*ADDR_LEN];
+            // oper2    = inst[2*ADDR_LEN-1 : ADDR_LEN];
+            // dest     = inst[ADDR_LEN-1 : 0];
+            mem_read = 1;
+            
+            $display($time, "\t inst = %b, oper1 = %b, oper2 = %b, dest = %b, mem_read = %b, alu_sig = %b",inst, oper1, oper2, dest, mem_read, alu_sig);
+        end
     end
     
     always @(negedge clk) begin
-        mem_read <= 0;
+        if (!rstn) begin
+            // alu_sig = 0;
+            // oper1   = 0;
+            // oper2   = 0;
+            // dest    = 0;
+        end
+        mem_read = 0;
     end
     
 endmodule

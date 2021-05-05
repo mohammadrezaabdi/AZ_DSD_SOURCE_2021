@@ -16,11 +16,9 @@ module IF (clk,
         end
         else begin
             if (pc < INST_CAP) begin
+                $display($time, "\t inst(%d):%b", pc, inst_mem[pc]);
                 inst = inst_mem[pc];
                 pc   = pc + 1;
-            end
-            else begin
-                $display("out of instruction memory Error.");
             end
         end
     end
