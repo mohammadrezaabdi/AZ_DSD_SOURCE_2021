@@ -1,15 +1,17 @@
-01_00001_00001_00001
-00_00000_00000_00000
-00_00000_00000_00000
-00_00000_00000_00000
-00_00000_00000_00000
+11_00011_00011_00011  // ADD
+01_00010_00010_00010  // MUL v
+00_00000_00000_00000  // STALL
+00_00000_00000_00000  // STALL
+10_00011_00001_00111  // SUB
 
 
-//IF, ID, ALU, WR
-//4 register -> size(2*BIT_PART), A, B, C, D;
-//word -> 32bit;
-//mem -> 32*32 bit;
-//opcode: 2bit, 5, 5, 5, 
-//ADD(mem3, mem1, mem2) -> 11
-//SUB(mem3, mem1, mem2) -> 10
-//MUL(mem3, mem1, mem2) -> 01
+/*
+IF, ID, ALU, WR
+4 register -> size(2*BIT_PART), A, B, C, D;
+word -> 32bit;
+mem -> 32*32 bit;
+opcode: 2bit, 5, 5, 5 -> (7bit) 
+ADD(mem1, mem2, mem3) -> 11
+SUB(mem1, mem2, mem3) -> 10
+MUL(mem1, mem2, mem3) -> 01
+*/

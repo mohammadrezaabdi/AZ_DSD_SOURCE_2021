@@ -31,9 +31,6 @@ module WB (dst_addr_i,
         memory_write_mod <= !clk;
     end
     
-    // always @(posedge clk)
-    //     memory_write_mod <= 0;
-    
     initial
         $monitor($time, "\t [WB] dst_addr_i = %d, data_i = %b, dst_addr_o = %d, data_o = %b, w_en = %b", dst_addr_i, data_i, dst_addr_o, data_o, w_en);
     
