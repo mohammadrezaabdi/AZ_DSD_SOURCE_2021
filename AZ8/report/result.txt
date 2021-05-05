@@ -1,75 +1,99 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
-                   0	 [MEM] r_en = x, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                    0	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 0, alu_sig = xx
+                   0	 [MEM] r_en = x, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = x, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                    0	 [MEM] r_en = x, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 1, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                    0	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 1
                    5	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 1, alu_sig = xx
                    5	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                    5	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 0
+                  10	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 0, alu_sig = xx
                   10	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 1, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   10	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 1
-                  15	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 1, alu_sig = xx
                   15	 [IF] inst[ 0]:11000110001100011
+                  15	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 1, alu_sig = xx
                   15	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   15	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 0
+                  20	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 0, alu_sig = xx
                   20	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 1, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   20	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 1
                   25	 [IF] inst[ 1]:01000100001000010
                   25	 [ID] inst = xxxxxxxxxxxxxxxxx, oper1 = xxxxx, oper2 = xxxxx, dest = xxxxx, mem_read = 1, alu_sig = xx
+                  25	 [ID] inst = 11000110001100011, oper1 = 00011, oper2 = 00011, dest = 00011, mem_read = 1, alu_sig = 11
                   25	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   25	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 0
+                  30	 [ID] inst = 11000110001100011, oper1 = 00011, oper2 = 00011, dest = 00011, mem_read = 0, alu_sig = 11
                   30	 [MEM] r_en = 1, r_addr1 =  x, r_addr2 =  x, w_addr =  x, w_en = 1, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   30	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 1
-                  35	 [ID] inst = 11000110001100011, oper1 = 00011, oper2 = 00011, dest = 00011, mem_read = 1, alu_sig = 11
                   35	 [IF] inst[ 2]:00000000000000000
+                  35	 [ID] inst = 11000110001100011, oper1 = 00011, oper2 = 00011, dest = 00011, mem_read = 1, alu_sig = 11
+                  35	 [ID] inst = 01000100001000010, oper1 = 00010, oper2 = 00010, dest = 00010, mem_read = 1, alu_sig = 01
                   35	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  3, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out2 = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
                   35	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  3, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = 00000000000000010000000000000001, data_out2 = 00000000000000010000000000000001
                   35	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 0
+                  40	 [ID] inst = 01000100001000010, oper1 = 00010, oper2 = 00010, dest = 00010, mem_read = 0, alu_sig = 01
                   40	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  3, w_addr =  x, w_en = 1, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = 00000000000000010000000000000001, data_out2 = 00000000000000010000000000000001
                   40	 [WB] dst_addr_i =  x, data_i = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, dst_addr_o =  x, data_o = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, w_en = 1
                   45	 [IF] inst[ 3]:00000000000000000
                   45	 [ID] inst = 01000100001000010, oper1 = 00010, oper2 = 00010, dest = 00010, mem_read = 1, alu_sig = 01
+                  45	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
                   45	 [MEM] r_en = 1, r_addr1 =  2, r_addr2 =  2, w_addr =  x, w_en = 0, data_in = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx, data_out1 = 00000000000000010000000000000001, data_out2 = 00000000000000010000000000000001
+                  45	 [ALU] a = 00000000000000010000000000000001, b = 00000000000000010000000000000001, control = 11, res = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                  45	 [ALU] a = 00000000000000010000000000000001, b = 00000000000000010000000000000001, control = 11, res = 00000000000000100000000000000010
                   45	 [MEM] r_en = 1, r_addr1 =  2, r_addr2 =  2, w_addr =  3, w_en = 0, data_in = 00000000000000100000000000000010, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000100000000000000010
                   45	 [WB] dst_addr_i =  3, data_i = 00000000000000100000000000000010, dst_addr_o =  3, data_o = 00000000000000100000000000000010, w_en = 0
+                  50	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 0, alu_sig = 00
                   50	 [MEM] r_en = 1, r_addr1 =  2, r_addr2 =  2, w_addr =  3, w_en = 1, data_in = 00000000000000100000000000000010, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000100000000000000010
                   50	 [MEM] r_en = 1, r_addr1 =  2, r_addr2 =  2, w_addr =  3, w_en = 1, data_in = 00000000000000100000000000000010, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000100000000000000010
                   50	 [WB] dst_addr_i =  3, data_i = 00000000000000100000000000000010, dst_addr_o =  3, data_o = 00000000000000100000000000000010, w_en = 1
-                  55	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
                   55	 [IF] inst[ 4]:10000110000100111
+                  55	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
                   55	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  3, w_en = 0, data_in = 00000000000000100000000000000010, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000100000000000000010
+                  55	 [ALU] a = 00000000000000100000000000000010, b = 00000000000000100000000000000010, control = 01, res = 00000000000000100000000000000010
+                  55	 [ALU] a = 00000000000000100000000000000010, b = 00000000000000100000000000000010, control = 01, res = 00000000000000000000000000000010
+                  55	 [ALU] a = 00000000000000100000000000000010, b = 00000000000000100000000000000010, control = 01, res = 00000000000000000000000000001000
                   55	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  2, w_en = 0, data_in = 00000000000000000000000000001000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   55	 [WB] dst_addr_i =  2, data_i = 00000000000000000000000000001000, dst_addr_o =  2, data_o = 00000000000000000000000000001000, w_en = 0
+                  60	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 0, alu_sig = 00
                   60	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  2, w_en = 1, data_in = 00000000000000000000000000001000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   60	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  2, w_en = 1, data_in = 00000000000000000000000000001000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   60	 [WB] dst_addr_i =  2, data_i = 00000000000000000000000000001000, dst_addr_o =  2, data_o = 00000000000000000000000000001000, w_en = 1
                   65	 [ID] inst = 00000000000000000, oper1 = 00000, oper2 = 00000, dest = 00000, mem_read = 1, alu_sig = 00
+                  65	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 1, alu_sig = 10
+                  65	 [ALU] a = 00000000000000000000000000000000, b = 00000000000000000000000000000000, control = 00, res = 00000000000000000000000000001000
                   65	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  2, w_en = 0, data_in = 00000000000000000000000000001000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
+                  65	 [ALU] a = 00000000000000000000000000000000, b = 00000000000000000000000000000000, control = 00, res = 00000000000000000000000000000000
                   65	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  0, w_en = 0, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   65	 [WB] dst_addr_i =  0, data_i = 00000000000000000000000000000000, dst_addr_o =  0, data_o = 00000000000000000000000000000000, w_en = 0
+                  70	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 0, alu_sig = 10
                   70	 [MEM] r_en = 1, r_addr1 =  0, r_addr2 =  0, w_addr =  0, w_en = 1, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   70	 [WB] dst_addr_i =  0, data_i = 00000000000000000000000000000000, dst_addr_o =  0, data_o = 00000000000000000000000000000000, w_en = 1
                   75	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 1, alu_sig = 10
                   75	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  0, w_en = 0, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000000000000000000000, data_out2 = 00000000000000000000000000000000
                   75	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  0, w_en = 0, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   75	 [WB] dst_addr_i =  0, data_i = 00000000000000000000000000000000, dst_addr_o =  0, data_o = 00000000000000000000000000000000, w_en = 0
+                  80	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 0, alu_sig = 10
                   80	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  0, w_en = 1, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   80	 [WB] dst_addr_i =  0, data_i = 00000000000000000000000000000000, dst_addr_o =  0, data_o = 00000000000000000000000000000000, w_en = 1
                   85	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 1, alu_sig = 10
+                  85	 [ALU] a = 00000000000000100000000000000010, b = 00000000000000010000000000000001, control = 10, res = 00000000000000000000000000000000
                   85	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  0, w_en = 0, data_in = 00000000000000000000000000000000, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
+                  85	 [ALU] a = 00000000000000100000000000000010, b = 00000000000000010000000000000001, control = 10, res = 00000000000000010000000000000001
                   85	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 0, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   85	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 0
+                  90	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 0, alu_sig = 10
                   90	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 1, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   90	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 1, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   90	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 1
                   95	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 1, alu_sig = 10
                   95	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 0, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                   95	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 0
+                 100	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 0, alu_sig = 10
                  100	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 1, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                  100	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 1
                  105	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 1, alu_sig = 10
                  105	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 0, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                  105	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 0
 WARNING: testbench.v:46: $writememb: Standard inconsistency, following 1364-2005.
+                 110	 [ID] inst = 10000110000100111, oper1 = 00011, oper2 = 00001, dest = 00111, mem_read = 0, alu_sig = 10
                  110	 [MEM] r_en = 1, r_addr1 =  3, r_addr2 =  1, w_addr =  7, w_en = 1, data_in = 00000000000000010000000000000001, data_out1 = 00000000000000100000000000000010, data_out2 = 00000000000000010000000000000001
                  110	 [WB] dst_addr_i =  7, data_i = 00000000000000010000000000000001, dst_addr_o =  7, data_o = 00000000000000010000000000000001, w_en = 1

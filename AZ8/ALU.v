@@ -35,7 +35,7 @@ module ALU (clk,
     
     assign res = (opp != `OPP_ASN) ? res_as: res_mul;
     
-    initial
-        $monitor($time, "\t [ALU] a = %b, b = %b, control = %b, res = %b", a, b, control_sig, res);
+    always @(*)
+        $display($time, "\t [ALU] a = %b, b = %b, control = %b, res = %b", a, b, control_sig, res);
     
 endmodule
