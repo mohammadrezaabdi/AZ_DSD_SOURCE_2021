@@ -6,11 +6,10 @@
 
 
 /*
-IF, ID, ALU, WR
-4 register -> size(2*BIT_PART), A, B, C, D;
+IF, ID, ALU, WB
 word -> 32bit;
 mem -> 32*32 bit;
-opcode: 2bit, 5, 5, 5 -> (7bit) 
+opcode: 2bit, 5, 5, 5 -> (17bit) 
 ADD(mem1, mem2, mem3) -> 11
 SUB(mem1, mem2, mem3) -> 10
 MUL(mem1, mem2, mem3) -> 01
