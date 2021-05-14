@@ -1,0 +1,208 @@
+$date
+	Fri May 14 23:35:20 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$scope module tcam $end
+$var wire 4 ! address [3:0] $end
+$var wire 1 " clk $end
+$var wire 1 # rwn $end
+$var wire 16 $ word [15:0] $end
+$var reg 5 % i [4:0] $end
+$var reg 4 & read_candidate [3:0] $end
+$scope function equals $end
+$var reg 16 ' a [15:0] $end
+$var reg 16 ( b [15:0] $end
+$var reg 1 ) equals $end
+$var reg 1 * flag $end
+$var reg 16 + j [15:0] $end
+$upscope $end
+$scope function number_of_x $end
+$var reg 16 , c [15:0] $end
+$var reg 16 - j [15:0] $end
+$var reg 16 . number [15:0] $end
+$var reg 16 / number_of_x [15:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx /
+bx .
+bx -
+bx ,
+bx +
+x*
+x)
+bx (
+bx '
+bx &
+bx %
+bx $
+x#
+0"
+bx !
+$end
+#5
+1"
+#10
+b0 !
+0"
+b111xx110111xx11 $
+0#
+#15
+1"
+#20
+b1 !
+0"
+b11x0100111x01001 $
+#25
+1"
+#30
+b10 !
+0"
+b1110x1101110x11 $
+#35
+1"
+#40
+b11 !
+0"
+b1101xx111101xx11 $
+#45
+1"
+#50
+bx !
+0"
+b111xx110111xx11 $
+1#
+#55
+b10 !
+b10 &
+b10 /
+b10000 -
+b10 .
+b1110x1101110x11 ,
+1)
+b10000 +
+1*
+bx '
+b111xx110111xx11 (
+b10000 %
+1"
+#60
+0"
+bx $
+#65
+b1 !
+b10 /
+b10000 -
+b10 .
+b11x0100111x01001 ,
+b10000 +
+bx '
+bx (
+b10000 %
+b1 &
+1"
+#70
+0"
+b11xxxx1111xxxx11 $
+#75
+b11 !
+b100 /
+b10000 -
+b100 .
+b1101xx111101xx11 ,
+1)
+1*
+b10000 +
+bx '
+b11xxxx1111xxxx11 (
+b10000 %
+b11 &
+1"
+#80
+b0 !
+0"
+b1111010111110101 $
+0#
+#85
+1"
+#90
+b1 !
+0"
+b101xxxxx101xxxxx $
+#95
+1"
+#100
+b10 !
+0"
+b10110x1110110x11 $
+#105
+1"
+#110
+b11 !
+0"
+b100xx010100xx01 $
+#115
+1"
+#120
+0"
+b11xx010111xx0101 $
+1#
+#125
+b0 !
+1)
+1*
+b0 /
+b10000 -
+b0 .
+b1111010111110101 ,
+b10000 +
+bx '
+b11xx010111xx0101 (
+b10000 %
+b0 &
+1"
+#130
+0"
+b1001101110011011 $
+#135
+bx !
+b10000 /
+b10000 .
+b10000 -
+bx ,
+1)
+1*
+b10000 +
+bx '
+b1001101110011011 (
+b10000 %
+bx &
+1"
+#140
+0"
+b10xxxxxx10xxxxxx $
+#145
+b10 !
+b10 &
+b10 /
+b10000 -
+b10 .
+b10110x1110110x11 ,
+1)
+1*
+b10000 +
+bx '
+b10xxxxxx10xxxxxx (
+b10000 %
+1"
+#150
+0"
