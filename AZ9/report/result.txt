@@ -1,0 +1,22 @@
+VCD info: dumpfile report/waveform.vcd opened for output.
+                   0 rwn = x  word = xxxxxxxxxxxxxxxx address =  x
+                  10 rwn = 0  word = 0111xx110111xx11 address =  0
+                  20 rwn = 0  word = 11x0100111x01001 address =  1
+                  30 rwn = 0  word = 01110x1101110x11 address =  2
+                  40 rwn = 0  word = 1101xx111101xx11 address =  3
+                  50 rwn = 1  word = 0111xx110111xx11 address =  x
+                  55 rwn = 1  word = 0111xx110111xx11 address =  2
+                  60 rwn = 1  word = xxxxxxxxxxxxxxxx address =  2
+                  65 rwn = 1  word = xxxxxxxxxxxxxxxx address =  1
+                  70 rwn = 1  word = 11xxxx1111xxxx11 address =  1
+                  75 rwn = 1  word = 11xxxx1111xxxx11 address =  3
+                  80 rwn = 0  word = 1111010111110101 address =  0
+                  90 rwn = 0  word = 101xxxxx101xxxxx address =  1
+                 100 rwn = 0  word = 10110x1110110x11 address =  2
+                 110 rwn = 0  word = 0100xx010100xx01 address =  3
+                 120 rwn = 1  word = 11xx010111xx0101 address =  3
+                 125 rwn = 1  word = 11xx010111xx0101 address =  0
+                 130 rwn = 1  word = 1001101110011011 address =  0
+                 135 rwn = 1  word = 1001101110011011 address =  x
+                 140 rwn = 1  word = 10xxxxxx10xxxxxx address =  x
+                 145 rwn = 1  word = 10xxxxxx10xxxxxx address =  2
