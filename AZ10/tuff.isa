@@ -1,0 +1,35 @@
+0000_1111_1111  PUSHC
+0001_1111_1111  PUSHM
+0010_1111_1111  POPM
+0011_xxxx_xxxx  JUMP
+0100_xxxx_xxxx  JZ
+0101_xxxx_xxxx  JS
+0110_xxxx_xxxx  ADD
+0111_xxxx_xxxx  SUB
+
+
+STACK
+MEM
+IFIDC(CONTROL) -> EXEC()
+EXEC {
+    ALU(SUB,ADD)
+    PB(PUSHC,PUSHM),
+    WB(POPM),
+    PC(JUMP123, NEXT_PC)
+}
+
+Example: Y=((X+23)+(X+23))-12 
+0001_0000_0001              PUSHM X                     
+0000_0001_0111              PUSHC 23                    
+0110_XXXX_XXXX              ADD                         
+
+0010_0000_0010              POPM Y                      
+0001_0000_0010              PUSHM Y                     
+0001_0000_0010              PUSHM Y                     
+0110_XXXX_XXXX              ADD                         
+
+0000_0000_1100              PUSHC 12
+0111_XXXX_XXXX              SUB
+
+0010_0000_0010              POPM RES
+1111_XXXX_XXXX              EXIT
