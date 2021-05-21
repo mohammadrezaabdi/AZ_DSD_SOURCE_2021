@@ -8,7 +8,7 @@ module IFIDC (clk,
               pc,
               control_bus,
               data);
-    parameter INST_CAP = 5;
+    parameter INST_CAP = 20;
     parameter INST_LEN = 12;
     parameter DATA_LEN = 8;
     
@@ -32,10 +32,12 @@ module IFIDC (clk,
             case(state)
                 `INIT:
                 begin
-                    if (en) begin
-                        state       <= `IF;
-                        control_bus <= 0;
-                        data        <= 0;
+                    if (rstn) begin
+                        if (en) begin
+                            state       <= `IF;
+                            control_bus <= 0;
+                            data        <= 0;
+                        end
                     end
                 end
                 

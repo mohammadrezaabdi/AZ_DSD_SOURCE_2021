@@ -1,5 +1,4 @@
-module MEMORY (r_addr,
-                    w_addr,
+module MEMORY (addr,
                     r_en,
                     w_en,
                     data_out,
@@ -11,7 +10,7 @@ module MEMORY (r_addr,
     parameter MEM_SIZE  = 32;
     
     
-    input [ADDR_LEN-1:0]r_addr,w_addr;
+    input [ADDR_LEN-1:0] addr;
     input r_en,w_en,clk;
     
     input [WORD_SIZE-1:0]data_in;
@@ -24,14 +23,14 @@ module MEMORY (r_addr,
     always @(*) //todo: refactor
     begin
         if (r_en) begin
-            data_out <= mem[r_addr];
+            data_out <= mem[addr];
         end
         if (w_en) begin
-            mem[w_addr] <= data_in;
+            mem[addr] <= data_in;
         end
     end
     
 initial
-    $monitor($time, "\t [MEM] r_en = %b, r_addr = %d, w_addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, r_addr, w_addr, w_en, data_in, data_out);
+    $monitor($time, "\t [MEM] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
 
 endmodule

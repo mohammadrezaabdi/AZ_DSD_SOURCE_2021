@@ -6,11 +6,13 @@
 `define ALU     0101
 `define ADD     0110
 `define SUB     0111
-`define STORE   1000
+`define PUSH   1000
 
 module ALU (control_bus,
             clk,
             rstn,
+            z_flag,
+            s_flag,
             stk_data_in,
             stk_push,
             stk_pop,
@@ -18,22 +20,24 @@ module ALU (control_bus,
     
     parameter DATA_LEN = 8;
     
-    
     input clk, rstn;
     input [3:0] control_bus;
     output reg [DATA_LEN-1:0] stk_data_in;
-    output reg stk_push,stk_pop;
+    output reg stk_push, stk_pop;
+    output z_flag, s_flag;
     input [DATA_LEN-1:0] stk_data_out;
     
-    wire asn = control_bus[0];
-    wire en  = control_bus[1] & control_bus[2];
+    wire asn      = control_bus[0];
+    wire en       = control_bus[1] & control_bus[2];
+    assign s_flag = (res < 0);
+    assign z_flag = (res == 0);
     
     reg [3:0]state;
     
-    reg signed [DATA_LEN-1:0] op1,op2,res;
+    reg signed [DATA_LEN-1:0] op1, op2, res;
     
     always @(posedge clk, negedge rstn) begin
-        if (!rstn) begin
+        if (!rstn && !en) begin
             state       <= `INIT;
             stk_data_in <= {DATA_LEN{1'bz}};
             stk_push    <= 1'bz;
@@ -43,12 +47,14 @@ module ALU (control_bus,
             case(state)
                 `INIT:
                 begin
-                    if (en) begin
-                        state <= `OP1_POP;
+                    if (rstn) begin
+                        if (en) begin
+                            state <= `OP1_POP;
+                        end
+                        stk_data_in <= {DATA_LEN{1'bz}};
+                        stk_push    <= 1'bz;
+                        stk_pop     <= 1'bz;
                     end
-                    stk_data_in <= {DATA_LEN{1'bz}};
-                    stk_push    <= 1'bz;
-                    stk_pop     <= 1'bz;
                 end
                 `OP1_POP:
                 begin
@@ -60,7 +66,6 @@ module ALU (control_bus,
                     stk_pop <= 0;
                     op1     <= stk_data_out;
                     state   <= `OP2_POP;
-                    
                 end
                 `OP2_POP:
                 begin
@@ -83,14 +88,14 @@ module ALU (control_bus,
                 `ADD:
                 begin
                     res   <= op1+op2;
-                    state <= `STORE;
+                    state <= `PUSH;
                 end
                 `SUB:
                 begin
                     res   <= op1-op2;
-                    state <= `STORE;
+                    state <= `PUSH;
                 end
-                `STORE:
+                `PUSH:
                 begin
                     stk_push    <= 1;
                     stk_data_in <= res;
