@@ -1,10 +1,10 @@
 module testbench();
     
-    parameter WORD_SIZE = 32;
-    parameter ADDR_LEN  = 5;
-    parameter MEM_SIZE  = 32;
-    parameter INST_LEN  = 17;
-    parameter INST_CAP  = 5;
+    parameter WORD_SIZE = 8;
+    parameter ADDR_LEN  = 8;
+    parameter MEM_SIZE  = 256;
+    parameter INST_LEN  = 12;
+    parameter INST_CAP  = 20;
     parameter clk_c     = 10;
     
     reg clk, rstn;

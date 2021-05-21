@@ -5,9 +5,9 @@ module MEMORY (addr,
                     data_in,
                     clk);
     
-    parameter ADDR_LEN  = 5;
-    parameter WORD_SIZE = 32;
-    parameter MEM_SIZE  = 32;
+    parameter ADDR_LEN  = 8;
+    parameter WORD_SIZE = 8;
+    parameter MEM_SIZE  = 256;
     
     
     input [ADDR_LEN-1:0] addr;
