@@ -6,6 +6,7 @@
 
 module WBPB (control_bus,
              clk,
+             en,
              rstn,
              addr_const,
              stk_data_in,
@@ -21,20 +22,20 @@ module WBPB (control_bus,
     parameter ADDR_LEN = 8;
     parameter DATA_LEN = 8;
     
-    input clk, rstn;
+    input clk, rstn, en;
     input [3:0] control_bus;
+    input [DATA_LEN-1:0] stk_data_out, mem_data_out, addr_const;
     output reg [DATA_LEN-1:0] stk_data_in, mem_data_in;
     output reg [ADDR_LEN-1:0] mem_addr;
     output reg stk_push, stk_pop, mem_r_en, mem_w_en;
-    input [DATA_LEN-1:0] stk_data_out, mem_data_out, addr_const;
     
     wire [1:0] opc = control_bus[1:0];
-    wire en        = (control_bus < 3);
+    wire wbpb_en   = (en && control_bus < 3);
     
     reg [3:0]state;
     
     always @(posedge clk, negedge rstn) begin
-        if (!rstn && !en) begin
+        if (!rstn && !wbpb_en) begin
             state       <= `INIT;
             stk_data_in <= {DATA_LEN{1'bz}};
             stk_push    <= 1'bz;
@@ -49,7 +50,7 @@ module WBPB (control_bus,
                 `INIT:
                 begin
                     if (rstn) begin
-                        if (en) begin
+                        if (wbpb_en) begin
                             if (opc == 2'b00) begin
                                 state <= `PUSH;
                             end
@@ -98,5 +99,8 @@ module WBPB (control_bus,
             endcase
         end
     end
+    
+    initial
+        $monitor($time, "\t [WBPB::%d] rstn = %b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     
 endmodule

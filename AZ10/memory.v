@@ -1,24 +1,24 @@
 module MEMORY (addr,
-                    r_en,
-                    w_en,
-                    data_out,
-                    data_in,
-                    clk);
+               r_en,
+               w_en,
+               data_out,
+               data_in,
+               clk);
     
     parameter ADDR_LEN  = 8;
-    parameter WORD_SIZE = 8;
+    parameter WORD_LEN = 8;
     parameter MEM_SIZE  = 256;
     
     
     input [ADDR_LEN-1:0] addr;
     input r_en,w_en,clk;
     
-    input [WORD_SIZE-1:0]data_in;
-    output reg [WORD_SIZE-1:0]data_out;
+    input [WORD_LEN-1:0]data_in;
+    output reg [WORD_LEN-1:0]data_out;
     
-    reg [WORD_SIZE-1:0] mem [MEM_SIZE-1:0];
+    reg [WORD_LEN-1:0] mem [MEM_SIZE-1:0];
     
-    reg [WORD_SIZE-1:0] data_o1,data_o2;
+    reg [WORD_LEN-1:0] data_o1,data_o2;
     
     always @(*) //todo: refactor
     begin
@@ -30,7 +30,7 @@ module MEMORY (addr,
         end
     end
     
-initial
-    $monitor($time, "\t [MEM] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
-
+    initial
+        $monitor($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
+    
 endmodule

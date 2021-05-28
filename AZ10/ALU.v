@@ -6,10 +6,11 @@
 `define ALU     0101
 `define ADD     0110
 `define SUB     0111
-`define PUSH   1000
+`define PUSH    1000
 
 module ALU (control_bus,
             clk,
+            en,
             rstn,
             z_flag,
             s_flag,
@@ -20,15 +21,15 @@ module ALU (control_bus,
     
     parameter DATA_LEN = 8;
     
-    input clk, rstn;
+    input clk, rstn, en;
     input [3:0] control_bus;
+    input [DATA_LEN-1:0] stk_data_out;
     output reg [DATA_LEN-1:0] stk_data_in;
     output reg stk_push, stk_pop;
     output z_flag, s_flag;
-    input [DATA_LEN-1:0] stk_data_out;
     
     wire asn      = control_bus[0];
-    wire en       = control_bus[1] & control_bus[2];
+    wire alu_en   = (en && control_bus[1] && control_bus[2]);
     assign s_flag = (res < 0);
     assign z_flag = (res == 0);
     
@@ -37,7 +38,7 @@ module ALU (control_bus,
     reg signed [DATA_LEN-1:0] op1, op2, res;
     
     always @(posedge clk, negedge rstn) begin
-        if (!rstn && !en) begin
+        if (!rstn && !alu_en) begin
             state       <= `INIT;
             stk_data_in <= {DATA_LEN{1'bz}};
             stk_push    <= 1'bz;
@@ -48,7 +49,7 @@ module ALU (control_bus,
                 `INIT:
                 begin
                     if (rstn) begin
-                        if (en) begin
+                        if (alu_en) begin
                             state <= `OP1_POP;
                         end
                         stk_data_in <= {DATA_LEN{1'bz}};
@@ -104,4 +105,8 @@ module ALU (control_bus,
             endcase
         end
     end
+    
+    initial
+        $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, z_flag = %b, s_flag = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d", state, rstn, control_bus, z_flag, s_flag, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out);
+    
 endmodule

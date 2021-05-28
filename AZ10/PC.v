@@ -18,8 +18,8 @@ module PC (control_bus,
     
     input clk, en, rstn, z_flag, s_flag;
     input [3:0] control_bus;
-    output reg stk_pop;
     input [DATA_LEN-1:0] stk_data_out;
+    output reg stk_pop;
     output reg [$clog2(INST_CAP):0] pc;
     
     wire[1:0] opc = {control_bus[2], control_bus[0]};
@@ -66,4 +66,8 @@ module PC (control_bus,
             endcase
         end
     end
+    
+    initial
+        $monitor($time, "\t [PC::%d] rstn = %b, en = %b, control_bus = %b, pc = %d, z_flag = %b, s_flag = %b, stk_pop = %b, stk_data_out = %d", state, rstn, en, control_bus, pc, z_flag, s_flag, stk_pop, stk_data_out);
+    
 endmodule

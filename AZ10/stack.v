@@ -7,26 +7,26 @@ module Stack (rstn,
               full,
               empty);
     
-    parameter DEPTH     = 8;
-    parameter BANDWIDTH = 8;
+    parameter STACK_DEPTH = 8;
+    parameter WORD_LEN    = 8;
     
     input wire rstn, push, pop, clk;
-    input wire[BANDWIDTH-1:0] data_in;
+    input wire[WORD_LEN-1:0] data_in;
     output full, empty;
-    output reg [BANDWIDTH-1:0] data_out;
+    output reg [WORD_LEN-1:0] data_out;
     
-    reg[$clog2(DEPTH):0] stack_ptr;
-    reg[BANDWIDTH-1:0] memory [0:DEPTH-1];
+    reg[$clog2(STACK_DEPTH):0] stack_ptr;
+    reg[WORD_LEN-1:0] memory [0:STACK_DEPTH-1];
     
     assign empty = (stack_ptr == 0) ? 1'b1 : 1'b0;
-    assign full  = (stack_ptr == DEPTH) ? 1'b1 : 1'b0;
+    assign full  = (stack_ptr == STACK_DEPTH) ? 1'b1 : 1'b0;
     
     // stack reset
     task reset_memory;
         integer i;
         begin
-            for (i = 0; i < DEPTH;i++) begin
-                memory[i] = {BANDWIDTH{1'b0}};
+            for (i = 0; i < STACK_DEPTH;i++) begin
+                memory[i] = {WORD_LEN{1'b0}};
             end
             stack_ptr = 0;
         end
@@ -37,7 +37,7 @@ module Stack (rstn,
             reset_memory;
         end
         else begin
-            // pushing into stack 
+            // pushing into stack
             if (push && !pop && !full) begin
                 memory[stack_ptr] = data_in;
                 stack_ptr         = stack_ptr + 1;
@@ -49,4 +49,8 @@ module Stack (rstn,
             end
         end
     end
+    
+    initial
+        $monitor($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
+    
 endmodule

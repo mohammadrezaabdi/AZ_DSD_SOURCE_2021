@@ -8,6 +8,7 @@ module IFIDC (clk,
               pc,
               control_bus,
               data);
+              
     parameter INST_CAP = 20;
     parameter INST_LEN = 12;
     parameter DATA_LEN = 8;
@@ -58,6 +59,6 @@ module IFIDC (clk,
     end
     
     initial
-        $monitor($time, "\t [IFIDC::%d]\tinst[%d]:%b\tcontrol:%b\tdata:%d", state, pc, inst_mem[pc], control_bus, data);
+        $monitor($time, "\t [IFIDC::%d] pc=%d control_bus=%b data=%d", state, pc, control_bus, data);
     
 endmodule
