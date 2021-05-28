@@ -5,9 +5,9 @@ module MEMORY (addr,
                data_in,
                clk);
     
-    parameter ADDR_LEN  = 8;
+    parameter ADDR_LEN = 8;
     parameter WORD_LEN = 8;
-    parameter MEM_SIZE  = 256;
+    parameter MEM_SIZE = 256;
     
     
     input [ADDR_LEN-1:0] addr;
@@ -28,9 +28,8 @@ module MEMORY (addr,
         if (w_en) begin
             mem[addr] <= data_in;
         end
+        
+        //debuging
+        $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
     end
-    
-    initial
-        $monitor($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
-    
 endmodule

@@ -1,6 +1,6 @@
-`define IFIDC   2'b01
-`define EXEC    2'b10
-`define EXRET   2'b00
+`define IFIDC   2'b00
+`define EXEC    2'b01
+`define EXRET   2'b10
 `define EXIT    2'b11
 
 module CPU (rstn,
@@ -55,6 +55,9 @@ module CPU (rstn,
                 end
             endcase
         end
+        
+        //debuging
+        $display($time, "\t [CPU::%d] ifidc_en = %b, exec_en = %b", state, ifidc_en, exec_en);
     end
     
     IFIDC #(
@@ -119,8 +122,5 @@ module CPU (rstn,
     .full(stk_full),
     .empty(stk_empty)
     );
-    
-    initial
-        $monitor($time, "\t [CPU::%d] ifidc_en = %b, exec_en = %b", state, ifidc_en, exec_en);
     
 endmodule

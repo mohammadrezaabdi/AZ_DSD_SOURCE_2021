@@ -26,12 +26,10 @@ module ALU (control_bus,
     input [DATA_LEN-1:0] stk_data_out;
     output reg [DATA_LEN-1:0] stk_data_in;
     output reg stk_push, stk_pop;
-    output z_flag, s_flag;
+    output reg z_flag, s_flag;
     
-    wire asn      = control_bus[0];
-    wire alu_en   = (en && control_bus[1] && control_bus[2]);
-    assign s_flag = (res < 0);
-    assign z_flag = (res == 0);
+    wire asn    = control_bus[0];
+    wire alu_en = (en && control_bus[1] && control_bus[2]);
     
     reg [3:0]state;
     
@@ -43,6 +41,8 @@ module ALU (control_bus,
             stk_data_in <= {DATA_LEN{1'bz}};
             stk_push    <= 1'bz;
             stk_pop     <= 1'bz;
+            s_flag      <= 0;
+            z_flag      <= 0;
         end
         else begin
             case(state)
@@ -98,6 +98,8 @@ module ALU (control_bus,
                 end
                 `PUSH:
                 begin
+                    s_flag      <= (res < 0);
+                    z_flag      <= (res == 0);
                     stk_push    <= 1;
                     stk_data_in <= res;
                     state       <= `INIT;

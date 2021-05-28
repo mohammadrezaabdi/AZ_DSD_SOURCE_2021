@@ -48,9 +48,9 @@ module Stack (rstn,
                 stack_ptr = stack_ptr - 1;
             end
         end
+        
+        //debugging
+        $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
     end
-    
-    initial
-        $monitor($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
-    
+
 endmodule

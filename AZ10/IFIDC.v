@@ -40,14 +40,12 @@ module IFIDC (clk,
                             data        <= 0;
                         end
                     end
-                end
-                
+                end               
                 `IF:
                 begin
                     inst  <= inst_mem[pc];
                     state <= `ID;
-                end
-                
+                end               
                 `ID:
                 begin
                     control_bus[3:0] <= inst[INST_LEN-1:DATA_LEN];
@@ -56,9 +54,9 @@ module IFIDC (clk,
                 end
             endcase
         end
+        
+        //debuging
+        $display($time, "\t [IFIDC::%d] pc=%d control_bus=%b data=%d", state, pc, control_bus, data);
     end
-    
-    initial
-        $monitor($time, "\t [IFIDC::%d] pc=%d control_bus=%b data=%d", state, pc, control_bus, data);
     
 endmodule

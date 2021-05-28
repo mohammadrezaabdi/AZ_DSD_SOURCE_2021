@@ -98,9 +98,9 @@ module WBPB (control_bus,
                 end
             endcase
         end
+        
+        //debugging
+        $display($time, "\t [WBPB::%d] rstn = %b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     end
-    
-    initial
-        $monitor($time, "\t [WBPB::%d] rstn = %b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
-    
+
 endmodule
