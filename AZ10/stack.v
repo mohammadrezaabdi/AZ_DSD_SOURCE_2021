@@ -26,9 +26,9 @@ module Stack (rstn,
         integer i;
         begin
             for (i = 0; i < STACK_DEPTH;i++) begin
-                memory[i] = {WORD_LEN{1'b0}};
+                memory[i] <= {WORD_LEN{1'b0}};
             end
-            stack_ptr = 0;
+            stack_ptr <= 0;
         end
     endtask
     
@@ -39,20 +39,20 @@ module Stack (rstn,
         else begin
             // pushing into stack
             if (push && !pop && !full) begin
-                memory[stack_ptr] = data_in;
-                stack_ptr         = stack_ptr + 1;
+                memory[stack_ptr] <= data_in;
+                stack_ptr         <= stack_ptr + 1;
             end
             // pop from stack
             if (pop && !push && !empty) begin
-                data_out  = memory[stack_ptr - 1];
-                stack_ptr = stack_ptr - 1;
+                data_out  <= memory[stack_ptr - 1];
+                stack_ptr <= stack_ptr - 1;
             end
         end
         
     end
     
     //debugging
-    // always @(*)
-    //     $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
+    always @(*)
+        $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
 
 endmodule

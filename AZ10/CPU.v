@@ -1,5 +1,6 @@
-`define IFIDC   0
-`define EXEC    1
+`define IFIDC   2'b00
+`define EXEC    2'b01
+`define WAIT    2'b10
 
 module CPU (rstn,
             clk);
@@ -14,14 +15,14 @@ module CPU (rstn,
     
     input rstn, clk;
     
-    wire stk_full, stk_empty, stk_push, stk_pop, mem_r_en, mem_w_en;
+    wire stk_full, stk_empty, stk_push, stk_pop, mem_r_en, mem_w_en, exec_fin_sig;
     wire [3:0] ifidc_control_bus;
     wire [DATA_LEN-1:0] stk_data_in, stk_data_out, mem_data_in, mem_data_out, ifidc_addr_const;
     wire [ADDR_LEN-1:0] mem_addr;
     wire [$clog2(INST_CAP):0] exec_pc;
     
     reg ifidc_en, exec_en;
-    reg state;
+    reg [1:0] state;
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
@@ -41,7 +42,15 @@ module CPU (rstn,
                 begin
                     ifidc_en <= 0;
                     exec_en  <= 1;
-                    state    <= `IFIDC;
+                    state    <= `WAIT;
+                end
+                `WAIT:
+                begin
+                    ifidc_en <= 0;
+                    exec_en  <= 0;
+                    if (exec_fin_sig) begin
+                        state <= `IFIDC;
+                    end
                 end
             endcase
         end
@@ -79,7 +88,8 @@ module CPU (rstn,
     .mem_addr(mem_addr),
     .mem_r_en(mem_r_en),
     .mem_w_en(mem_w_en),
-    .mem_data_out(mem_data_out)
+    .mem_data_out(mem_data_out),
+    .fin_sig(exec_fin_sig)
     );
     
     MEMORY #(
@@ -110,8 +120,8 @@ module CPU (rstn,
     );
     
     //debuging
-    always @(*)
-        $display($time, "\t [CPU::%d] ifidc_en = %b, exec_en = %b", state, ifidc_en, exec_en);
+    // always @(*)
+    //     $display($time, "\t [CPU::%d] ifidc_en = %b, exec_en = %b, exec_finish = %b", state, ifidc_en, exec_en, exec_fin_sig);
     
     
 endmodule

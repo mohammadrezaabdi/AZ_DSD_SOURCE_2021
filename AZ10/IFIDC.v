@@ -25,8 +25,8 @@ module IFIDC (clk,
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn && !en) begin
-            control_bus <= 0;
-            data        <= 0;
+            control_bus <= 4'b1000;
+            data        <= 8'bx;
             state       <= `INIT;
         end
         else begin
@@ -35,9 +35,7 @@ module IFIDC (clk,
                 begin
                     if (rstn) begin
                         if (en) begin
-                            state       <= `IF;
-                            // control_bus <= 0;
-                            // data        <= 0;
+                            state <= `IF;
                         end
                     end
                 end
@@ -58,7 +56,7 @@ module IFIDC (clk,
     end
     
     //debuging
-    always @(*)
-        $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d", state, pc, control_bus, data);
+    // always @(*)
+    //     $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d", state, pc, control_bus, data);
     
 endmodule

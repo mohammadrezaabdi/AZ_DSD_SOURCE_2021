@@ -1,8 +1,8 @@
-`define INIT    000
-`define PUSH    001
-`define POP     010
-`define LOAD    011
-`define STORE   100
+`define INIT    3'b000
+`define PUSH    3'b001
+`define POP     3'b010
+`define LOAD    3'b011
+`define STORE   3'b100
 
 module WBPB (control_bus,
              clk,
@@ -17,7 +17,8 @@ module WBPB (control_bus,
              mem_addr,
              mem_r_en,
              mem_w_en,
-             mem_data_out);
+             mem_data_out,
+             fin_sig);
     
     parameter ADDR_LEN = 8;
     parameter DATA_LEN = 8;
@@ -27,12 +28,12 @@ module WBPB (control_bus,
     input [DATA_LEN-1:0] stk_data_out, mem_data_out, addr_const;
     output reg [DATA_LEN-1:0] stk_data_in, mem_data_in;
     output reg [ADDR_LEN-1:0] mem_addr;
-    output reg stk_push, stk_pop, mem_r_en, mem_w_en;
+    output reg stk_push, stk_pop, mem_r_en, mem_w_en, fin_sig;
     
     wire [1:0] opc = control_bus[1:0];
     wire wbpb_en   = (en && control_bus < 3);
     
-    reg [3:0]state;
+    reg [2:0]state;
     
     always @(posedge clk, negedge rstn) begin
         if (!rstn && !wbpb_en) begin
@@ -44,6 +45,7 @@ module WBPB (control_bus,
             mem_addr    <= {ADDR_LEN{1'bz}};
             mem_r_en    <= 1'bz;
             mem_w_en    <= 1'bz;
+            fin_sig     <= 0;
         end
         else begin
             case(state)
@@ -61,6 +63,7 @@ module WBPB (control_bus,
                                 state <= `POP;
                             end
                         end
+                        fin_sig     <= 0;
                         stk_data_in <= {DATA_LEN{1'bz}};
                         stk_push    <= 1'bz;
                         stk_pop     <= 1'bz;
@@ -73,13 +76,16 @@ module WBPB (control_bus,
                 `PUSH:
                 begin
                     stk_push    <= 1;
+                    stk_pop     <= 0;
                     stk_data_in <= (opc == 2'b00) ? addr_const : mem_data_out;
                     state       <= `INIT;
+                    fin_sig     <= 1;
                 end
                 `POP:
                 begin
-                    stk_pop <= 1;
-                    state   <= `STORE;
+                    stk_pop  <= 1;
+                    stk_push <= 0;
+                    state    <= `STORE;
                 end
                 `LOAD:
                 begin
@@ -95,6 +101,7 @@ module WBPB (control_bus,
                     mem_data_in <= stk_data_out;
                     mem_addr    <= addr_const;
                     state       <= `INIT;
+                    fin_sig     <= 1;
                 end
             endcase
         end
@@ -102,7 +109,7 @@ module WBPB (control_bus,
     end
     
     //debugging
-    // always @(*)
-    //     $display($time, "\t [WBPB::%d] rstn = %b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
+    always @(*)
+        $display($time, "\t [WBPB::%d] rstn = %b, en = %b control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     
 endmodule

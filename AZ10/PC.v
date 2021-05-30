@@ -12,7 +12,8 @@ module PC (control_bus,
            z_flag,
            s_flag,
            stk_pop,
-           stk_data_out);
+           stk_data_out,
+           fin_sig);
     
     parameter INST_CAP = 20;
     parameter DATA_LEN = 8;
@@ -20,12 +21,13 @@ module PC (control_bus,
     input clk, en, rstn, z_flag, s_flag;
     input [3:0] control_bus;
     input [DATA_LEN-1:0] stk_data_out;
-    output reg stk_pop;
+    output reg stk_pop, fin_sig;
     output reg [$clog2(INST_CAP):0] pc;
     
     wire[1:0] opc = {control_bus[2], control_bus[0]};
     wire branch   = (control_bus > 2 && control_bus < 6);
-    wire exit     = (control_bus[3]);
+    wire exit     = (control_bus == 4'b1111);
+    wire stall    = !(control_bus < 4'b1000 || control_bus == 4'b1111);
     
     reg [2:0]state;
     
@@ -34,6 +36,7 @@ module PC (control_bus,
             state   <= `INIT;
             stk_pop <= 1'bz;
             pc      <= 0;
+            fin_sig <= 0;
         end
         else begin
             case(state)
@@ -48,6 +51,7 @@ module PC (control_bus,
                             else
                                 state <= `NXTL;
                         end
+                        fin_sig <= 0;
                         stk_pop <= 1'bz;
                     end
                 end
@@ -62,13 +66,17 @@ module PC (control_bus,
                         pc <= pc + 1;
                     end
                     state <= `INIT;
+                    if (stall) begin
+                        fin_sig <= 1;
+                    end
                 end
                 `BR:
                 begin
                     if ((opc == 2'b01) || (opc == 2'b10 && z_flag) ||  (opc == 2'b11 && s_flag)) begin
                         pc <= stk_data_out;
                     end
-                    state <= `INIT;
+                    state   <= `INIT;
+                    fin_sig <= 1;
                 end
                 `EXIT:
                 begin

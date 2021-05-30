@@ -20,14 +20,14 @@ module MEMORY (addr,
     
     reg [WORD_LEN-1:0] data_o1,data_o2;
     
-    always @(*) //todo: refactor
+    always @(posedge clk) //todo: refactor
     begin
         if (r_en) begin
             data_out <= mem[addr];
         end
-            if (w_en) begin
-                mem[addr] <= data_in;
-            end
+        if (w_en) begin
+            mem[addr] <= data_in;
+        end
         
     end
     

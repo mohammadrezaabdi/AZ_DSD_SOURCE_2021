@@ -1,12 +1,12 @@
-`define INIT    0000
-`define OP1_POP 0001
-`define OP1_RCV 0010
-`define OP2_POP 0011
-`define OP2_RCV 0100
-`define ALU     0101
-`define ADD     0110
-`define SUB     0111
-`define PUSH    1000
+`define INIT    4'b0000
+`define OP1_POP 4'b0001
+`define OP1_RCV 4'b0010
+`define OP2_POP 4'b0011
+`define OP2_RCV 4'b0100
+`define ALU     4'b0101
+`define ADD     4'b0110
+`define SUB     4'b0111
+`define PUSH    4'b1000
 
 module ALU (control_bus,
             clk,
@@ -17,7 +17,8 @@ module ALU (control_bus,
             stk_data_in,
             stk_push,
             stk_pop,
-            stk_data_out);
+            stk_data_out,
+            fin_sig);
     
     parameter DATA_LEN = 8;
     
@@ -26,7 +27,7 @@ module ALU (control_bus,
     input [DATA_LEN-1:0] stk_data_out;
     output reg [DATA_LEN-1:0] stk_data_in;
     output reg stk_push, stk_pop;
-    output reg z_flag, s_flag;
+    output reg z_flag, s_flag, fin_sig;
     
     wire asn    = control_bus[0];
     wire alu_en = (en && control_bus[1] && control_bus[2]);
@@ -43,6 +44,7 @@ module ALU (control_bus,
             stk_pop     <= 1'bz;
             s_flag      <= 0;
             z_flag      <= 0;
+            fin_sig     <= 0;
         end
         else begin
             case(state)
@@ -52,6 +54,7 @@ module ALU (control_bus,
                         if (alu_en) begin
                             state <= `OP1_POP;
                         end
+                        fin_sig     <= 0;
                         stk_data_in <= {DATA_LEN{1'bz}};
                         stk_push    <= 1'bz;
                         stk_pop     <= 1'bz;
@@ -103,6 +106,7 @@ module ALU (control_bus,
                     stk_push    <= 1;
                     stk_data_in <= res;
                     state       <= `INIT;
+                    fin_sig     <= 1;
                 end
             endcase
         end
