@@ -49,8 +49,10 @@ module Stack (rstn,
             end
         end
         
-        //debugging
-        $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
     end
+    
+    //debugging
+    // always @(*)
+    //     $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
 
 endmodule

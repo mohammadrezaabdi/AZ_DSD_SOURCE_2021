@@ -1,7 +1,8 @@
-`define INIT    00
-`define POP     01
-`define NXTL      10
-`define BR      11
+`define INIT    3'b000
+`define POP     3'b001
+`define NXTL    3'b010
+`define BR      3'b011
+`define EXIT    3'b100
 
 module PC (control_bus,
            clk,
@@ -24,8 +25,9 @@ module PC (control_bus,
     
     wire[1:0] opc = {control_bus[2], control_bus[0]};
     wire branch   = (control_bus > 2 && control_bus < 6);
+    wire exit     = (control_bus[3]);
     
-    reg [3:0]state;
+    reg [2:0]state;
     
     always @(posedge clk, negedge rstn) begin
         if (!rstn && !en) begin
@@ -39,7 +41,12 @@ module PC (control_bus,
                 begin
                     if (rstn) begin
                         if (en) begin
-                            state <= (branch) ? `POP : `NXTL;
+                            if (branch)
+                                state <= `POP;
+                            else if (exit)
+                                state <= `EXIT;
+                            else
+                                state <= `NXTL;
                         end
                         stk_pop <= 1'bz;
                     end
@@ -63,11 +70,17 @@ module PC (control_bus,
                     end
                     state <= `INIT;
                 end
+                `EXIT:
+                begin
+                    //do nothing
+                end
             endcase
         end
         
-        //debuging
-        $display($time, "\t [PC::%d] rstn = %b, en = %b, control_bus = %b, pc = %d, z_flag = %b, s_flag = %b, stk_pop = %b, stk_data_out = %d", state, rstn, en, control_bus, pc, z_flag, s_flag, stk_pop, stk_data_out);
     end
+    
+    //debuging
+    // always @(*)
+    //     $display($time, "\t [PC::%d] rstn = %b, en = %b, control_bus = %b, pc = %d, z_flag = %b, s_flag = %b, stk_pop = %b, stk_data_out = %d", state, rstn, en, control_bus, pc, z_flag, s_flag, stk_pop, stk_data_out);
     
 endmodule

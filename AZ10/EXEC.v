@@ -15,8 +15,7 @@ module EXEC (clk,
              mem_addr,
              mem_r_en,
              mem_w_en,
-             mem_data_out,
-             exec_code);
+             mem_data_out);
     
     parameter DATA_LEN = 8;
     parameter ADDR_LEN = 8;
@@ -30,10 +29,7 @@ module EXEC (clk,
     output wire stk_push, stk_pop, mem_r_en, mem_w_en;
     output wire [$clog2(INST_CAP):0] pc;
     wire alu_z_flag, alu_s_flag;
-    output wire [1:0] exec_code;
-    
-    assign exec_code = (en && control_bus[3] == 1) ? `EXIT : `NXTI;
-    
+
     ALU  #(
     .DATA_LEN(DATA_LEN)
     ) alu0 (

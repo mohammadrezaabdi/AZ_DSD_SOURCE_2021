@@ -108,7 +108,8 @@ module ALU (control_bus,
         end
     end
     
-    initial
-        $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, z_flag = %b, s_flag = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d", state, rstn, control_bus, z_flag, s_flag, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out);
+    //debuging
+    // always @(*)
+    //     $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, z_flag = %b, s_flag = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d", state, rstn, control_bus, z_flag, s_flag, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out);
     
 endmodule

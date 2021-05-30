@@ -25,11 +25,14 @@ module MEMORY (addr,
         if (r_en) begin
             data_out <= mem[addr];
         end
-        if (w_en) begin
-            mem[addr] <= data_in;
-        end
+            if (w_en) begin
+                mem[addr] <= data_in;
+            end
         
-        //debuging
-        $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
     end
+    
+    //debuging
+    // always @(*)
+    //     $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
+    
 endmodule
