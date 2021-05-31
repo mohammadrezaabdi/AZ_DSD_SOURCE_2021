@@ -57,8 +57,13 @@ module PC (control_bus,
                 end
                 `POP:
                 begin
-                    stk_pop <= 1;
-                    state   <= `BR;
+                    if (!((opc == 2'b01) || (opc == 2'b10 && z_flag) ||  (opc == 2'b11 && s_flag))) begin
+                        state <= `NXTL;
+                    end
+                    else begin
+                        stk_pop <= 1;
+                        state   <= `BR;
+                    end
                 end
                 `NXTL:
                 begin
@@ -72,15 +77,13 @@ module PC (control_bus,
                 end
                 `BR:
                 begin
-                    if ((opc == 2'b01) || (opc == 2'b10 && z_flag) ||  (opc == 2'b11 && s_flag)) begin
-                        pc <= stk_data_out;
-                    end
+                    pc <= stk_data_out;
                     state   <= `INIT;
                     fin_sig <= 1;
                 end
                 `EXIT:
                 begin
-                    //do nothing
+                // do nothing
                 end
             endcase
         end

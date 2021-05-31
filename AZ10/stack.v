@@ -20,6 +20,8 @@ module Stack (rstn,
     
     assign empty = (stack_ptr == 0) ? 1'b1 : 1'b0;
     assign full  = (stack_ptr == STACK_DEPTH) ? 1'b1 : 1'b0;
+
+    wire [WORD_LEN-1:0]top = memory[stack_ptr-1];
     
     // stack reset
     task reset_memory;
@@ -33,7 +35,7 @@ module Stack (rstn,
     endtask
     
     always @(posedge clk or negedge rstn) begin
-        if (rstn) begin
+        if (!rstn) begin
             reset_memory;
         end
         else begin
@@ -53,6 +55,6 @@ module Stack (rstn,
     
     //debugging
     always @(*)
-        $display($time, "\t [STACK] rstn = %b, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, data_in, push, pop, data_out, full, empty);
+        $display($time, "\t [STACK] rstn = %b, stack_ptr = %d, top = %d, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, stack_ptr, top, data_in, push, pop, data_out, full, empty);
 
 endmodule

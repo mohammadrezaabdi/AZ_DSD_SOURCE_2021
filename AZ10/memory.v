@@ -20,19 +20,18 @@ module MEMORY (addr,
     
     reg [WORD_LEN-1:0] data_o1,data_o2;
     
-    always @(posedge clk) //todo: refactor
+    always @(*) //todo: refactor mem_D va kir e khar
     begin
         if (r_en) begin
             data_out <= mem[addr];
         end
         if (w_en) begin
             mem[addr] <= data_in;
-        end
-        
+        end    
     end
     
     //debuging
-    // always @(*)
-    //     $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
+    always @(*)
+        $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
     
 endmodule

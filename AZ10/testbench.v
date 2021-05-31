@@ -44,7 +44,7 @@ module testbench();
         #CLK_C
         rstn = 1;
         #(100 * CLK_C);
-        $writememb("report/result.mem", cpu0.memory0.mem, 0, MEM_SIZE-1);
+        $writememb("report/result.mem", cpu0.memory0.mem);
         $finish;
     end
     

@@ -1,9 +1,11 @@
-`define INIT    3'b000
-`define PUSH    3'b001
-`define POP     3'b010
-`define LOAD    3'b011
-`define STORE   3'b100
-
+`define INIT    3'b000             //Pushm  -> load push
+`define LOAD    3'b001
+`define PUSH    3'b010             //pop    -> pop store 
+`define PUSH_D  3'b011
+`define POP     3'b100             //pushc  -> push
+`define POP_D   3'b101
+`define STORE   3'b110
+//todo kir e khar
 module WBPB (control_bus,
              clk,
              en,
@@ -75,16 +77,26 @@ module WBPB (control_bus,
                 end
                 `PUSH:
                 begin
-                    stk_push    <= 1;
+                    mem_r_en <= 0;
+                    mem_w_en <= 0;
                     stk_pop     <= 0;
                     stk_data_in <= (opc == 2'b00) ? addr_const : mem_data_out;
+                    state       <= `PUSH_D;
+                end
+                `PUSH_D:
+                begin
+                    stk_push    <= 1;
                     state       <= `INIT;
                     fin_sig     <= 1;
                 end
                 `POP:
                 begin
-                    stk_pop  <= 1;
                     stk_push <= 0;
+                    state    <= `POP_D;
+                end
+                `POP_D:
+                begin
+                    stk_pop  <= 1;
                     state    <= `STORE;
                 end
                 `LOAD:
@@ -110,6 +122,6 @@ module WBPB (control_bus,
     
     //debugging
     always @(*)
-        $display($time, "\t [WBPB::%d] rstn = %b, en = %b control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
+        $display($time, "\t [WBPB::%d] rstn = %b, en = %b, fin_sig=%b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, fin_sig, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     
 endmodule
