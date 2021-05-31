@@ -1,16 +1,16 @@
 `define INIT    3'b000
 
-`define LOAD    3'b001
-`define PUSH    3'b010 
-`define PUSH_D  3'b011
+`define LOAD    3'b011      
+`define PUSH    3'b001      
+`define PUSH_W  3'b010      
 
-`define POP     3'b100
-`define POP_D   3'b101
-`define STORE   3'b110
+`define POP     3'b101 
+`define POP_W   3'b110      
+`define STORE   3'b111      
 
-// `define OP_PUSHC    
-// `define OP_PUSHM
-// `define OP_POPM
+`define OP_PUSHC    2'b00     
+`define OP_PUSHM    2'b01
+`define OP_POPM     2'b10
 
 //todo kir e khar
 module PP (control_bus,
@@ -60,27 +60,17 @@ module PP (control_bus,
             case(state)
                 `INIT:
                 begin
-                    if (rstn) begin
-                        if (wbpb_en) begin
-                            if (opc == 2'b00) begin
-                                state <= `PUSH;
-                            end
-                            else if (opc == 2'b01) begin
-                                state <= `LOAD;
-                            end
-                            else if (opc == 2'b10) begin
-                                state <= `POP;
-                            end
-                        end
-                        fin_sig     <= 0;
-                        stk_data_in <= {DATA_LEN{1'bz}};
-                        stk_push    <= 1'bz;
-                        stk_pop     <= 1'bz;
-                        mem_data_in <= {DATA_LEN{1'bz}};
-                        mem_addr    <= {ADDR_LEN{1'bz}};
-                        mem_r_en    <= 1'bz;
-                        mem_w_en    <= 1'bz;
+                    if (wbpb_en) begin
+                        state <= {opc,1'b1};
                     end
+                    fin_sig     <= 0;
+                    stk_data_in <= {DATA_LEN{1'bz}};
+                    stk_push    <= 1'bz;
+                    stk_pop     <= 1'bz;
+                    mem_data_in <= {DATA_LEN{1'bz}};
+                    mem_addr    <= {ADDR_LEN{1'bz}};
+                    mem_r_en    <= 1'bz;
+                    mem_w_en    <= 1'bz;
                 end
                 `PUSH:
                 begin
@@ -88,30 +78,13 @@ module PP (control_bus,
                     mem_w_en <= 0;
                     stk_pop     <= 0;
                     stk_data_in <= (opc == 2'b00) ? addr_const : mem_data_out;
-                    state       <= `PUSH_D;
+                    state       <= `PUSH_W;
                 end
-                `PUSH_D:
+                `PUSH_W:
                 begin
                     stk_push    <= 1;
                     state       <= `INIT;
                     fin_sig     <= 1;
-                end
-                `POP:
-                begin
-                    stk_push <= 0;
-                    stk_pop  <= 1;
-                    state    <= `POP_D;
-                end
-                `POP_D:
-                begin
-                    state    <= `STORE;
-                end
-                `LOAD:
-                begin
-                    mem_r_en <= 1;
-                    mem_w_en <= 0;
-                    mem_addr <= addr_const;
-                    state    <= `PUSH;
                 end
                 `STORE:
                 begin
@@ -122,13 +95,32 @@ module PP (control_bus,
                     state       <= `INIT;
                     fin_sig     <= 1;
                 end
+                `POP:
+                begin
+                    stk_push <= 0;
+                    stk_pop  <= 1;
+                    state    <= `POP_W;
+                end
+                `POP_W:
+                begin
+                    state    <= `STORE;
+                end
+                `LOAD:
+                begin
+                    mem_r_en <= 1;
+                    mem_w_en <= 0;
+                    mem_addr <= addr_const;
+                    state    <= `PUSH;
+                end
+                default:
+                    state <= `INIT;
             endcase
         end
         
     end
     
     //debugging
-    // always @(*)
-    //     $display($time, "\t [WBPB::%d] rstn = %b, en = %b, fin_sig=%b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, fin_sig, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
+    always @(*)
+        $display($time, "\t [WBPB::%d] rstn = %b, en = %b, fin_sig=%b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, fin_sig, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     
 endmodule

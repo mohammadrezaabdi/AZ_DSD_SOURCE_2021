@@ -126,8 +126,8 @@ module CPU (rstn,
     );
     
     // debuging
-    // always @(*)
-    //     $display($time, "\t [CPU::%d] ifidc_fetch = %b, exec_en = %b, exec_finish = %b", state, ifidc_fetch, exec_en, exec_fin_sig);
+    always @(*)
+        $display($time, "\t [CPU::%d] ifidc_fetch = %b, exec_en = %b, exec_finish = %b", state, ifidc_fetch, exec_en, exec_fin_sig);
     
     
 endmodule

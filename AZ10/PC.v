@@ -42,18 +42,16 @@ module PC (control_bus,
             case(state)
                 `INIT:
                 begin
-                    if (rstn) begin
-                        if (en) begin
-                            if (branch)
-                                state <= `POP;
-                            else if (exit)
-                                state <= `EXIT;
-                            else
-                                state <= `NXTL;
-                        end
-                        fin_sig <= 0;
-                        stk_pop <= 1'bz;
+                    if (en) begin
+                        if (branch)
+                            state <= `POP;
+                        else if (exit)
+                            state <= `EXIT;
+                        else
+                            state <= `NXTL;
                     end
+                    fin_sig <= 0;
+                    stk_pop <= 1'bz;
                 end
                 `POP:
                 begin
@@ -93,7 +91,7 @@ module PC (control_bus,
     end
     
     //debuging
-    // always @(*)
-    //     $display($time, "\t [PC::%d] rstn = %b, en = %b, control_bus = %b, pc = %d, z_flag = %b, s_flag = %b, stk_pop = %b, stk_data_out = %d", state, rstn, en, control_bus, pc, z_flag, s_flag, stk_pop, stk_data_out);
+    always @(*)
+        $display($time, "\t [PC::%d] rstn = %b, en = %b, control_bus = %b, pc = %d, z_flag = %b, s_flag = %b, stk_pop = %b, stk_data_out = %d", state, rstn, en, control_bus, pc, z_flag, s_flag, stk_pop, stk_data_out);
     
 endmodule

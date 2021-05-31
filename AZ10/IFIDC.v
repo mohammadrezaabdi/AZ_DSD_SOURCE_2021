@@ -35,10 +35,8 @@ module IFIDC (clk,
             case(state)
                 `INIT:
                 begin
-                    if (rstn) begin
-                        if (en) begin
-                            state <= `IF;
-                        end
+                    if (en) begin
+                        state <= `IF;
                     end
                     IS_ready <=0;
                 end
@@ -60,7 +58,7 @@ module IFIDC (clk,
     end
     
     //debuging
-    // always @(*)
-    //     $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d IS_ready = %b rstn = %b en = %b", state, pc, control_bus, data,IS_ready,rstn, en);
+    always @(*)
+        $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d IS_ready = %b rstn = %b en = %b", state, pc, control_bus, data,IS_ready,rstn, en);
     
 endmodule

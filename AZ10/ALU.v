@@ -51,15 +51,13 @@ module ALU (control_bus,
             case(state)
                 `INIT:
                 begin
-                    if (rstn) begin
-                        if (alu_en) begin
-                            state <= `OP1_POP;
-                        end
-                        fin_sig     <= 0;
-                        stk_data_in <= {DATA_LEN{1'bz}};
-                        stk_push    <= 1'bz;
-                        stk_pop     <= 1'bz;
+                    if (alu_en) begin
+                        state <= `OP1_POP;
                     end
+                    fin_sig     <= 0;
+                    stk_data_in <= {DATA_LEN{1'bz}};
+                    stk_push    <= 1'bz;
+                    stk_pop     <= 1'bz;
                 end
                 `OP1_POP:
                 begin
