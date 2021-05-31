@@ -31,7 +31,7 @@ module MEMORY (addr,
     end
     
     //debuging
-    always @(*)
-        $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
+    // always @(*)
+    //     $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
     
 endmodule

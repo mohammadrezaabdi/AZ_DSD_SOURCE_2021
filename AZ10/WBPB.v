@@ -1,8 +1,8 @@
-`define INIT    3'b000             //Pushm  -> load push
+`define INIT    3'b000
 `define LOAD    3'b001
-`define PUSH    3'b010             //pop    -> pop store 
+`define PUSH    3'b010 
 `define PUSH_D  3'b011
-`define POP     3'b100             //pushc  -> push
+`define POP     3'b100
 `define POP_D   3'b101
 `define STORE   3'b110
 //todo kir e khar
@@ -121,7 +121,7 @@ module WBPB (control_bus,
     end
     
     //debugging
-    always @(*)
-        $display($time, "\t [WBPB::%d] rstn = %b, en = %b, fin_sig=%b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, fin_sig, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
+    // always @(*)
+    //     $display($time, "\t [WBPB::%d] rstn = %b, en = %b, fin_sig=%b, control_bus = %b, addr_const = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d, mem_data_in = %d, mem_addr = %d, mem_r_en = %b, mem_w_en = %b, mem_data_out = %d", state, rstn, en, fin_sig, control_bus, addr_const, stk_data_in, stk_push, stk_pop, stk_data_out, mem_data_in, mem_addr, mem_r_en, mem_w_en, mem_data_out);
     
 endmodule

@@ -1,12 +1,13 @@
 `define INIT    4'b0000
 `define OP1_POP 4'b0001
 `define OP1_RCV 4'b0010
-`define OP2_POP 4'b0011
-`define OP2_RCV 4'b0100
-`define ALU     4'b0101
-`define ADD     4'b0110
-`define SUB     4'b0111
+`define OP1_STR 4'b0011
+`define OP2_POP 4'b0100
+`define OP2_RCV 4'b0101
+`define OP2_STR 4'b0110
+`define ALU     4'b0111
 `define PUSH    4'b1000
+`define PUSH_D  4'b1001
 
 module ALU (control_bus,
             clk,
@@ -29,7 +30,7 @@ module ALU (control_bus,
     output reg stk_push, stk_pop;
     output reg z_flag, s_flag, fin_sig;
     
-    wire asn    = control_bus[0];
+    wire asn    = !control_bus[0];
     wire alu_en = (en && control_bus[1] && control_bus[2]);
     
     reg [3:0]state;
@@ -62,12 +63,18 @@ module ALU (control_bus,
                 end
                 `OP1_POP:
                 begin
+                    stk_push<= 0;
+
                     stk_pop <= 1;
                     state   <= `OP1_RCV;
                 end
                 `OP1_RCV:
                 begin
                     stk_pop <= 0;
+                    state   <= `OP1_STR;
+                end
+                `OP1_STR:
+                begin
                     op1     <= stk_data_out;
                     state   <= `OP2_POP;
                 end
@@ -79,24 +86,19 @@ module ALU (control_bus,
                 `OP2_RCV:
                 begin
                     stk_pop <= 0;
+                    state   <= `OP2_STR;
+                end
+                `OP2_STR:
+                begin
                     op2     <= stk_data_out;
                     state   <= `ALU;
                 end
                 `ALU:
                 begin
                     if (asn)
-                        state <= `ADD;
+                        res   <= op2+op1;
                     else
-                        state <= `SUB;
-                end
-                `ADD:
-                begin
-                    res   <= op1+op2;
-                    state <= `PUSH;
-                end
-                `SUB:
-                begin
-                    res   <= op1-op2;
+                        res   <= op2-op1;
                     state <= `PUSH;
                 end
                 `PUSH:
@@ -105,6 +107,11 @@ module ALU (control_bus,
                     z_flag      <= (res == 0);
                     stk_push    <= 1;
                     stk_data_in <= res;
+                    state       <= `PUSH_D;
+                end
+                `PUSH_D:
+                begin
+                    stk_push    <= 0;
                     state       <= `INIT;
                     fin_sig     <= 1;
                 end
@@ -113,7 +120,7 @@ module ALU (control_bus,
     end
     
     //debuging
-    // always @(*)
-    //     $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, z_flag = %b, s_flag = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d", state, rstn, control_bus, z_flag, s_flag, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out);
+    always @(*)
+        $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d z_flag = %b, s_flag = %b,", state, rstn, control_bus, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out, z_flag, s_flag);
     
 endmodule
