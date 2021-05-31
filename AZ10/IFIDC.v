@@ -6,6 +6,7 @@ module IFIDC (clk,
               en,
               rstn,
               pc,
+              IS_ready,
               control_bus,
               data);
     
@@ -17,6 +18,7 @@ module IFIDC (clk,
     input [$clog2(INST_CAP):0] pc;
     output reg [3:0]control_bus;
     output reg [DATA_LEN-1:0]data;
+    output reg IS_ready;
     
     reg [INST_LEN-1:0] inst_mem [INST_CAP-1:0];
     reg[INST_LEN-1:0] inst;
@@ -38,6 +40,7 @@ module IFIDC (clk,
                             state <= `IF;
                         end
                     end
+                    IS_ready <=0;
                 end
                 `IF:
                 begin
@@ -49,6 +52,7 @@ module IFIDC (clk,
                     control_bus[3:0] <= inst[INST_LEN-1:DATA_LEN];
                     data             <= inst[DATA_LEN-1:0];
                     state            <= `INIT;
+                    IS_ready <=1;
                 end
             endcase
         end
@@ -57,6 +61,6 @@ module IFIDC (clk,
     
     //debuging
     // always @(*)
-    //     $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d", state, pc, control_bus, data);
+    //     $display($time, "\t [IFIDC::%d] pc = %d control_bus = %b addr_imm = %d IS_ready = %b rstn = %b en = %b", state, pc, control_bus, data,IS_ready,rstn, en);
     
 endmodule

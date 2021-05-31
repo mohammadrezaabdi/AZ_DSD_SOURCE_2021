@@ -54,7 +54,7 @@ module Stack (rstn,
     end
     
     //debugging
-    always @(*)
-        $display($time, "\t [STACK] rstn = %b, stack_ptr = %d, top = %d, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, stack_ptr, top, data_in, push, pop, data_out, full, empty);
+    // always @(*)
+    //     $display($time, "\t [STACK] rstn = %b, stack_ptr = %d, top = %d, data_in = %d, push = %b, pop = %b, data_out = %d, full = %b, empty = %b", rstn, stack_ptr, top, data_in, push, pop, data_out, full, empty);
 
 endmodule

@@ -1,143 +1,46 @@
-                   0	 [STACK] rstn = 0, stack_ptr =  x, top =   x, data_in =   x, push = x, pop = x, data_out =   x, full = x, empty = x
+WARNING: testbench.v:39: $readmemb(report/is.mem): Not enough words in the file for the requested range [0:19].
+                   0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = x
                    0	 [WBPB::x] rstn = 0, en = x, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
+                   0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = 0
                    0	 [WBPB::x] rstn = 0, en = 0, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
-                   0	 [STACK] rstn = 0, stack_ptr =  0, top =   x, data_in =   x, push = x, pop = x, data_out =   x, full = 0, empty = 1
+                   5	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 0 en = 0
                    5	 [WBPB::0] rstn = 0, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                   5	 [STACK] rstn = 0, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
-                   5	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = xxxxxxxx
-                  10	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
+                  10	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 1 en = 0
                   10	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  25	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  35	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  15	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 1
+                  25	 [IFIDC::1] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
+                  35	 [IFIDC::2] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
+                  45	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 1 rstn = 1 en = 0
                   45	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  75	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  85	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  95	 [MEMORY] r_en = 1, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = xxxxxxxx
-                  95	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   x
-                  95	 [MEMORY] r_en = 1, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                  95	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
-                 105	 [MEMORY] r_en = 0, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                 105	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   5, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
-                 115	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   2, stk_data_in =   5, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
-                 125	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 125	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00000101
-                 125	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
-                 125	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 0
-                 145	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 155	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 165	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
-                 165	 [MEMORY] r_en = 1, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                 165	 [MEMORY] r_en = 1, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 165	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =  10
-                 175	 [MEMORY] r_en = 0, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 175	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =  10, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 185	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   2, stk_data_in =  10, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 195	 [STACK] rstn = 1, stack_ptr =  2, top =  10, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 0
-                 195	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 195	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 215	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 225	 [WBPB::4] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 235	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = 0, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 245	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 255	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = 0, pop = 1, data_out =  10, full = 0, empty = 0
-                 255	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  10, mem_data_in =   x, mem_addr =   1, mem_r_en = 0, mem_w_en = 1, mem_data_out =  10
-                 255	 [MEMORY] r_en = 0, addr =   1, w_en = 1, data_in = xxxxxxxx, data_out = 00001010
-                 265	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 265	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 265	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 265	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 1
-                 285	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 295	 [WBPB::4] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 305	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = 0, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 315	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 325	 [MEMORY] r_en = 0, addr =   x, w_en = 1, data_in = 00000101, data_out = 00001010
-                 325	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   5, mem_addr =   x, mem_r_en = 0, mem_w_en = 1, mem_data_out =  10
-                 335	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 335	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 355	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 365	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 375	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = 1, data_out =   5, full = 0, empty = 1
-                 375	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 385	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = 0, data_out =   5, full = 0, empty = 1
-                 385	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 395	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = 1, data_out =   5, full = 0, empty = 1
-                 395	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 405	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = 0, data_out =   5, full = 0, empty = 1
-                 405	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 435	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   0, push = 1, pop = 0, data_out =   5, full = 0, empty = 1
-                 435	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 445	 [STACK] rstn = 1, stack_ptr =  1, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 1
-                 445	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 445	 [STACK] rstn = 1, stack_ptr =  1, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 465	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 475	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 485	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 485	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 495	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 505	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 505	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 505	 [STACK] rstn = 1, stack_ptr =  2, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 525	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 535	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 545	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 545	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 555	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 565	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 565	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 565	 [STACK] rstn = 1, stack_ptr =  3, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 585	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 595	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 605	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 605	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 615	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 625	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 625	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 625	 [STACK] rstn = 1, stack_ptr =  4, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 645	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 655	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 665	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 665	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 675	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 685	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 685	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 685	 [STACK] rstn = 1, stack_ptr =  5, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 705	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 715	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 725	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 725	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 735	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 745	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 745	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 745	 [STACK] rstn = 1, stack_ptr =  6, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 765	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 775	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 785	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 785	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 795	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 805	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 805	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 805	 [STACK] rstn = 1, stack_ptr =  7, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 825	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 835	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 845	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 845	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 855	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 865	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 865	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 865	 [STACK] rstn = 1, stack_ptr =  8, top =   0, data_in =   z, push = z, pop = z, data_out =   5, full = 1, empty = 0
-                 885	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 895	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 905	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 905	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 915	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 925	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 925	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                 945	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 955	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 965	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00001010
-                 965	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = z, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 975	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =   0, stk_data_in =   0, stk_push = 1, stk_pop = 0, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  10
-                 985	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-                 985	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00001010
-                1005	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =   0, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  10
-WARNING: testbench.v:47: $writememb: Standard inconsistency, following 1364-2005.
+                  55	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
+                  65	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  75	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  85	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   x
+                  85	 [IFIDC::0] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
+                  85	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
+                  95	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                 105	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                 115	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 125	 [IFIDC::0] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 1
+                 135	 [IFIDC::1] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
+                 145	 [IFIDC::2] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
+                 155	 [IFIDC::0] pc =  1 control_bus = 0010 addr_imm =   2 IS_ready = 1 rstn = 1 en = 0
+                 155	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 165	 [IFIDC::0] pc =  1 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
+                 175	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 185	 [WBPB::4] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 195	 [IFIDC::0] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
+                 195	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 205	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 215	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   x, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =   5
+                 225	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 235	 [IFIDC::0] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 1
+                 245	 [IFIDC::1] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
+                 255	 [IFIDC::2] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
+                 265	 [IFIDC::0] pc =  2 control_bus = 1111 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
+                 265	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 275	 [IFIDC::0] pc =  2 control_bus = 1111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
+                 285	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 295	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+WARNING: PC.v:87: $writememb: Standard inconsistency, following 1364-2005.
+                 305	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5

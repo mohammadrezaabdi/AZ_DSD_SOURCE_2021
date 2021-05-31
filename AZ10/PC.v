@@ -84,6 +84,8 @@ module PC (control_bus,
                 `EXIT:
                 begin
                 // do nothing
+                $writememb("report/result.mem", cpu0.memory0.mem);
+                $finish;
                 end
             endcase
         end

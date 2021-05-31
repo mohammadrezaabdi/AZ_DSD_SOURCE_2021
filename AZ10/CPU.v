@@ -1,6 +1,7 @@
 `define IFIDC   2'b00
-`define EXEC    2'b01
-`define WAIT    2'b10
+`define IFIDC_W 2'b01
+`define EXEC    2'b10
+`define EXEC_W  2'b11
 
 module CPU (rstn,
             clk);
@@ -15,18 +16,18 @@ module CPU (rstn,
     
     input rstn, clk;
     
-    wire stk_full, stk_empty, stk_push, stk_pop, mem_r_en, mem_w_en, exec_fin_sig;
+    wire stk_full, stk_empty, stk_push, stk_pop, mem_r_en, mem_w_en, exec_fin_sig,IS_ready;
     wire [3:0] ifidc_control_bus;
     wire [DATA_LEN-1:0] stk_data_in, stk_data_out, mem_data_in, mem_data_out, ifidc_addr_const;
     wire [ADDR_LEN-1:0] mem_addr;
     wire [$clog2(INST_CAP):0] exec_pc;
     
-    reg ifidc_en, exec_en;
+    reg ifidc_fetch, exec_en;
     reg [1:0] state;
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
-            ifidc_en <= 0;
+            ifidc_fetch <= 0;
             exec_en  <= 0;
             state    <= `IFIDC;
         end
@@ -34,19 +35,23 @@ module CPU (rstn,
             case(state)
                 `IFIDC:
                 begin
-                    ifidc_en <= 1;
-                    exec_en  <= 0;
-                    state    <= `EXEC;
+                    ifidc_fetch <= 1;
+                    state    <= `IFIDC_W;
+                end
+                `IFIDC_W:
+                begin
+                    ifidc_fetch <= 0;
+                    if(IS_ready==1) begin
+                        state    <= `EXEC;
+                    end
                 end
                 `EXEC:
                 begin
-                    ifidc_en <= 0;
                     exec_en  <= 1;
-                    state    <= `WAIT;
+                    state    <= `EXEC_W;
                 end
-                `WAIT:
+                `EXEC_W:
                 begin
-                    ifidc_en <= 0;
                     exec_en  <= 0;
                     if (exec_fin_sig) begin
                         state <= `IFIDC;
@@ -62,9 +67,10 @@ module CPU (rstn,
     .DATA_LEN(DATA_LEN)
     ) ifidc0 (
     .clk(clk),
-    .en(ifidc_en),
+    .en(ifidc_fetch),
     .rstn(rstn),
     .pc(exec_pc),
+    .IS_ready(IS_ready),
     .control_bus(ifidc_control_bus),
     .data(ifidc_addr_const)
     );
@@ -119,9 +125,9 @@ module CPU (rstn,
     .empty(stk_empty)
     );
     
-    //debuging
+    // debuging
     // always @(*)
-    //     $display($time, "\t [CPU::%d] ifidc_en = %b, exec_en = %b, exec_finish = %b", state, ifidc_en, exec_en, exec_fin_sig);
+    //     $display($time, "\t [CPU::%d] ifidc_fetch = %b, exec_en = %b, exec_finish = %b", state, ifidc_fetch, exec_en, exec_fin_sig);
     
     
 endmodule
