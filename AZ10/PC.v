@@ -5,6 +5,10 @@
 `define EXIT    3'b100
 `define POP_W   3'b101
 
+`define OP_JP   2'b01
+`define OP_JS   2'b10
+`define OP_JZ   2'b11
+
 module PC (control_bus,
            clk,
            rstn,
@@ -35,11 +39,11 @@ module PC (control_bus,
     
     always @(posedge clk, negedge rstn) begin
         if (!rstn && !en) begin
-            state   <= `INIT;
-            stk_pop <= 1'bz;
+            state    <= `INIT;
+            stk_pop  <= 1'bz;
             stk_push <= 1'bz;
-            pc      <= 0;
-            fin_sig <= 0;
+            pc       <= 0;
+            fin_sig  <= 0;
         end
         else begin
             case(state)
@@ -53,19 +57,19 @@ module PC (control_bus,
                         else
                             state <= `NXTL;
                     end
-                    fin_sig <= 0;
-                    stk_pop <= 1'bz;
+                    fin_sig  <= 0;
+                    stk_pop  <= 1'bz;
                     stk_push <= 1'bz;
                 end
                 `POP:
                 begin
                     stk_push <= 0;
-                    if (!((opc == 2'b01) || (opc == 2'b10 && z_flag) ||  (opc == 2'b11 && s_flag))) begin
-                        state <= `NXTL;
-                    end
-                    else begin
+                    if ((opc == `OP_JP) || (opc == `OP_JZ && z_flag) ||  (opc == `OP_JS && s_flag)) begin
                         stk_pop <= 1;
                         state   <= `POP_W;
+                    end
+                    else begin
+                        state <= `NXTL;
                     end
                 end
                 `POP_W:
@@ -85,14 +89,14 @@ module PC (control_bus,
                 end
                 `BR:
                 begin
-                    pc <= stk_data_out;
+                    pc      <= stk_data_out;
                     state   <= `INIT;
                     fin_sig <= 1;
                 end
                 `EXIT:
                 begin
-                $writememb("report/result.mem", cpu0.memory0.mem);
-                $finish;
+                    $writememb("report/result.mem", cpu0.memory0.mem);
+                    $finish;
                 end
             endcase
         end

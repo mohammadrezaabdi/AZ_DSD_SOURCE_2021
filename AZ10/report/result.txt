@@ -1,56 +1,56 @@
 VCD info: dumpfile report/waveform.vcd opened for output.
                    0	 [STACK] rstn = 0, stack_ptr =  x, top =   x, data_in =   x, push = x, pop = x, data_out =   x, full = x, empty = x
                    0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = x
-                   0	 [WBPB::x] rstn = 0, en = x, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
+                   0	 [WBPB::x] rstn = 0, en = x, fin_sig = x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
                    0	 [PC::x] rstn = 0, en = x, control_bus = xxxx, pc =  x, z_flag = x, s_flag = x, stk_pop = x, stk_data_out =   x
-                   0	 [ALU:: x] rstn = 0, control_bus = xxxx, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x z_flag = x, s_flag = x,
+                   0	 [ALU:: x] rstn = 0, control_bus = xxxx, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x z_flag = x, s_flag = x,
                    0	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = x
                    0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = 0
-                   0	 [WBPB::0] rstn = 0, en = 0, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
+                   0	 [WBPB::0] rstn = 0, en = 0, fin_sig = x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
                    0	 [PC::x] rstn = 0, en = 0, control_bus = xxxx, pc =  x, z_flag = x, s_flag = x, stk_pop = x, stk_data_out =   x
                    0	 [STACK] rstn = 0, stack_ptr =  0, top =   x, data_in =   x, push = x, pop = x, data_out =   x, full = 0, empty = 1
-                   5	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 0 en = 0
-                   5	 [WBPB::0] rstn = 0, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                   5	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 0 en = 0
+                   5	 [WBPB::0] rstn = 0, en = 0, fin_sig = 0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                    5	 [PC::0] rstn = 0, en = 0, control_bus = 1000, pc =  0, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                   5	 [ALU:: 0] rstn = 0, control_bus = 1000, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                   5	 [ALU:: 0] rstn = 0, control_bus = 1000, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                    5	 [STACK] rstn = 0, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
                    5	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = xxxxxxxx
                    5	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                   10	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
-                  10	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 1 en = 0
-                  10	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  10	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
+                  10	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   10	 [PC::0] rstn = 1, en = 0, control_bus = 1000, pc =  0, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                  10	 [ALU:: 0] rstn = 1, control_bus = 1000, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                  10	 [ALU:: 0] rstn = 1, control_bus = 1000, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                   15	 [CPU::1] ifidc_fetch = 1, exec_en = 0, exec_finish = 0
                   15	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 1
                   25	 [IFIDC::1] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                   25	 [CPU::1] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                   35	 [IFIDC::2] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                   45	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 1 rstn = 1 en = 0
-                  45	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  45	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   45	 [PC::0] rstn = 1, en = 0, control_bus = 0001, pc =  0, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                  45	 [ALU:: 0] rstn = 1, control_bus = 0001, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                  45	 [ALU:: 0] rstn = 1, control_bus = 0001, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                   55	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                   55	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                   65	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                  65	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  65	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   65	 [PC::0] rstn = 1, en = 1, control_bus = 0001, pc =  0, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                   75	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                  75	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
+                  75	 [WBPB::3] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   75	 [PC::2] rstn = 1, en = 0, control_bus = 0001, pc =  0, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                   85	 [MEMORY] r_en = 1, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = xxxxxxxx
-                  85	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   x
+                  85	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   x
                   85	 [IFIDC::0] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                   85	 [PC::0] rstn = 1, en = 0, control_bus = 0001, pc =  1, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                   85	 [MEMORY] r_en = 1, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                  85	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
+                  85	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
                   95	 [MEMORY] r_en = 0, addr =   1, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                  95	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
-                 105	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                  95	 [WBPB::2] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                 105	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
                  105	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  115	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 1
                  115	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 115	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 115	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  115	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00000101
                  115	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 0
                  115	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
@@ -60,26 +60,26 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  135	 [IFIDC::1] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                  145	 [IFIDC::2] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                  155	 [IFIDC::0] pc =  1 control_bus = 0000 addr_imm =  23 IS_ready = 1 rstn = 1 en = 0
-                 155	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 155	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  155	 [PC::0] rstn = 1, en = 0, control_bus = 0000, pc =  1, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                 155	 [ALU:: 0] rstn = 1, control_bus = 0000, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                 155	 [ALU:: 0] rstn = 1, control_bus = 0000, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                  165	 [IFIDC::0] pc =  1 control_bus = 0000 addr_imm =  23 IS_ready = 0 rstn = 1 en = 0
                  165	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  175	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 175	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 175	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  175	 [PC::0] rstn = 1, en = 1, control_bus = 0000, pc =  1, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                 185	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 185	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  185	 [PC::2] rstn = 1, en = 0, control_bus = 0000, pc =  1, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                  185	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  195	 [IFIDC::0] pc =  2 control_bus = 0000 addr_imm =  23 IS_ready = 0 rstn = 1 en = 0
                  195	 [PC::0] rstn = 1, en = 0, control_bus = 0000, pc =  2, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                  195	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                 195	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  23, stk_data_in =  23, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
-                 205	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =  23, stk_data_in =  23, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                 195	 [WBPB::2] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  23, stk_data_in =  23, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
+                 205	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0000, addr_const =  23, stk_data_in =  23, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
                  205	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  215	 [STACK] rstn = 1, stack_ptr =  2, top =  23, data_in =   z, push = z, pop = z, data_out =   x, full = 0, empty = 0
                  215	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 215	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 215	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  23, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  215	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00000101
                  215	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  225	 [CPU::1] ifidc_fetch = 1, exec_en = 0, exec_finish = 0
@@ -88,50 +88,50 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  235	 [IFIDC::1] pc =  2 control_bus = 0000 addr_imm =  23 IS_ready = 0 rstn = 1 en = 0
                  245	 [IFIDC::2] pc =  2 control_bus = 0000 addr_imm =  23 IS_ready = 0 rstn = 1 en = 0
                  255	 [IFIDC::0] pc =  2 control_bus = 0110 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
-                 255	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 255	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  255	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  2, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                 255	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                 255	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                  265	 [IFIDC::0] pc =  2 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  265	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  275	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 275	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 275	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  275	 [PC::0] rstn = 1, en = 1, control_bus = 0110, pc =  2, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
-                 285	 [ALU:: 1] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
+                 285	 [ALU:: 1] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x z_flag = 0, s_flag = 0,
                  285	 [PC::2] rstn = 1, en = 0, control_bus = 0110, pc =  2, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                  285	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                 285	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 285	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  295	 [IFIDC::0] pc =  3 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  295	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   x
                  295	 [STACK] rstn = 1, stack_ptr =  2, top =  23, data_in =   z, push = 0, pop = 1, data_out =   x, full = 0, empty = 0
-                 295	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 295	 [ALU:: 2] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   x z_flag = 0, s_flag = 0,
+                 295	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 295	 [ALU:: 2] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   x z_flag = 0, s_flag = 0,
                  305	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = 0, pop = 0, data_out =  23, full = 0, empty = 0
-                 305	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  23, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 305	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  23, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  305	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  23
-                 305	 [ALU:: 3] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  23 z_flag = 0, s_flag = 0,
-                 315	 [ALU:: 4] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  23 z_flag = 0, s_flag = 0,
+                 305	 [ALU:: 3] rstn = 1, control_bus = 0110, opt1 =    x, opt2 =    x, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  23 z_flag = 0, s_flag = 0,
+                 315	 [ALU:: 4] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  23 z_flag = 0, s_flag = 0,
                  325	 [STACK] rstn = 1, stack_ptr =  1, top =   5, data_in =   z, push = 0, pop = 1, data_out =  23, full = 0, empty = 0
-                 325	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  23, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 325	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  23, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  325	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  23
-                 325	 [ALU:: 5] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  23 z_flag = 0, s_flag = 0,
+                 325	 [ALU:: 5] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  23 z_flag = 0, s_flag = 0,
                  335	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =   5, full = 0, empty = 0
-                 335	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 335	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  335	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
-                 335	 [ALU:: 6] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 335	 [ALU:: 6] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    x, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  335	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =   5, full = 0, empty = 1
-                 345	 [ALU:: 7] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
-                 355	 [ALU:: 8] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 345	 [ALU:: 7] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =    x, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 355	 [ALU:: 8] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  365	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =  28, push = 1, pop = 0, data_out =   5, full = 0, empty = 1
-                 365	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 365	 [ALU:: 9] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 365	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 365	 [ALU:: 9] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  375	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =  28, push = 0, pop = 0, data_out =   5, full = 0, empty = 1
-                 375	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 375	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =  28, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 375	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 375	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =  28, stk_push = 0, stk_pop = 0, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  375	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =  28, push = 0, pop = 0, data_out =   5, full = 0, empty = 0
                  375	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  385	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =   z, push = z, pop = z, data_out =   5, full = 0, empty = 0
-                 385	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 385	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 385	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 385	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  385	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
                  385	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  385	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
@@ -141,30 +141,30 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  405	 [CPU::1] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  415	 [IFIDC::2] pc =  3 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  425	 [IFIDC::0] pc =  3 control_bus = 0010 addr_imm =   2 IS_ready = 1 rstn = 1 en = 0
-                 425	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 425	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  425	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
-                 425	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5 z_flag = 0, s_flag = 0,
+                 425	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5 z_flag = 0, s_flag = 0,
                  435	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  435	 [IFIDC::0] pc =  3 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  445	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 445	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 445	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  445	 [PC::0] rstn = 1, en = 1, control_bus = 0010, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
                  455	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                 455	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 455	 [WBPB::5] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  455	 [PC::2] rstn = 1, en = 0, control_bus = 0010, pc =  3, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
-                 465	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 465	 [WBPB::6] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  465	 [IFIDC::0] pc =  4 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  465	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc =  4, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =   5
                  475	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 1, data_out =  28, full = 0, empty = 0
-                 475	 [WBPB::7] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 475	 [WBPB::7] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  475	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc =  4, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 475	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 475	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  475	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 1, data_out =  28, full = 0, empty = 1
                  485	 [MEMORY] r_en = 0, addr =   2, w_en = 1, data_in = 00011100, data_out = 00000101
-                 485	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28, mem_data_in =  28, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =   5
+                 485	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28, mem_data_in =  28, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =   5
                  485	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  495	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 495	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 495	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  495	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00000101
                  495	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  505	 [CPU::1] ifidc_fetch = 1, exec_en = 0, exec_finish = 0
@@ -173,28 +173,28 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  515	 [IFIDC::1] pc =  4 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  525	 [IFIDC::2] pc =  4 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  535	 [IFIDC::0] pc =  4 control_bus = 0001 addr_imm =   2 IS_ready = 1 rstn = 1 en = 0
-                 535	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 535	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  535	 [PC::0] rstn = 1, en = 0, control_bus = 0001, pc =  4, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 535	 [ALU:: 0] rstn = 1, control_bus = 0001, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 535	 [ALU:: 0] rstn = 1, control_bus = 0001, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  545	 [IFIDC::0] pc =  4 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  545	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  555	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 555	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 555	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  555	 [PC::0] rstn = 1, en = 1, control_bus = 0001, pc =  4, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 565	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
+                 565	 [WBPB::3] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  565	 [PC::2] rstn = 1, en = 0, control_bus = 0001, pc =  4, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  565	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  575	 [IFIDC::0] pc =  5 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  575	 [PC::0] rstn = 1, en = 0, control_bus = 0001, pc =  5, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  575	 [MEMORY] r_en = 1, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00000101
-                 575	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
+                 575	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
                  575	 [MEMORY] r_en = 1, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00011100
-                 575	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =  28
+                 575	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =  28
                  585	 [MEMORY] r_en = 0, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00011100
-                 585	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
-                 595	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 585	 [WBPB::2] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 595	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
                  595	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 605	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 605	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  605	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00011100
                  605	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  605	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =   z, push = z, pop = z, data_out =  28, full = 0, empty = 1
@@ -209,22 +209,22 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  655	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  655	 [IFIDC::0] pc =  5 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  665	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 665	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 665	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  665	 [PC::0] rstn = 1, en = 1, control_bus = 0001, pc =  5, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  675	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                 675	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 675	 [WBPB::3] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  675	 [PC::2] rstn = 1, en = 0, control_bus = 0001, pc =  5, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  685	 [MEMORY] r_en = 1, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00011100
-                 685	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =  28
+                 685	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 1, mem_w_en = 0, mem_data_out =  28
                  685	 [IFIDC::0] pc =  6 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  685	 [PC::0] rstn = 1, en = 0, control_bus = 0001, pc =  6, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  695	 [MEMORY] r_en = 0, addr =   2, w_en = 0, data_in = zzzzzzzz, data_out = 00011100
-                 695	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
-                 705	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 695	 [WBPB::2] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 705	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0001, addr_const =   2, stk_data_in =  28, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   2, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
                  705	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  715	 [STACK] rstn = 1, stack_ptr =  2, top =  28, data_in =   z, push = z, pop = z, data_out =  28, full = 0, empty = 0
                  715	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 715	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 715	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0001, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  715	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00011100
                  715	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  725	 [CPU::1] ifidc_fetch = 1, exec_en = 0, exec_finish = 0
@@ -233,50 +233,50 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  735	 [IFIDC::1] pc =  6 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  745	 [IFIDC::2] pc =  6 control_bus = 0001 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  755	 [IFIDC::0] pc =  6 control_bus = 0110 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
-                 755	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 755	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  755	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  6, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 755	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 755	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  765	 [IFIDC::0] pc =  6 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  765	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  775	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 775	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 775	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  775	 [PC::0] rstn = 1, en = 1, control_bus = 0110, pc =  6, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 785	 [ALU:: 1] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 785	 [ALU:: 1] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  785	 [PC::2] rstn = 1, en = 0, control_bus = 0110, pc =  6, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  785	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                 785	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 785	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  795	 [IFIDC::0] pc =  7 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  795	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  795	 [STACK] rstn = 1, stack_ptr =  2, top =  28, data_in =   z, push = 0, pop = 1, data_out =  28, full = 0, empty = 0
-                 795	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                 795	 [ALU:: 2] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 795	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 795	 [ALU:: 2] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  805	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =   z, push = 0, pop = 0, data_out =  28, full = 0, empty = 0
-                 805	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 805	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  805	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 805	 [ALU:: 3] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
-                 815	 [ALU:: 4] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 805	 [ALU:: 3] rstn = 1, control_bus = 0110, opt1 =   23, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 815	 [ALU:: 4] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  825	 [STACK] rstn = 1, stack_ptr =  1, top =  28, data_in =   z, push = 0, pop = 1, data_out =  28, full = 0, empty = 0
-                 825	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 825	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  825	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 825	 [ALU:: 5] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 825	 [ALU:: 5] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  835	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =  28, full = 0, empty = 0
-                 835	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 835	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  835	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 835	 [ALU:: 6] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 835	 [ALU:: 6] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =    5, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  835	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =  28, full = 0, empty = 1
-                 845	 [ALU:: 7] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, res =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
-                 855	 [ALU:: 8] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 845	 [ALU:: 7] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, result =   28, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 855	 [ALU:: 8] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  865	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =  56, push = 1, pop = 0, data_out =  28, full = 0, empty = 1
-                 865	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                 865	 [ALU:: 9] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, res =   56, stk_data_in =  56, stk_push = 1, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 865	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 865	 [ALU:: 9] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, result =   56, stk_data_in =  56, stk_push = 1, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  875	 [STACK] rstn = 1, stack_ptr =  1, top =  56, data_in =  56, push = 0, pop = 0, data_out =  28, full = 0, empty = 1
-                 875	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                 875	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, res =   56, stk_data_in =  56, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 875	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 875	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, result =   56, stk_data_in =  56, stk_push = 0, stk_pop = 0, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  875	 [STACK] rstn = 1, stack_ptr =  1, top =  56, data_in =  56, push = 0, pop = 0, data_out =  28, full = 0, empty = 0
                  875	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  885	 [STACK] rstn = 1, stack_ptr =  1, top =  56, data_in =   z, push = z, pop = z, data_out =  28, full = 0, empty = 0
-                 885	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                 885	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 885	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0110, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 885	 [ALU:: 0] rstn = 1, control_bus = 0110, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  885	 [PC::0] rstn = 1, en = 0, control_bus = 0110, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  885	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  885	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
@@ -286,24 +286,24 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                  905	 [CPU::1] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  915	 [IFIDC::2] pc =  7 control_bus = 0110 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  925	 [IFIDC::0] pc =  7 control_bus = 0000 addr_imm =  12 IS_ready = 1 rstn = 1 en = 0
-                 925	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 925	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  925	 [PC::0] rstn = 1, en = 0, control_bus = 0000, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 925	 [ALU:: 0] rstn = 1, control_bus = 0000, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                 925	 [ALU:: 0] rstn = 1, control_bus = 0000, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                  935	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                  935	 [IFIDC::0] pc =  7 control_bus = 0000 addr_imm =  12 IS_ready = 0 rstn = 1 en = 0
                  945	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                 945	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 945	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  945	 [PC::0] rstn = 1, en = 1, control_bus = 0000, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  955	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                 955	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 955	 [WBPB::1] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  955	 [PC::2] rstn = 1, en = 0, control_bus = 0000, pc =  7, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                  965	 [MEMORY] r_en = 0, addr =   z, w_en = 0, data_in = zzzzzzzz, data_out = 00011100
-                 965	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  12, stk_data_in =  12, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 965	 [WBPB::2] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  12, stk_data_in =  12, stk_push = z, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
                  965	 [IFIDC::0] pc =  8 control_bus = 0000 addr_imm =  12 IS_ready = 0 rstn = 1 en = 0
                  965	 [PC::0] rstn = 1, en = 0, control_bus = 0000, pc =  8, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                 975	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0000, addr_const =  12, stk_data_in =  12, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
+                 975	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0000, addr_const =  12, stk_data_in =  12, stk_push = 1, stk_pop = 0, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = 0, mem_w_en = 0, mem_data_out =  28
                  975	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                 985	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                 985	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0000, addr_const =  12, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                  985	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00011100
                  985	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                  985	 [STACK] rstn = 1, stack_ptr =  2, top =  12, data_in =   z, push = z, pop = z, data_out =  28, full = 0, empty = 0
@@ -314,51 +314,51 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                 1005	 [CPU::1] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1015	 [IFIDC::2] pc =  8 control_bus = 0000 addr_imm =  12 IS_ready = 0 rstn = 1 en = 0
                 1025	 [IFIDC::0] pc =  8 control_bus = 0111 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
-                1025	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1025	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1025	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  8, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                1025	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                1025	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                 1035	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1035	 [IFIDC::0] pc =  8 control_bus = 0111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                 1045	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                1045	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1045	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1045	 [PC::0] rstn = 1, en = 1, control_bus = 0111, pc =  8, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                 1055	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                1055	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1055	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1055	 [PC::2] rstn = 1, en = 0, control_bus = 0111, pc =  8, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
-                1055	 [ALU:: 1] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                1055	 [ALU:: 1] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28 z_flag = 0, s_flag = 0,
                 1065	 [STACK] rstn = 1, stack_ptr =  2, top =  12, data_in =   z, push = 0, pop = 1, data_out =  28, full = 0, empty = 0
-                1065	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1065	 [ALU:: 2] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
+                1065	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  28, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1065	 [ALU:: 2] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  28 z_flag = 0, s_flag = 0,
                 1065	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  28
                 1065	 [IFIDC::0] pc =  9 control_bus = 0111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                 1075	 [STACK] rstn = 1, stack_ptr =  1, top =  56, data_in =   z, push = 0, pop = 0, data_out =  12, full = 0, empty = 0
-                1075	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  12, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1075	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  12, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1075	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  12
-                1075	 [ALU:: 3] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  12 z_flag = 0, s_flag = 0,
-                1085	 [ALU:: 4] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  12 z_flag = 0, s_flag = 0,
+                1075	 [ALU:: 3] rstn = 1, control_bus = 0111, opt1 =   28, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  12 z_flag = 0, s_flag = 0,
+                1085	 [ALU:: 4] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  12 z_flag = 0, s_flag = 0,
                 1095	 [STACK] rstn = 1, stack_ptr =  1, top =  56, data_in =   z, push = 0, pop = 1, data_out =  12, full = 0, empty = 0
-                1095	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  12, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1095	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  12, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1095	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  12
-                1095	 [ALU:: 5] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  12 z_flag = 0, s_flag = 0,
+                1095	 [ALU:: 5] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  12 z_flag = 0, s_flag = 0,
                 1105	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =  56, full = 0, empty = 0
-                1105	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1105	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1105	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
-                1105	 [ALU:: 6] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1105	 [ALU:: 6] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   28, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1105	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 0, data_out =  56, full = 0, empty = 1
-                1115	 [ALU:: 7] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, res =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
-                1125	 [ALU:: 8] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1115	 [ALU:: 7] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, result =   56, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1125	 [ALU:: 8] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1135	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =  44, push = 1, pop = 0, data_out =  56, full = 0, empty = 1
-                1135	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1135	 [ALU:: 9] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =  44, stk_push = 1, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1135	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1135	 [ALU:: 9] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =  44, stk_push = 1, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1145	 [STACK] rstn = 1, stack_ptr =  1, top =  44, data_in =  44, push = 0, pop = 0, data_out =  56, full = 0, empty = 1
-                1145	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1145	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =  44, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1145	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1145	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =  44, stk_push = 0, stk_pop = 0, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1145	 [STACK] rstn = 1, stack_ptr =  1, top =  44, data_in =  44, push = 0, pop = 0, data_out =  56, full = 0, empty = 0
                 1145	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                 1155	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                 1155	 [STACK] rstn = 1, stack_ptr =  1, top =  44, data_in =   z, push = z, pop = z, data_out =  56, full = 0, empty = 0
-                1155	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1155	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1155	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1155	 [ALU:: 0] rstn = 1, control_bus = 0111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1155	 [PC::0] rstn = 1, en = 0, control_bus = 0111, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
                 1155	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1165	 [CPU::1] ifidc_fetch = 1, exec_en = 0, exec_finish = 0
@@ -367,29 +367,29 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                 1175	 [IFIDC::1] pc =  9 control_bus = 0111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                 1185	 [IFIDC::2] pc =  9 control_bus = 0111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                 1195	 [IFIDC::0] pc =  9 control_bus = 0010 addr_imm =   2 IS_ready = 1 rstn = 1 en = 0
-                1195	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1195	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1195	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
-                1195	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56 z_flag = 0, s_flag = 0,
+                1195	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56 z_flag = 0, s_flag = 0,
                 1205	 [IFIDC::0] pc =  9 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                 1205	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1215	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                1215	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1215	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1215	 [PC::0] rstn = 1, en = 1, control_bus = 0010, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
-                1225	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1225	 [WBPB::5] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1225	 [PC::2] rstn = 1, en = 0, control_bus = 0010, pc =  9, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
                 1225	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1235	 [IFIDC::0] pc = 10 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                 1235	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  56
-                1235	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1245	 [WBPB::7] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1235	 [WBPB::6] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  56, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1245	 [WBPB::7] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1245	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 1, data_out =  44, full = 0, empty = 0
                 1245	 [PC::0] rstn = 1, en = 0, control_bus = 0010, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  44
-                1245	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
+                1245	 [ALU:: 0] rstn = 1, control_bus = 0010, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
                 1245	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 1, data_out =  44, full = 0, empty = 1
                 1255	 [MEMORY] r_en = 0, addr =   2, w_en = 1, data_in = 00101100, data_out = 00011100
-                1255	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44, mem_data_in =  44, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =  28
+                1255	 [WBPB::0] rstn = 1, en = 0, fin_sig = 1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44, mem_data_in =  44, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =  28
                 1255	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
-                1265	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1265	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1265	 [MEMORY] r_en = z, addr =   z, w_en = z, data_in = zzzzzzzz, data_out = 00011100
                 1265	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 1
                 1265	 [CPU::0] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
@@ -399,20 +399,20 @@ VCD info: dumpfile report/waveform.vcd opened for output.
                 1285	 [CPU::1] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1295	 [IFIDC::2] pc = 10 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                 1305	 [IFIDC::0] pc = 10 control_bus = 1111 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
-                1305	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1305	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1305	 [PC::0] rstn = 1, en = 0, control_bus = 1111, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  44
-                1305	 [ALU:: 0] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
+                1305	 [ALU:: 0] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
                 1315	 [CPU::2] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
                 1315	 [IFIDC::0] pc = 10 control_bus = 1111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                 1325	 [CPU::3] ifidc_fetch = 0, exec_en = 1, exec_finish = 0
-                1325	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1325	 [WBPB::0] rstn = 1, en = 1, fin_sig = 0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1325	 [PC::0] rstn = 1, en = 1, control_bus = 1111, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  44
                 1335	 [CPU::3] ifidc_fetch = 0, exec_en = 0, exec_finish = 0
-                1335	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1335	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
                 1335	 [PC::4] rstn = 1, en = 0, control_bus = 1111, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  44
-                1335	 [ALU:: 1] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
-WARNING: PC.v:94: $writememb: Standard inconsistency, following 1364-2005.
+                1335	 [ALU:: 1] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44 z_flag = 0, s_flag = 0,
+WARNING: PC.v:98: $writememb: Standard inconsistency, following 1364-2005.
                 1345	 [STACK] rstn = 1, stack_ptr =  0, top =   x, data_in =   z, push = 0, pop = 1, data_out =  44, full = 0, empty = 1
-                1345	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
-                1345	 [ALU:: 2] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, res =   44, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44 z_flag = 0, s_flag = 0,
+                1345	 [WBPB::0] rstn = 1, en = 0, fin_sig = 0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =  44, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =  28
+                1345	 [ALU:: 2] rstn = 1, control_bus = 1111, opt1 =   12, opt2 =   56, result =   44, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =  44 z_flag = 0, s_flag = 0,
                 1345	 [PC::4] rstn = 1, en = 0, control_bus = 1111, pc = 10, z_flag = 0, s_flag = 0, stk_pop = z, stk_data_out =  44

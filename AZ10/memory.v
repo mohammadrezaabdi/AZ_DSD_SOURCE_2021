@@ -27,7 +27,7 @@ module MEMORY (addr,
         end
         if (w_en) begin
             mem[addr] <= data_in;
-        end    
+        end
     end
     
     //debugging

@@ -1,6 +1,7 @@
 `define INIT    2'b00
 `define IF      2'b01
 `define ID      2'b10
+`define OP_STL  4'b1000
 
 module IFIDC (clk,
               en,
@@ -27,9 +28,10 @@ module IFIDC (clk,
     
     always @(posedge clk or negedge rstn) begin
         if (!rstn && !en) begin
-            control_bus <= 4'b1000;
+            control_bus <= `OP_STL;
             data        <= 8'bx;
             state       <= `INIT;
+            IS_ready    <= 0;
         end
         else begin
             case(state)
@@ -38,7 +40,7 @@ module IFIDC (clk,
                     if (en) begin
                         state <= `IF;
                     end
-                    IS_ready <=0;
+                    IS_ready <= 0;
                 end
                 `IF:
                 begin
@@ -50,7 +52,7 @@ module IFIDC (clk,
                     control_bus[3:0] <= inst[INST_LEN-1:DATA_LEN];
                     data             <= inst[DATA_LEN-1:0];
                     state            <= `INIT;
-                    IS_ready <=1;
+                    IS_ready         <= 1;
                 end
             endcase
         end

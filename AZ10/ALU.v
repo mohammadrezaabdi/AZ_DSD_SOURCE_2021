@@ -7,7 +7,7 @@
 `define OP2_STR 4'b0110
 `define ALU     4'b0111
 `define PUSH    4'b1000
-`define PUSH_D  4'b1001
+`define PUSH_W  4'b1001
 
 module ALU (control_bus,
             clk,
@@ -35,7 +35,7 @@ module ALU (control_bus,
     
     reg [3:0]state;
     
-    reg signed [DATA_LEN-1:0] op1, op2, res;
+    reg signed [DATA_LEN-1:0] op1, op2, result;
     
     always @(posedge clk, negedge rstn) begin
         if (!rstn && !alu_en) begin
@@ -62,7 +62,6 @@ module ALU (control_bus,
                 `OP1_POP:
                 begin
                     stk_push<= 0;
-
                     stk_pop <= 1;
                     state   <= `OP1_RCV;
                 end
@@ -94,20 +93,20 @@ module ALU (control_bus,
                 `ALU:
                 begin
                     if (asn)
-                        res   <= op2+op1;
+                        result   <= op2 + op1;
                     else
-                        res   <= op2-op1;
+                        result   <= op2 - op1;
                     state <= `PUSH;
                 end
                 `PUSH:
                 begin
-                    s_flag      <= (res < 0);
-                    z_flag      <= (res == 0);
+                    s_flag      <= (result < 0);
+                    z_flag      <= (result == 0);
                     stk_push    <= 1;
-                    stk_data_in <= res;
-                    state       <= `PUSH_D;
+                    stk_data_in <= result;
+                    state       <= `PUSH_W;
                 end
-                `PUSH_D:
+                `PUSH_W:
                 begin
                     stk_push    <= 0;
                     state       <= `INIT;
@@ -119,6 +118,6 @@ module ALU (control_bus,
     
     //debugging
     always @(*)
-        $display($time, "\t [ALU::%d] rstn = %b, control_bus = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d z_flag = %b, s_flag = %b,", state, rstn, control_bus, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out, z_flag, s_flag);
+        $display($time, "\t [ALU::%d] rstn = %b, control_bus = %b, opt1 = %d, opt2 = %d, result = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d z_flag = %b, s_flag = %b,", state, rstn, control_bus, op1, op2, result, stk_data_in, stk_push, stk_pop, stk_data_out, z_flag, s_flag);
     
 endmodule

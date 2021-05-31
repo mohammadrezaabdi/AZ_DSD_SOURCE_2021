@@ -1,5 +1,5 @@
 $date
-	Mon May 31 22:11:31 2021
+	Tue Jun  1 00:17:58 2021
 $end
 $version
 	Icarus Verilog
@@ -63,7 +63,7 @@ $var wire 1 F asn $end
 $var reg 1 A fin_sig $end
 $var reg 8 G op1 [7:0] $end
 $var reg 8 H op2 [7:0] $end
-$var reg 8 I res [7:0] $end
+$var reg 8 I result [7:0] $end
 $var reg 1 @ s_flag $end
 $var reg 4 J state [3:0] $end
 $var reg 8 K stk_data_in [7:0] $end
@@ -92,8 +92,8 @@ $upscope $end
 $scope module pp0 $end
 $var wire 1 ! clk $end
 $var wire 1 3 en $end
+$var wire 1 X pp_en $end
 $var wire 1 " rstn $end
-$var wire 1 X wbpb_en $end
 $var wire 8 Y stk_data_out [7:0] $end
 $var wire 2 Z opc [1:0] $end
 $var wire 8 [ mem_data_out [7:0] $end
@@ -271,6 +271,7 @@ zL
 zM
 bz K
 b0 J
+02
 b0 h
 0R
 b1000 .
@@ -285,7 +286,6 @@ b1000 p
 0!
 1"
 #15
-02
 b1 5
 14
 1!

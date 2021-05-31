@@ -28,31 +28,31 @@ module CPU (rstn,
     always @(posedge clk or negedge rstn) begin
         if (!rstn) begin
             ifidc_fetch <= 0;
-            exec_en  <= 0;
-            state    <= `IFIDC;
+            exec_en     <= 0;
+            state       <= `IFIDC;
         end
         else begin
             case(state)
                 `IFIDC:
                 begin
                     ifidc_fetch <= 1;
-                    state    <= `IFIDC_W;
+                    state       <= `IFIDC_W;
                 end
                 `IFIDC_W:
                 begin
                     ifidc_fetch <= 0;
-                    if(IS_ready==1) begin
-                        state    <= `EXEC;
+                    if (IS_ready) begin
+                        state <= `EXEC;
                     end
                 end
                 `EXEC:
                 begin
-                    exec_en  <= 1;
-                    state    <= `EXEC_W;
+                    exec_en <= 1;
+                    state   <= `EXEC_W;
                 end
                 `EXEC_W:
                 begin
-                    exec_en  <= 0;
+                    exec_en <= 0;
                     if (exec_fin_sig) begin
                         state <= `IFIDC;
                     end
