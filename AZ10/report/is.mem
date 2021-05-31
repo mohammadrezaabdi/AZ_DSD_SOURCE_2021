@@ -1,5 +1,7 @@
 // SWAP
 0001_0000_0001              // PUSHM ARG1                    
+0001_0000_0010              // PUSHM ARG2                    
+0010_0000_0001              // POPM ARG2
 0010_0000_0010              // POPM ARG1
 1111_xxxx_xxxx              // EXIT
 0000_0000_0000

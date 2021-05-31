@@ -92,11 +92,11 @@ module WBPB (control_bus,
                 `POP:
                 begin
                     stk_push <= 0;
+                    stk_pop  <= 1;
                     state    <= `POP_D;
                 end
                 `POP_D:
                 begin
-                    stk_pop  <= 1;
                     state    <= `STORE;
                 end
                 `LOAD:
