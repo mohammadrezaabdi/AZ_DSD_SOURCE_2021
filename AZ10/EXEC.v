@@ -82,6 +82,7 @@ module EXEC (clk,
     .z_flag(alu_z_flag),
     .s_flag(alu_s_flag),
     .stk_pop(stk_pop),
+    .stk_push(stk_push),
     .stk_data_out(stk_data_out),
     .fin_sig(pc_fin_sig)
     );

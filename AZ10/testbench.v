@@ -24,10 +24,10 @@ module testbench();
     .rstn(rstn)
     );
     
-    // initial begin
-    //     $dumpfile("report/waveform.vcd");
-    //     $dumpvars(0,cpu0);
-    // end
+    initial begin
+        $dumpfile("report/waveform.vcd");
+        $dumpvars(0,cpu0);
+    end
     
     initial begin
         clk         = 0;
@@ -43,9 +43,8 @@ module testbench();
         rstn = 0;
         #CLK_C
         rstn = 1;
-        #(100 * CLK_C);
-        // $writememb("report/result.mem", cpu0.memory0.mem);
-        // $finish;
+        #(100000 * CLK_C);
+        $finish;
     end
     
 endmodule

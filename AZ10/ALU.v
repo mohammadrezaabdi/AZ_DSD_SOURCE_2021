@@ -117,8 +117,8 @@ module ALU (control_bus,
         end
     end
     
-    //debuging
+    //debugging
     always @(*)
-        $monitor($time, "\t [ALU::%d] rstn = %b, control_bus = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d z_flag = %b, s_flag = %b,", state, rstn, control_bus, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out, z_flag, s_flag);
+        $display($time, "\t [ALU::%d] rstn = %b, control_bus = %b, opt1 = %d, opt2 = %d, res = %d, stk_data_in = %d, stk_push = %b, stk_pop = %b, stk_data_out = %d z_flag = %b, s_flag = %b,", state, rstn, control_bus, op1, op2, res, stk_data_in, stk_push, stk_pop, stk_data_out, z_flag, s_flag);
     
 endmodule

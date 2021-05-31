@@ -125,7 +125,7 @@ module CPU (rstn,
     .empty(stk_empty)
     );
     
-    // debuging
+    //debugging
     always @(*)
         $display($time, "\t [CPU::%d] ifidc_fetch = %b, exec_en = %b, exec_finish = %b", state, ifidc_fetch, exec_en, exec_fin_sig);
     

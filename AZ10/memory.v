@@ -20,7 +20,7 @@ module MEMORY (addr,
     
     reg [WORD_LEN-1:0] data_o1,data_o2;
     
-    always @(*) //todo: refactor mem_D va kir e khar
+    always @(*)
     begin
         if (r_en) begin
             data_out <= mem[addr];
@@ -30,7 +30,7 @@ module MEMORY (addr,
         end    
     end
     
-    //debuging
+    //debugging
     always @(*)
         $display($time, "\t [MEMORY] r_en = %b, addr = %d, w_en = %b, data_in = %b, data_out = %b", r_en, addr, w_en, data_in, data_out);
     

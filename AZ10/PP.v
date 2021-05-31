@@ -12,7 +12,6 @@
 `define OP_PUSHM    2'b01
 `define OP_POPM     2'b10
 
-//todo kir e khar
 module PP (control_bus,
              clk,
              en,
