@@ -1,45 +1,23 @@
-WARNING: testbench.v:39: $readmemb(report/is.mem): Not enough words in the file for the requested range [0:19].
-                   0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = x
                    0	 [WBPB::x] rstn = 0, en = x, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
-                   0	 [IFIDC::x] pc =  x control_bus = xxxx addr_imm =   x IS_ready = x rstn = 0 en = 0
                    0	 [WBPB::x] rstn = 0, en = 0, fin_sig=x, control_bus = xxxx, addr_const =   x, stk_data_in =   x, stk_push = x, stk_pop = x, stk_data_out =   x, mem_data_in =   x, mem_addr =   x, mem_r_en = x, mem_w_en = x, mem_data_out =   x
-                   5	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 0 en = 0
                    5	 [WBPB::0] rstn = 0, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  10	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = x rstn = 1 en = 0
                   10	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1000, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  15	 [IFIDC::0] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 1
-                  25	 [IFIDC::1] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
-                  35	 [IFIDC::2] pc =  0 control_bus = 1000 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
-                  45	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 1 rstn = 1 en = 0
                   45	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
-                  55	 [IFIDC::0] pc =  0 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                   65	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   75	 [WBPB::1] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   x
                   85	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   x
-                  85	 [IFIDC::0] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
                   85	 [WBPB::2] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 1, mem_w_en = 0, mem_data_out =   5
                   95	 [WBPB::3] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = z, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
                  105	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0001, addr_const =   1, stk_data_in =   5, stk_push = 1, stk_pop = 0, stk_data_out =   x, mem_data_in =   z, mem_addr =   1, mem_r_en = 0, mem_w_en = 0, mem_data_out =   5
                  115	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0001, addr_const =   1, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 125	 [IFIDC::0] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 1
-                 135	 [IFIDC::1] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
-                 145	 [IFIDC::2] pc =  1 control_bus = 0001 addr_imm =   1 IS_ready = 0 rstn = 1 en = 0
-                 155	 [IFIDC::0] pc =  1 control_bus = 0010 addr_imm =   2 IS_ready = 1 rstn = 1 en = 0
                  155	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 165	 [IFIDC::0] pc =  1 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  175	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  185	 [WBPB::4] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 195	 [IFIDC::0] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
                  195	 [WBPB::5] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = z, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  205	 [WBPB::6] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   x, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  215	 [WBPB::0] rstn = 1, en = 0, fin_sig=1, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = 0, stk_pop = 1, stk_data_out =   5, mem_data_in =   x, mem_addr =   2, mem_r_en = 0, mem_w_en = 1, mem_data_out =   5
                  225	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 0010, addr_const =   2, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 235	 [IFIDC::0] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 1
-                 245	 [IFIDC::1] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
-                 255	 [IFIDC::2] pc =  2 control_bus = 0010 addr_imm =   2 IS_ready = 0 rstn = 1 en = 0
-                 265	 [IFIDC::0] pc =  2 control_bus = 1111 addr_imm =   x IS_ready = 1 rstn = 1 en = 0
                  265	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
-                 275	 [IFIDC::0] pc =  2 control_bus = 1111 addr_imm =   x IS_ready = 0 rstn = 1 en = 0
                  285	 [WBPB::0] rstn = 1, en = 1, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
                  295	 [WBPB::0] rstn = 1, en = 0, fin_sig=0, control_bus = 1111, addr_const =   x, stk_data_in =   z, stk_push = z, stk_pop = z, stk_data_out =   5, mem_data_in =   z, mem_addr =   z, mem_r_en = z, mem_w_en = z, mem_data_out =   5
 WARNING: PC.v:87: $writememb: Standard inconsistency, following 1364-2005.
