@@ -1,12 +1,19 @@
 `define INIT    3'b000
+
 `define LOAD    3'b001
 `define PUSH    3'b010 
 `define PUSH_D  3'b011
+
 `define POP     3'b100
 `define POP_D   3'b101
 `define STORE   3'b110
+
+// `define OP_PUSHC    
+// `define OP_PUSHM
+// `define OP_POPM
+
 //todo kir e khar
-module WBPB (control_bus,
+module PP (control_bus,
              clk,
              en,
              rstn,

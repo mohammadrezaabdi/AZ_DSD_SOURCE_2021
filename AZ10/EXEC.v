@@ -49,10 +49,10 @@ module EXEC (clk,
     .fin_sig(alu_fin_sig)
     );
     
-    WBPB  #(
+    PP  #(
     .DATA_LEN(DATA_LEN),
     .ADDR_LEN(ADDR_LEN)
-    ) wbpb0 (
+    ) pp0 (
     .clk(clk),
     .rstn(rstn),
     .en(en),
